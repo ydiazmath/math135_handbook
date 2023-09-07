@@ -84,7 +84,7 @@ Hint: $\sin(x) = \cos(x)$ at $x=\pi/4$ and $x=5\pi/4$.
 2. Use *RStudio* to estimate the area between these two curves.
 
 
-
+<!--
 ## Solutions
 
 
@@ -236,3 +236,4 @@ So our estimate of the area is
 ```{r}
 0.414 + 2.828 + 2.414
 ```
+-->

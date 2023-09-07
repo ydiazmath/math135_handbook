@@ -51,7 +51,7 @@ Below is a plot of an objective function $f(x,y)$ in red, and its constraint fun
 4. What price would make this increase useful to the company? (Hint: the units for your answer are "dollars per unit produced.")
 
 
-
+<!--
 ## Solutions
 
 ### Constrained Production
@@ -139,4 +139,4 @@ So if we increase our budget by \$1, then we will produce 22 more units.
 
 4. The Lagrange multiplier is approximately $22$ units/dollar. We will break even if we can sell one unit for $1/22=0.045$ dollars/unit. So if the sale price is at least \$0.045, we will decide to increase production.
 
-
+-->

@@ -69,7 +69,7 @@ Each of the scenarios below describes a quantity that is changing over time. For
 2. The altitude of a bird that is about to have a gentle landing on the ground.
 3. The location of a car that is cruising at the speed limit on a straight highway.
 
-
+<!--
 ## Solutions
 
 ### Estimating the first and second derivatives from a graph
@@ -99,3 +99,4 @@ So we have $g(x)=f'(x)$ and $h(x) = f''(x)$.
 1. Both the first and second derivatives are positive. The number of views is increasing at a faster and faster rate.
 2. The first derivative is negative because the height of the bird is decreasing. The second derivative is positive because the bird is slowing down as it approaches the ground.
 3. The first derivative is positive since the car is moving forward. The second derivative is zero because the velocity is not changing.
+-->

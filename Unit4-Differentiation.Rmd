@@ -54,7 +54,7 @@ Find the derivative for each of the following functions.
 
 
 
-
+<!--
 ## Solutions
 
 ### Basic Derivative Practice
@@ -93,3 +93,4 @@ Find the derivative for each of the following functions.
 1. $h'(t) = \frac{(t-4) - (t+4)}{(t-4)^2}$
 
 
+-->

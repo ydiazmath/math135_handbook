@@ -75,7 +75,7 @@ sum(areas)
    e. A **left endpoint estimation** on intervals of size $0.00001$
   
 2. Make a plot of $f(x)$ on $[0,4]$. Is is clear whether each of the values about is an over-estimate? an under-estimate? or neither?
-
+<!--
 ## Solutions
 
 
@@ -219,3 +219,4 @@ It is **not** clear whether any of these values is an over-estimate or an under-
 
 So we can't easily tell whether it's an under-estimate or an over-estimate.
 
+-->

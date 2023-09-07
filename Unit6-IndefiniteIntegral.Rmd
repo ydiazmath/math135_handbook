@@ -82,7 +82,7 @@ where $t$ is the number of days since the start of the outbreak.
 2.  How many total people get infected by time $T$ where $T$ is a very large number? 
 
 
-
+<!--
 ## Solutions
 
 ### Indefinite Integral Practice
@@ -223,5 +223,5 @@ $$
 For very large $T$ the second term is basically 0. So we have 2000 zombies by the end of the outbreak. Gosh, that's not too bad! 
 
 
-
+-->
 

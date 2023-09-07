@@ -124,7 +124,7 @@ $$
 2. We know that the solution to this differential equation is a logistic function $\displaystyle{P(t) = \frac{K}{1+Ce^{-rt}}}$. Find the values for $r,C,K$. Then calculate the actual value of $P(50)$ and compare this value our estimates. How did  we do  in each case?
 
 
-
+<!--
 
 ##  Solutions
 
