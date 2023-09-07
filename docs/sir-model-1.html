@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>40 SIR Model | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="40 SIR Model | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
@@ -112,6 +112,10 @@ code span.vs { color: #008080; } /* VerbatimString */
 code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="m135style.css" type="text/css" />
 </head>
@@ -139,6 +143,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a>
 <ul>
@@ -147,7 +169,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.1.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1.1</b> Common Functions</a></li>
 <li class="chapter" data-level="2.1.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.1.2</b> Defining Your Own Function</a></li>
 <li class="chapter" data-level="2.1.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.1.3</b> Creating Lists of Data</a></li>
-<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-1"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
 <li class="chapter" data-level="2.1.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i><b>2.1.5</b> Plotting Functions</a></li>
 <li class="chapter" data-level="2.1.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i><b>2.1.6</b> Plotting Data and Functions</a></li>
 <li class="chapter" data-level="2.1.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.1.7</b> Fitting a Function to Data</a></li>
@@ -216,6 +238,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.3.2" data-path="linear-functions.html"><a href="linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i><b>5.3.2</b> Height and weight of American men</a></li>
 <li class="chapter" data-level="5.3.3" data-path="linear-functions.html"><a href="linear-functions.html#scooter-rates"><i class="fa fa-check"></i><b>5.3.3</b> Scooter rates</a></li>
 <li class="chapter" data-level="5.3.4" data-path="linear-functions.html"><a href="linear-functions.html#oil-reserves"><i class="fa fa-check"></i><b>5.3.4</b> Oil reserves</a></li>
+<li class="chapter" data-level="5.3.5" data-path="linear-functions.html"><a href="linear-functions.html#world-population-growth-rate"><i class="fa fa-check"></i><b>5.3.5</b> World population growth rate</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="linear-functions.html"><a href="linear-functions.html#solutions"><i class="fa fa-check"></i><b>5.4</b> Solutions</a>
 <ul>
@@ -317,16 +340,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#activities-6"><i class="fa fa-check"></i><b>10.2</b> Activities</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours"><i class="fa fa-check"></i><b>10.2.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.2.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.2.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#drawing-contours-on-a-data-table"><i class="fa fa-check"></i><b>10.3</b> Drawing contours on a data table</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.3.1</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.3.2</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.3.3</b> Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.4</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.4.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.4.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.4.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.4.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.4.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.4.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.4.4</b> Plotting in RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i><b>11</b> Unit 1 Summary</a>
@@ -789,13 +815,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.3</b> Managing an Outbreak</a></li>
 <li class="chapter" data-level="40.2.4" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.4</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="sir-model-1.html"><a href="sir-model-1.html#solutions-26"><i class="fa fa-check"></i><b>40.3</b> Solutions</a>
-<ul>
-<li class="chapter" data-level="40.3.1" data-path="sir-model-1.html"><a href="sir-model-1.html#threshold-population-for-an-sir-model-1"><i class="fa fa-check"></i><b>40.3.1</b> Threshold Population for an SIR Model</a></li>
-<li class="chapter" data-level="40.3.2" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick-1"><i class="fa fa-check"></i><b>40.3.2</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
-<li class="chapter" data-level="40.3.3" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak-1"><i class="fa fa-check"></i><b>40.3.3</b> Managing an Outbreak</a></li>
-<li class="chapter" data-level="40.3.4" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate-1"><i class="fa fa-check"></i><b>40.3.4</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="41" data-path="unit-7-summary.html"><a href="unit-7-summary.html"><i class="fa fa-check"></i><b>41</b> Unit 7 Summary</a>
 <ul>
@@ -843,7 +862,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="plotting-an-sir-slope-field-and-an-sir-trajectory" class="section level3 hasAnchor" number="40.1.1">
 <h3><span class="header-section-number">40.1.1</span> Plotting an SIR Slope Field and an SIR Trajectory<a href="sir-model-1.html#plotting-an-sir-slope-field-and-an-sir-trajectory" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field, and a <code>traj_plot</code> function that we use to plot a trajectory. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb218-1"><a href="sir-model-1.html#cb218-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="sir-model-1.html#cb1-1" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is some example code that plots an SIR slope field where</p>
 <ul>
 <li>The infection rate is <span class="math inline">\(a=0.001\)</span></li>
@@ -852,10 +871,10 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><span class="math inline">\(0 \leq I \leq 100\)</span></li>
 </ul>
 <p>The horizontal axis is the susceptible population and the vertical axis is the infected population.</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="sir-model-1.html#cb219-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(S <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb219-2"><a href="sir-model-1.html#cb219-2" aria-hidden="true" tabindex="-1"></a>                 I <span class="sc">~</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I, </span>
-<span id="cb219-3"><a href="sir-model-1.html#cb219-3" aria-hidden="true" tabindex="-1"></a>                 <span class="fu">bounds</span>(<span class="at">S=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), </span>
-<span id="cb219-4"><a href="sir-model-1.html#cb219-4" aria-hidden="true" tabindex="-1"></a>                 <span class="at">transform=</span><span class="cf">function</span>(L) L<span class="sc">^</span><span class="fl">0.01</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="sir-model-1.html#cb2-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(S <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb2-2"><a href="sir-model-1.html#cb2-2" tabindex="-1"></a>                 I <span class="sc">~</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I, </span>
+<span id="cb2-3"><a href="sir-model-1.html#cb2-3" tabindex="-1"></a>                 <span class="fu">bounds</span>(<span class="at">S=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), </span>
+<span id="cb2-4"><a href="sir-model-1.html#cb2-4" tabindex="-1"></a>                 <span class="at">transform=</span><span class="cf">function</span>(L) L<span class="sc">^</span><span class="fl">0.01</span>)</span></code></pre></div>
 <p>Here is some example code that plots a single SIR trajectory for this same model. Here are the additional inputs:</p>
 <ul>
 <li><code>domain(t=0:80)</code> means that the trajectory runs for <span class="math inline">\(0 \leq t \leq 80\)</span>.</li>
@@ -863,12 +882,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li><code>I=5</code> means that the initial infected population is 5.</li>
 <li><code>nt=20</code> means that 20 tick marks will be added to the trajectory, showing the time that the point <span class="math inline">\((S,I)\)</span> occurs.</li>
 </ul>
-<div class="sourceCode" id="cb220"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb220-1"><a href="sir-model-1.html#cb220-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb220-2"><a href="sir-model-1.html#cb220-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I )</span>
-<span id="cb220-3"><a href="sir-model-1.html#cb220-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
-<span id="cb220-4"><a href="sir-model-1.html#cb220-4" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="sir-model-1.html#cb3-1" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
+<span id="cb3-2"><a href="sir-model-1.html#cb3-2" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span><span class="fl">0.2</span><span class="sc">*</span>I )</span>
+<span id="cb3-3"><a href="sir-model-1.html#cb3-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
+<span id="cb3-4"><a href="sir-model-1.html#cb3-4" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-177-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-4-1.png" width="70%" /></p>
 </div>
 </div>
 <div id="activities-28" class="section level2 hasAnchor" number="40.2">
@@ -881,7 +900,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li>If we start at <span class="math inline">\(S=400\)</span> and <span class="math inline">\(I=10\)</span>, are we in epidemic phase?</li>
 <li>What is the threshold population for this SIR Model?</li>
 </ol>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-178-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-5-1.png" width="70%" /></p>
 </div>
 <div id="ending-an-outbreak-before-everyone-gets-sick" class="section level3 hasAnchor" number="40.2.2">
 <h3><span class="header-section-number">40.2.2</span> Ending an Outbreak Before Everyone Gets Sick<a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -908,7 +927,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:45), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-179-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-6-1.png" width="672" />
 -->
 </div>
 <div id="managing-an-outbreak" class="section level3 hasAnchor" number="40.2.3">
@@ -940,105 +959,173 @@ and starting at <span class="math inline">\(S=600\)</span> and <span class="math
 and starting at <span class="math inline">\(S=600\)</span> and <span class="math inline">\(I=8\)</span>. Plot this trajectory. How large is the peak infected population? When does it occur? How many uninfected people are there at the end of the outbreak? How long does the outbreak last?</p></li>
 <li><p>Compare your answers to part 2 and part 3. What do you notice?</p></li>
 </ol>
-</div>
-</div>
-<div id="solutions-26" class="section level2 hasAnchor" number="40.3">
-<h2><span class="header-section-number">40.3</span> Solutions<a href="sir-model-1.html#solutions-26" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="threshold-population-for-an-sir-model-1" class="section level3 hasAnchor" number="40.3.1">
-<h3><span class="header-section-number">40.3.1</span> Threshold Population for an SIR Model<a href="sir-model-1.html#threshold-population-for-an-sir-model-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Here is the slope field for an SIR Model. The horizontal axis is the Susceptible population and the vertical axis is the Infected population.</p>
-<ol style="list-style-type: decimal">
-<li>No, we are not in epidemic phase. The number of infecteds is decreasing when <span class="math inline">\(S=200\)</span>.</li>
-<li>Yes, we are in epidemic phase. The number of infecteds is increasing when <span class="math inline">\(S=400\)</span>.</li>
-<li>The threshold population is
-<span class="math display">\[ \frac{b}{a} = \frac{0.5}{0.002}=250.\]</span></li>
-</ol>
-</div>
-<div id="ending-an-outbreak-before-everyone-gets-sick-1" class="section level3 hasAnchor" number="40.3.2">
-<h3><span class="header-section-number">40.3.2</span> Ending an Outbreak Before Everyone Gets Sick<a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>A disease is spreading according to the SIR Model
-<span class="math display">\[
-\frac{dS}{dt} = -0.001 SI \qquad  \frac{dS}{dt} = 0.001 SI -0.2 I
-\]</span>
-1. Use <code>traj_plot</code> to create the SI trajectory for initial conditions <span class="math inline">\(S=600\)</span> and <span class="math inline">\(I=8\)</span>. Start with <span class="math inline">\(0 \leq t \leq 100.\)</span></p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="sir-model-1.html#cb222-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb222-2"><a href="sir-model-1.html#cb222-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span> <span class="fl">0.2</span><span class="sc">*</span>I )</span>
-<span id="cb222-3"><a href="sir-model-1.html#cb222-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb224"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb224-1"><a href="sir-model-1.html#cb224-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-180-1.png" width="70%" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li>The outbreak lasts about 50 days.</li>
-</ol>
-<div class="sourceCode" id="cb225"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb225-1"><a href="sir-model-1.html#cb225-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb225-2"><a href="sir-model-1.html#cb225-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span> <span class="fl">0.2</span><span class="sc">*</span>I )</span>
-<span id="cb225-3"><a href="sir-model-1.html#cb225-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb227"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb227-1"><a href="sir-model-1.html#cb227-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">10</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-181-1.png" width="70%" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>The removal rate <span class="math inline">\(b=0.38\)</span> is the smallest rate that has at least 200 susceptible people remaining when the infected population is 0.</li>
-</ol>
-<div class="sourceCode" id="cb228"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb228-1"><a href="sir-model-1.html#cb228-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb228-2"><a href="sir-model-1.html#cb228-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span> <span class="fl">0.38</span><span class="sc">*</span>I )</span>
-<span id="cb228-3"><a href="sir-model-1.html#cb228-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb230"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb230-1"><a href="sir-model-1.html#cb230-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-182-1.png" width="70%" /></p>
-</div>
-<div id="managing-an-outbreak-1" class="section level3 hasAnchor" number="40.3.3">
-<h3><span class="header-section-number">40.3.3</span> Managing an Outbreak<a href="sir-model-1.html#managing-an-outbreak-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Reality is complicated, and many of these actions have diverse impacts. So there is not a single “right answer” here. But here are a few actions and their potential impacts on the SIR Model.</p>
-<p>The following actions reduce the infection rate <span class="math inline">\(a\)</span></p>
-<ul>
-<li>Social distancing (fewer and less frequent interactions)</li>
-<li>Masking (harder to transmit)</li>
-<li>Hand washing, sanitizing (harder to transmit)</li>
-</ul>
-<p>The following actions increase the removal rate <span class="math inline">\(b\)</span></p>
-<ul>
-<li>Isolating of infected people (isolation places an infected person into the removed category)</li>
-<li>Testing and isolating of people who test positive (same as above)</li>
-<li>Theraputic drugs that help you to recover more quickly</li>
-</ul>
-<p>An effective vaccine moves people directly from susceptible to removed. This adds a new term, based on the vaccination rate. For example:
-<span class="math display">\[
+<!--
+## Solutions
+
+### Threshold Population for an SIR Model
+Here is the slope field for an SIR Model. The horizontal axis is the Susceptible population and the vertical axis is the Infected population.
+
+1. No, we are not in epidemic phase. The number of infecteds is decreasing when $S=200$. 
+2. Yes, we are  in epidemic phase. The number of infecteds is increasing when $S=400$. 
+3. The threshold population is 
+$$ \frac{b}{a} = \frac{0.5}{0.002}=250.$$
+
+
+### Ending an Outbreak Before Everyone Gets Sick
+
+A disease is spreading according to the SIR Model
+$$
+\frac{dS}{dt} = -0.001 SI \qquad  \frac{dS}{dt} = 0.001 SI -0.2 I 
+$$
+1.  Use `traj_plot` to create the SI trajectory for initial conditions $S=600$ and $I=8$. Start with $0 \leq t \leq 100.$
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I - 0.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:100), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-7-1.png" width="70%" />
+
+2. The outbreak lasts about 50 days.
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I - 0.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=10)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-8-1.png" width="70%" />
+
+3. The removal rate $b=0.38$ is the smallest rate that has at least 200 susceptible people remaining when the infected population is 0.
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I - 0.38*I )
+Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-9-1.png" width="70%" />
+
+
+
+
+### Managing an Outbreak
+
+Reality is complicated, and many of these actions have diverse impacts. So there is not a single "right answer" here. But here are a few actions and their potential impacts on the SIR Model.
+
+The following actions reduce the infection rate $a$
+
+* Social distancing (fewer and less frequent interactions)
+* Masking (harder to transmit)
+* Hand washing, sanitizing (harder to transmit)
+
+The following actions increase the removal rate $b$
+
+* Isolating of infected people (isolation places an infected person into the removed category)
+* Testing and isolating of people who test positive (same as above)
+* Theraputic drugs that help you to recover more quickly
+
+An effective vaccine moves people directly from susceptible to removed. This adds a new term, based on the vaccination rate. For example:
+$$
 \frac{dS}{dt} = -aSI - cS, \qquad \frac{dI}{dt} = aSI - bI, \qquad \frac{dR}{dt} = bI + cS,
-\]</span>
-where <span class="math inline">\(0 &lt; c &lt; 1\)</span> is the rate at which susceptible people are vaccinated.</p>
-</div>
-<div id="changing-infection-rate-versus-changing-removal-rate-1" class="section level3 hasAnchor" number="40.3.4">
-<h3><span class="header-section-number">40.3.4</span> Changing Infection Rate Versus Changing Removal Rate<a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>The peak infected population is about 185. It occurs at <span class="math inline">\(t=12.5\)</span>. There are about 25 susceptible people left at the end of the outbreak.</li>
-</ol>
-<div class="sourceCode" id="cb231"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb231-1"><a href="sir-model-1.html#cb231-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb231-2"><a href="sir-model-1.html#cb231-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span>.<span class="dv">2</span><span class="sc">*</span>I )</span>
-<span id="cb231-3"><a href="sir-model-1.html#cb231-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb233"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb233-1"><a href="sir-model-1.html#cb233-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-183-1.png" width="70%" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li>When the model is half as infectious, the peak infected population is 46, and this occurs at <span class="math inline">\(t=29\)</span>. There are about 235 susceptible people left at the end of the outbreak, which lasts about 100 days.</li>
-</ol>
-<div class="sourceCode" id="cb234"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb234-1"><a href="sir-model-1.html#cb234-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.0005</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb234-2"><a href="sir-model-1.html#cb234-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.0005</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span>.<span class="dv">2</span><span class="sc">*</span>I )</span>
-<span id="cb234-3"><a href="sir-model-1.html#cb234-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb236"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb236-1"><a href="sir-model-1.html#cb236-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-184-1.png" width="70%" /></p>
-<ol start="3" style="list-style-type: decimal">
-<li>When the removal time is doubled, the peak infected population is 46, and this occurs at <span class="math inline">\(t=14.5\)</span>. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.</li>
-</ol>
-<div class="sourceCode" id="cb237"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb237-1"><a href="sir-model-1.html#cb237-1" aria-hidden="true" tabindex="-1"></a>SIRdyn <span class="ot">=</span> <span class="fu">makeODE</span>(dS <span class="sc">~</span> <span class="sc">-</span> <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I, </span>
-<span id="cb237-2"><a href="sir-model-1.html#cb237-2" aria-hidden="true" tabindex="-1"></a>                  dI <span class="sc">~</span>  <span class="fl">0.001</span><span class="sc">*</span>S<span class="sc">*</span>I <span class="sc">-</span>.<span class="dv">4</span><span class="sc">*</span>I )</span>
-<span id="cb237-3"><a href="sir-model-1.html#cb237-3" aria-hidden="true" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
-<pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<div class="sourceCode" id="cb239"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb239-1"><a href="sir-model-1.html#cb239-1" aria-hidden="true" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-185-1.png" width="70%" /></p>
-<ol start="4" style="list-style-type: decimal">
-<li>The models in parts 2 and 3 both follow the same trajectory, but the outbreak in Model 3 happens twice as quickly. The respective changes to the removal rate <span class="math inline">\(a\)</span> (in Model 2) and the removal rate <span class="math inline">\(b\)</span> (in Model 3) both have the same effect on the threshold population (which is twice its original value).</li>
-</ol>
+$$
+where $0 < c < 1$ is the rate at which susceptible people are vaccinated.
+
+### Changing Infection Rate Versus Changing Removal Rate
+
+1. The peak infected population is about 185. It occurs at $t=12.5$. There are about 25 susceptible people left at the end of the outbreak.
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I -.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-10-1.png" width="70%" />
+
+
+2. When the model is half as infectious, the peak infected population is 46, and this occurs at $t=29$. There are about 235 susceptible people left at the end of the outbreak, which lasts about 100 days.
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.0005*S*I, 
+                  dI ~  0.0005*S*I -.2*I )
+Soln = integrateODE(SIRdyn, domain(t=0:100), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-11-1.png" width="70%" />
+
+
+3. When the removal time is doubled, the peak infected population is 46, and this occurs at $t=14.5$. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.
+
+
+```r
+SIRdyn = makeODE(dS ~ - 0.001*S*I, 
+                  dI ~  0.001*S*I -.4*I )
+Soln = integrateODE(SIRdyn, domain(t=0:50), S=600, I=8)
+```
+
+```
+## Solution containing functions S(t), I(t).
+```
+
+```r
+traj_plot(I(t) ~ S(t), Soln, nt=20)
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-12-1.png" width="70%" />
+
+
+
+
+4. The models in parts 2 and 3 both follow the same trajectory, but the outbreak in Model 3 happens twice as quickly. The respective changes to the removal rate $a$ (in Model 2) and the removal rate $b$ (in Model 3) both have the same effect on the threshold population (which is twice its original value).
+
+-->
 
 </div>
 </div>

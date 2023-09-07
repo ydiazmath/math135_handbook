@@ -144,7 +144,7 @@ and starting at $S=600$ and $I=8$. Plot this trajectory. How large is the peak i
 4. Compare your answers to part 2 and part 3. What do you notice?
 
 
-
+<!--
 ## Solutions
 
 ### Threshold Population for an SIR Model
@@ -250,6 +250,6 @@ traj_plot(I(t) ~ S(t), Soln, nt=20)
 
 4. The models in parts 2 and 3 both follow the same trajectory, but the outbreak in Model 3 happens twice as quickly. The respective changes to the removal rate $a$ (in Model 2) and the removal rate $b$ (in Model 3) both have the same effect on the threshold population (which is twice its original value).
 
-
+-->
 
 
