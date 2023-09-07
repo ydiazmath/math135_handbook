@@ -126,7 +126,7 @@ $$
 
 
 
-##  Soluutions
+##  Solutions
 
 ### Euler's Method for Two Steps
 

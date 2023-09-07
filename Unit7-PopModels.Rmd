@@ -84,7 +84,7 @@ $$
 1. What is the growth rate $r$? 
 2. What is the carrying capacity $K$?
 3. How large is the deer population when that population is growing  at its fastest rate? How fast is the population growing at that time?
-
+<!--
 ## Solutions
 
 
@@ -145,5 +145,5 @@ $$
 So the carrying capacity is $K=8$.
 
 3. The rate of change is largest when $P=K/2=4$. The rate of change is $0.22 \cdot 4 \cdot \frac{1}{2} =  0.44$.
-
+-->
 

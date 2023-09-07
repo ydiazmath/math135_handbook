@@ -39,7 +39,7 @@ $$
 4. $y=0$
 
 
-
+<!--
 ## Solutions
 
 
@@ -71,3 +71,4 @@ We must check whether $\frac{dy}{dx} =3y.$
 2. $\frac{dy}{dx}=3e^{3x}$ and $3y = 3e^{3x}$. These are equal, so $y=e^{3x}$ is a solution!
 3. $\frac{dy}{dx}=3\cos(3x)-3\sin(3x)$ and $3y=3\sin(3x)+3\cos(3x)$. These are not equal (they differ by a negative sign), so  $y=\sin(3x)+\cos(3x)$ is NOT a solution.
 4. $\frac{dy}{dx}=0$ and $3y=0$. These are equal, so $y=0$ is a solution!
+-->

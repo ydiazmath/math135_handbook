@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>37 Population Models | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="37 Population Models | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
@@ -52,66 +52,11 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; } /* Alert */
-code span.an { color: #008000; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #0000ff; } /* ControlFlow */
-code span.ch { color: #008080; } /* Char */
-code span.cn { } /* Constant */
-code span.co { color: #008000; } /* Comment */
-code span.cv { color: #008000; } /* CommentVar */
-code span.do { color: #008000; } /* Documentation */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.im { } /* Import */
-code span.in { color: #008000; } /* Information */
-code span.kw { color: #0000ff; } /* Keyword */
-code span.op { } /* Operator */
-code span.ot { color: #ff4000; } /* Other */
-code span.pp { color: #ff4000; } /* Preprocessor */
-code span.sc { color: #008080; } /* SpecialChar */
-code span.ss { color: #008080; } /* SpecialString */
-code span.st { color: #008080; } /* String */
-code span.va { } /* Variable */
-code span.vs { color: #008080; } /* VerbatimString */
-code span.wa { color: #008000; font-weight: bold; } /* Warning */
-</style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="m135style.css" type="text/css" />
 </head>
@@ -139,6 +84,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a>
 <ul>
@@ -147,7 +110,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.1.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1.1</b> Common Functions</a></li>
 <li class="chapter" data-level="2.1.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.1.2</b> Defining Your Own Function</a></li>
 <li class="chapter" data-level="2.1.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.1.3</b> Creating Lists of Data</a></li>
-<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-1"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
 <li class="chapter" data-level="2.1.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i><b>2.1.5</b> Plotting Functions</a></li>
 <li class="chapter" data-level="2.1.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i><b>2.1.6</b> Plotting Data and Functions</a></li>
 <li class="chapter" data-level="2.1.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.1.7</b> Fitting a Function to Data</a></li>
@@ -216,6 +179,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.3.2" data-path="linear-functions.html"><a href="linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i><b>5.3.2</b> Height and weight of American men</a></li>
 <li class="chapter" data-level="5.3.3" data-path="linear-functions.html"><a href="linear-functions.html#scooter-rates"><i class="fa fa-check"></i><b>5.3.3</b> Scooter rates</a></li>
 <li class="chapter" data-level="5.3.4" data-path="linear-functions.html"><a href="linear-functions.html#oil-reserves"><i class="fa fa-check"></i><b>5.3.4</b> Oil reserves</a></li>
+<li class="chapter" data-level="5.3.5" data-path="linear-functions.html"><a href="linear-functions.html#world-population-growth-rate"><i class="fa fa-check"></i><b>5.3.5</b> World population growth rate</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="linear-functions.html"><a href="linear-functions.html#solutions"><i class="fa fa-check"></i><b>5.4</b> Solutions</a>
 <ul>
@@ -317,16 +281,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#activities-6"><i class="fa fa-check"></i><b>10.2</b> Activities</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours"><i class="fa fa-check"></i><b>10.2.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.2.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.2.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#drawing-contours-on-a-data-table"><i class="fa fa-check"></i><b>10.3</b> Drawing contours on a data table</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.3.1</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.3.2</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.3.3</b> Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.4</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.4.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.4.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.4.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.4.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.4.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.4.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.4.4</b> Plotting in RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i><b>11</b> Unit 1 Summary</a>
@@ -730,14 +697,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="37.2.4" data-path="population-models.html"><a href="population-models.html#constrained-rabbit-population"><i class="fa fa-check"></i><b>37.2.4</b> Constrained Rabbit Population</a></li>
 <li class="chapter" data-level="37.2.5" data-path="population-models.html"><a href="population-models.html#constrained-deer-population"><i class="fa fa-check"></i><b>37.2.5</b> Constrained Deer Population</a></li>
 </ul></li>
-<li class="chapter" data-level="37.3" data-path="population-models.html"><a href="population-models.html#solutions-24"><i class="fa fa-check"></i><b>37.3</b> Solutions</a>
-<ul>
-<li class="chapter" data-level="37.3.1" data-path="population-models.html"><a href="population-models.html#drug-metabolization-1"><i class="fa fa-check"></i><b>37.3.1</b> Drug Metabolization</a></li>
-<li class="chapter" data-level="37.3.2" data-path="population-models.html"><a href="population-models.html#elementary-my-dear-watson-1"><i class="fa fa-check"></i><b>37.3.2</b> Elementary, My Dear Watson</a></li>
-<li class="chapter" data-level="37.3.3" data-path="population-models.html"><a href="population-models.html#optimal-coffee-temperature-1"><i class="fa fa-check"></i><b>37.3.3</b> Optimal Coffee Temperature</a></li>
-<li class="chapter" data-level="37.3.4" data-path="population-models.html"><a href="population-models.html#constrained-rabbit-population-1"><i class="fa fa-check"></i><b>37.3.4</b> Constrained Rabbit Population</a></li>
-<li class="chapter" data-level="37.3.5" data-path="population-models.html"><a href="population-models.html#constrained-deer-population-1"><i class="fa fa-check"></i><b>37.3.5</b> Constrained Deer Population</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="38" data-path="eulers-method-1.html"><a href="eulers-method-1.html"><i class="fa fa-check"></i><b>38</b> Euler’s Method</a>
 <ul>
@@ -769,7 +728,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="39.2.2" data-path="slope-fields-1.html"><a href="slope-fields-1.html#draw-some-trajectories"><i class="fa fa-check"></i><b>39.2.2</b> Draw Some Trajectories</a></li>
 <li class="chapter" data-level="39.2.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models"><i class="fa fa-check"></i><b>39.2.3</b> Slope Fields for Population Models</a></li>
 </ul></li>
-<li class="chapter" data-level="39.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#solutions-25"><i class="fa fa-check"></i><b>39.3</b> Solutions</a>
+<li class="chapter" data-level="39.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#solutions-24"><i class="fa fa-check"></i><b>39.3</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="39.3.1" data-path="slope-fields-1.html"><a href="slope-fields-1.html#match-the-slope-fields"><i class="fa fa-check"></i><b>39.3.1</b> Match the Slope Fields</a></li>
 <li class="chapter" data-level="39.3.2" data-path="slope-fields-1.html"><a href="slope-fields-1.html#draw-some-trajectories-1"><i class="fa fa-check"></i><b>39.3.2</b> Draw Some Trajectories</a></li>
@@ -789,7 +748,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.3</b> Managing an Outbreak</a></li>
 <li class="chapter" data-level="40.2.4" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.4</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="sir-model-1.html"><a href="sir-model-1.html#solutions-26"><i class="fa fa-check"></i><b>40.3</b> Solutions</a>
+<li class="chapter" data-level="40.3" data-path="sir-model-1.html"><a href="sir-model-1.html#solutions-25"><i class="fa fa-check"></i><b>40.3</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="40.3.1" data-path="sir-model-1.html"><a href="sir-model-1.html#threshold-population-for-an-sir-model-1"><i class="fa fa-check"></i><b>40.3.1</b> Threshold Population for an SIR Model</a></li>
 <li class="chapter" data-level="40.3.2" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick-1"><i class="fa fa-check"></i><b>40.3.2</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
@@ -913,69 +872,69 @@ Note that this is the same differential equation as exponential growth with cons
 <ol style="list-style-type: decimal">
 <li>What is the growth rate <span class="math inline">\(r\)</span>?</li>
 <li>What is the carrying capacity <span class="math inline">\(K\)</span>?</li>
-<li>How large is the deer population when that population is growing at its fastest rate? How fast is the population growing at that time?</li>
-</ol>
-</div>
-</div>
-<div id="solutions-24" class="section level2 hasAnchor" number="37.3">
-<h2><span class="header-section-number">37.3</span> Solutions<a href="population-models.html#solutions-24" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="drug-metabolization-1" class="section level3 hasAnchor" number="37.3.1">
-<h3><span class="header-section-number">37.3.1</span> Drug Metabolization<a href="population-models.html#drug-metabolization-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>This is an exponential decay function.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle={\frac{dQ}{dt} = rQ}\)</span></li>
-<li>The solution is expoential decay <span class="math inline">\(Q(t) = Ce^{rt}\)</span>. We have <span class="math inline">\(Q(0) = 10 = C e^{r\cdot 0} = C\)</span>. So <span class="math inline">\(Q(t) = 10e^{rt}\)</span>, Next we have <span class="math inline">\(Q(3) = 2 = 10 e^{3r}\)</span> so <span class="math inline">\(r = \frac{1}{3} \ln (1/5) = -0.537\)</span>. Our final formula is <span class="math inline">\(Q(t) = 10 e^{-0537t}\)</span>.</li>
-</ol></li>
-<li>Suppose that a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
-<ol style="list-style-type: lower-alpha">
-<li><span class="math inline">\(\displaystyle={\frac{dQ}{dt} = -0.2 Q + 60}\)</span></li>
-<li>We need to rewrite the differential equation as <span class="math inline">\(\displaystyle={\frac{dQ}{dt} = -0.2 (Q - 300)}\)</span>. The solution is
-<span class="math inline">\(Q(t) = 300 - 300 e^{-0.2t}\)</span>.</li>
-<li><span class="math inline">\(Q(t)\)</span> converges to <span class="math inline">\(300\)</span></li>
-</ol></li>
-</ol>
-</div>
-<div id="elementary-my-dear-watson-1" class="section level3 hasAnchor" number="37.3.2">
-<h3><span class="header-section-number">37.3.2</span> Elementary, My Dear Watson<a href="population-models.html#elementary-my-dear-watson-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In a mystery novel, the body of a murder victim is found at noon in a room with a constant temperature of <span class="math inline">\(20^\circ C\)</span>. At noon, the body is <span class="math inline">\(35^\circ C\)</span> and at 2 pm the body is <span class="math inline">\(33^\circ C\)</span>. Normal body temperature is <span class="math inline">\(37^\circ C\)</span>. What time did the murder occur?</p>
-<p>We use Newton’s Law of Cooling <span class="math inline">\(\frac{dT}{dt} = r(T-A)\)</span> where <span class="math inline">\(A=20\)</span>. Let’s set <span class="math inline">\(t=0\)</span> to be noon. We have <span class="math inline">\(T(0)=35\)</span> and <span class="math inline">\(T(2)=33\)</span>.
-The initial condition tell us that the solution is <span class="math inline">\(T(t) = 20 + 15e^{rt}\)</span>. Next, we have <span class="math inline">\(T(2) = 33 = 20 + 15e^{2r}\)</span> and so <span class="math inline">\(r = \frac{1}{2} \ln(13/15) = -0.072.\)</span> Our temperature function is <span class="math inline">\(T(t) = 20+15e^{-0.072t}.\)</span></p>
-<p>Finally, we solve <span class="math inline">\(37 = 20+15e^{-0.072t}\)</span> which is equivalent to <span class="math inline">\(17/15 = e^{-0.072t}\)</span>. Our time of death is <span class="math inline">\(t= -1/(0.072) \ln(17/15) = -1.74\)</span>. So the time of death was 10:15 am.</p>
-</div>
-<div id="optimal-coffee-temperature-1" class="section level3 hasAnchor" number="37.3.3">
-<h3><span class="header-section-number">37.3.3</span> Optimal Coffee Temperature<a href="population-models.html#optimal-coffee-temperature-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>In my <span class="math inline">\(22^\circ C\)</span> office, my coffee starts at <span class="math inline">\(80^\circ C\)</span>, but cools to <span class="math inline">\(75^\circ C\)</span> after 10 minutes. If I like my coffee between <span class="math inline">\(63^\circ C\)</span> and <span class="math inline">\(70^\circ C\)</span>, how long is my window to drink it?</p>
-<p>We have <span class="math inline">\(T(t) = 22 + 58 e^{rt}\)</span>. Solving <span class="math inline">\(75 = 22 + 58e^{10r}\)</span> gives
-<span class="math inline">\(r= \frac{1}{10} \ln (53/58) = -0.009\)</span>. The temperature formula is <span class="math inline">\(22 + 68 e^{-0.009 t}\)</span>.</p>
-<p>Next, we solve <span class="math inline">\(63 = 22 + 58 e^{-0.009 t}\)</span> to find that <span class="math inline">\(t= -1/0.009 \ln(41/58)=38.54\)</span>. Finally we solve <span class="math inline">\(70 = 22 + 58 e^{-0.009 t}\)</span> to find that <span class="math inline">\(t= -1/0.009 \ln(48/58)=21.03\)</span>. So the coffee is drinkable from minute 21 to minute <span class="math inline">\(38.5\)</span>.</p>
-</div>
-<div id="constrained-rabbit-population-1" class="section level3 hasAnchor" number="37.3.4">
-<h3><span class="header-section-number">37.3.4</span> Constrained Rabbit Population<a href="population-models.html#constrained-rabbit-population-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The yearly population <span class="math inline">\(P(t)\)</span> of rabbits is modeled by
-<span class="math display">\[
+<li>How large is the deer population when that population is growing at its fastest rate? How fast is the population growing at that time?
+<!--
+## Solutions
+
+
+### Drug Metabolization
+
+1. This is an exponential decay function.
+    a. $\displaystyle={\frac{dQ}{dt} = rQ}$
+    a. The solution is expoential decay  $Q(t) = Ce^{rt}$. We have $Q(0) = 10 = C e^{r\cdot 0} = C$. So $Q(t) = 10e^{rt}$, Next we have $Q(3) = 2 = 10 e^{3r}$ so $r = \frac{1}{3} \ln (1/5) = -0.537$. Our final formula is $Q(t) = 10 e^{-0537t}$.
+
+2. Suppose that  a drug is being administered at a constant rate of 60 mg/hour and its decreasing at a rate of 20% of the amount present.
+    a. $\displaystyle={\frac{dQ}{dt} = -0.2 Q + 60}$
+    a. We need to rewrite the differential equation as $\displaystyle={\frac{dQ}{dt} = -0.2 (Q - 300)}$. The solution is
+    $Q(t) = 300 - 300 e^{-0.2t}$.
+    a. $Q(t)$ converges to $300$
+
+### Elementary, My Dear Watson
+
+In a mystery novel, the body of a murder victim is found at noon in a room with a constant temperature of $20^\circ C$. At noon, the body is $35^\circ C$ and at 2 pm the body is $33^\circ C$. Normal body temperature is $37^\circ C$. What time did the murder occur?
+
+We use Newton's Law of Cooling $\frac{dT}{dt} = r(T-A)$ where $A=20$. Let's set $t=0$ to be noon. We have $T(0)=35$ and $T(2)=33$.
+The initial condition tell us that the solution is $T(t) = 20 + 15e^{rt}$. Next, we have $T(2)  = 33 = 20 + 15e^{2r}$ and so $r = \frac{1}{2} \ln(13/15) = -0.072.$ Our temperature function is $T(t) = 20+15e^{-0.072t}.$
+
+Finally, we solve $37 = 20+15e^{-0.072t}$ which is equivalent to $17/15 = e^{-0.072t}$. Our time of death is $t= -1/(0.072) \ln(17/15) = -1.74$. So the time of death was 10:15 am.
+
+### Optimal Coffee Temperature
+
+In my $22^\circ C$ office, my coffee starts at $80^\circ C$, but cools to $75^\circ C$ after 10 minutes. If I like my coffee between $63^\circ C$ and $70^\circ C$, how long is my window to drink it?
+
+We have $T(t) = 22 + 58 e^{rt}$. Solving $75 = 22 + 58e^{10r}$ gives
+$r= \frac{1}{10} \ln (53/58) = -0.009$. The temperature formula is $22 + 68 e^{-0.009 t}$.
+
+Next, we solve $63 = 22 + 58 e^{-0.009 t}$ to find that $t= -1/0.009 \ln(41/58)=38.54$. Finally we solve $70 = 22 + 58 e^{-0.009 t}$ to find that $t= -1/0.009 \ln(48/58)=21.03$. So the coffee is drinkable from minute 21 to minute $38.5$.
+
+### Constrained Rabbit Population
+
+The yearly population $P(t)$ of rabbits is modeled by 
+$$
 \frac{dP}{dt} = 0.45 P  \left(1 - \frac{P}{90} \right).
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li>We have <span class="math inline">\(\frac{dP}{dt} = 0.45 \cdot 120 \left(1 - \frac{120}{90} \right) &lt; 0\)</span>. The population will decrease because the rate of change is negative.</li>
-<li><span class="math inline">\(P&#39;(t)=0\)</span> when <span class="math inline">\(P=0\)</span> and when <span class="math inline">\(P=90\)</span>.</li>
-<li>The carrying capacity is 90.</li>
-</ol>
-</div>
-<div id="constrained-deer-population-1" class="section level3 hasAnchor" number="37.3.5">
-<h3><span class="header-section-number">37.3.5</span> Constrained Deer Population<a href="population-models.html#constrained-deer-population-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The annual population <span class="math inline">\(P(t)\)</span> of deer is modeled by the constrained growth equation
-<span class="math display">\[
+$$
+
+1. We have $\frac{dP}{dt} = 0.45 \cdot 120  \left(1 - \frac{120}{90} \right) < 0$. The population will decrease  because the rate of change is negative. 
+2. $P'(t)=0$ when $P=0$ and when $P=90$.
+3. The carrying capacity is 90.
+
+
+### Constrained Deer Population
+
+The annual population $P(t)$ of deer is modeled by the constrained growth equation
+$$
 \frac{dP}{dt} = 0.22 P - 0.0275 P^2.
-\]</span></p>
-<ol style="list-style-type: decimal">
-<li><p>The growth rate is <span class="math inline">\(r=0.23\)</span>.</p></li>
-<li><p>We rewrite the derivative as
-<span class="math display">\[
+$$
+
+1. The growth rate is $r=0.23$. 
+2. We rewrite the derivative as
+$$
 \frac{dP}{dt} = 0.22 P\left( 1 - \frac{0.0275}{0.22} P \right) = 0.22 P\left( 1 - \frac{P}{8} \right)
-\]</span>
-So the carrying capacity is <span class="math inline">\(K=8\)</span>.</p></li>
-<li><p>The rate of change is largest when <span class="math inline">\(P=K/2=4\)</span>. The rate of change is <span class="math inline">\(0.22 \cdot 4 \cdot \frac{1}{2} = 0.44\)</span>.</p></li>
+$$
+So the carrying capacity is $K=8$.
+
+3. The rate of change is largest when $P=K/2=4$. The rate of change is $0.22 \cdot 4 \cdot \frac{1}{2} =  0.44$.
+--></li>
 </ol>
 
 </div>

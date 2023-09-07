@@ -96,7 +96,7 @@ $$
 \frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
 $$
 for  $0 \leq P \leq 600$ and $0 \leq t \leq 50$.
-
+<!--
 ## Solutions
 
 ### Match the Slope Fields
@@ -194,3 +194,4 @@ Let's set $\frac{dP}{dt}=0$ and solve to find the equilibrium points. We have
 * If $100 < P(0) < 400$ then the population increases to 400.
 * If $P(0) = 400$ then the population remains at this equilibrium value. This is a stable equilibrium.
 * If $P(0) > 400$ then the population decreases down to 400.
+-->

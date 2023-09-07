@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>39 Slope Fields | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="39 Slope Fields | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
@@ -112,6 +112,10 @@ code span.vs { color: #008080; } /* VerbatimString */
 code span.wa { color: #008000; font-weight: bold; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="m135style.css" type="text/css" />
 </head>
@@ -139,6 +143,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a>
 <ul>
@@ -147,7 +169,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.1.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1.1</b> Common Functions</a></li>
 <li class="chapter" data-level="2.1.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.1.2</b> Defining Your Own Function</a></li>
 <li class="chapter" data-level="2.1.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.1.3</b> Creating Lists of Data</a></li>
-<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-1"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
 <li class="chapter" data-level="2.1.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i><b>2.1.5</b> Plotting Functions</a></li>
 <li class="chapter" data-level="2.1.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i><b>2.1.6</b> Plotting Data and Functions</a></li>
 <li class="chapter" data-level="2.1.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.1.7</b> Fitting a Function to Data</a></li>
@@ -216,6 +238,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.3.2" data-path="linear-functions.html"><a href="linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i><b>5.3.2</b> Height and weight of American men</a></li>
 <li class="chapter" data-level="5.3.3" data-path="linear-functions.html"><a href="linear-functions.html#scooter-rates"><i class="fa fa-check"></i><b>5.3.3</b> Scooter rates</a></li>
 <li class="chapter" data-level="5.3.4" data-path="linear-functions.html"><a href="linear-functions.html#oil-reserves"><i class="fa fa-check"></i><b>5.3.4</b> Oil reserves</a></li>
+<li class="chapter" data-level="5.3.5" data-path="linear-functions.html"><a href="linear-functions.html#world-population-growth-rate"><i class="fa fa-check"></i><b>5.3.5</b> World population growth rate</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="linear-functions.html"><a href="linear-functions.html#solutions"><i class="fa fa-check"></i><b>5.4</b> Solutions</a>
 <ul>
@@ -317,16 +340,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#activities-6"><i class="fa fa-check"></i><b>10.2</b> Activities</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours"><i class="fa fa-check"></i><b>10.2.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.2.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.2.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#drawing-contours-on-a-data-table"><i class="fa fa-check"></i><b>10.3</b> Drawing contours on a data table</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.3.1</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.3.2</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.3.3</b> Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.4</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.4.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.4.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.4.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.4.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.4.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.4.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.4.4</b> Plotting in RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i><b>11</b> Unit 1 Summary</a>
@@ -769,12 +795,6 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="39.2.2" data-path="slope-fields-1.html"><a href="slope-fields-1.html#draw-some-trajectories"><i class="fa fa-check"></i><b>39.2.2</b> Draw Some Trajectories</a></li>
 <li class="chapter" data-level="39.2.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models"><i class="fa fa-check"></i><b>39.2.3</b> Slope Fields for Population Models</a></li>
 </ul></li>
-<li class="chapter" data-level="39.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#solutions-25"><i class="fa fa-check"></i><b>39.3</b> Solutions</a>
-<ul>
-<li class="chapter" data-level="39.3.1" data-path="slope-fields-1.html"><a href="slope-fields-1.html#match-the-slope-fields"><i class="fa fa-check"></i><b>39.3.1</b> Match the Slope Fields</a></li>
-<li class="chapter" data-level="39.3.2" data-path="slope-fields-1.html"><a href="slope-fields-1.html#draw-some-trajectories-1"><i class="fa fa-check"></i><b>39.3.2</b> Draw Some Trajectories</a></li>
-<li class="chapter" data-level="39.3.3" data-path="slope-fields-1.html"><a href="slope-fields-1.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i><b>39.3.3</b> Slope Fields for Population Models</a></li>
-</ul></li>
 </ul></li>
 <li class="chapter" data-level="40" data-path="sir-model-1.html"><a href="sir-model-1.html"><i class="fa fa-check"></i><b>40</b> SIR Model</a>
 <ul>
@@ -789,7 +809,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="40.2.3" data-path="sir-model-1.html"><a href="sir-model-1.html#managing-an-outbreak"><i class="fa fa-check"></i><b>40.2.3</b> Managing an Outbreak</a></li>
 <li class="chapter" data-level="40.2.4" data-path="sir-model-1.html"><a href="sir-model-1.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i><b>40.2.4</b> Changing Infection Rate Versus Changing Removal Rate</a></li>
 </ul></li>
-<li class="chapter" data-level="40.3" data-path="sir-model-1.html"><a href="sir-model-1.html#solutions-26"><i class="fa fa-check"></i><b>40.3</b> Solutions</a>
+<li class="chapter" data-level="40.3" data-path="sir-model-1.html"><a href="sir-model-1.html#solutions-25"><i class="fa fa-check"></i><b>40.3</b> Solutions</a>
 <ul>
 <li class="chapter" data-level="40.3.1" data-path="sir-model-1.html"><a href="sir-model-1.html#threshold-population-for-an-sir-model-1"><i class="fa fa-check"></i><b>40.3.1</b> Threshold Population for an SIR Model</a></li>
 <li class="chapter" data-level="40.3.2" data-path="sir-model-1.html"><a href="sir-model-1.html#ending-an-outbreak-before-everyone-gets-sick-1"><i class="fa fa-check"></i><b>40.3.2</b> Ending an Outbreak Before Everyone Gets Sick</a></li>
@@ -830,12 +850,12 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div id="creating-a-slope-field-in-rstudio" class="section level2 hasAnchor" number="39.1">
 <h2><span class="header-section-number">39.1</span> Creating a Slope Field in RStudio<a href="slope-fields-1.html#creating-a-slope-field-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="slope-fields-1.html#cb213-1" aria-hidden="true" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="slope-fields-1.html#cb1-1" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
 <p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 6 - 2 P}\)</span></p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb214-1"><a href="slope-fields-1.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb214-2"><a href="slope-fields-1.html#cb214-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
-<span id="cb214-3"><a href="slope-fields-1.html#cb214-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-170-1.png" width="672" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="slope-fields-1.html#cb2-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb2-2"><a href="slope-fields-1.html#cb2-2" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb2-3"><a href="slope-fields-1.html#cb2-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
 <div id="activities-27" class="section level2 hasAnchor" number="39.2">
 <h2><span class="header-section-number">39.2</span> Activities<a href="slope-fields-1.html#activities-27" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -916,113 +936,116 @@ for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math
 <span class="math display">\[
 \frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
 \]</span>
-for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</p></li>
-</ol>
-</div>
-</div>
-<div id="solutions-25" class="section level2 hasAnchor" number="39.3">
-<h2><span class="header-section-number">39.3</span> Solutions<a href="slope-fields-1.html#solutions-25" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="match-the-slope-fields" class="section level3 hasAnchor" number="39.3.1">
-<h3><span class="header-section-number">39.3.1</span> Match the Slope Fields<a href="slope-fields-1.html#match-the-slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=xy}\)</span> is Slope Field B</li>
-<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=\frac{x}{y}}\)</span> is Slope Field A</li>
-<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x+y}\)</span> is Slope Field D</li>
-<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x-y}\)</span> is Slope Field C</li>
-</ol>
-</div>
-<div id="draw-some-trajectories-1" class="section level3 hasAnchor" number="39.3.2">
-<h3><span class="header-section-number">39.3.2</span> Draw Some Trajectories<a href="slope-fields-1.html#draw-some-trajectories-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Here are some trajectories (not necessarily the ones that go through the three points specified).</p>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.
+<!--
+## Solutions
+
+### Match the Slope Fields
+
+1. $\displaystyle{\frac{dy}{dx}=xy}$ is Slope Field B 
+1. $\displaystyle{\frac{dy}{dx}=\frac{x}{y}}$ is Slope Field A
+1. $\displaystyle{\frac{dy}{dx}=x+y}$ is Slope Field D
+1. $\displaystyle{\frac{dy}{dx}=x-y}$ is Slope Field C
+
+### Draw Some Trajectories
+
+Here are some trajectories (not necessarily the ones that go through the three points specified).
+
 <table>
 <tr>
-<td>
-Slope Field A
-</td>
-<td>
-Slope Field B
-</td>
+<td> Slope Field A</td>
+<td> Slope Field B</td>
 </tr>
 <tr>
 <td>
-<img src="images/slopefield1soln.png" style="width:100.0%" />
+![](images/slopefield1soln.png){width=100%}
 </td>
 <td>
-<img src="images/slopefield2soln.png" style="width:100.0%" />
+![](images/slopefield2soln.png){width=100%}
 <tr>
-<td>
-</td>
-<td>
-</td>
+<td></td>
+<td></td>
 </tr>
 <tr>
-<td>
-Slope Field C
-</td>
-<td>
-Slope Field D
-</td>
+<td> Slope Field C</td>
+<td> Slope Field D</td>
 </tr>
 </td>
 </tr>
 <tr>
 <td>
-<img src="images/slopefield3soln.png" style="width:100.0%" />
+![](images/slopefield3soln.png){width=100%}
 </td>
 <td>
-<img src="images/slopefield4soln.png" style="width:100.0%" />
+![](images/slopefield4soln.png){width=100%}
 </td>
 </tr>
 </table>
-</div>
-<div id="slope-fields-for-population-models-1" class="section level3 hasAnchor" number="39.3.3">
-<h3><span class="header-section-number">39.3.3</span> Slope Fields for Population Models<a href="slope-fields-1.html#slope-fields-for-population-models-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of <span class="math inline">\(P\)</span> does the population increase without bound? stabilize to a constant value? die out?</p>
-<ol style="list-style-type: decimal">
-<li>Exponential growth with harvesting.</li>
+
+
+### Slope Fields for Population Models
+
+Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of $P$ does the population increase without bound? stabilize to a constant value? die out? 
+
+1. Exponential growth with harvesting.
+
+
+```r
+vectorfield_plot(t ~ 1,
+P ~  0.2 * P -  40,
+bounds(t=0:100, P=0:300))
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-3-1.png" width="70%" />
+
+* If $P(0) > 200$ then the population increases without bound
+* If $P(0) = 200$ then the population remains at this equilibrium value. This is an unstable equilibrium.
+* If $P(0) < 200$ then the population decreases to zero.
+
+2. Constrained growth
+
+
+```r
+vectorfield_plot(t ~ 1,
+P ~  0.05  * P *  (1 - 0.002 * P),
+bounds(t=0:50, P=0:600))
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-4-1.png" width="70%" />
+
+* If $P(0) = 0$ then the population remains at 0. This is an unstable equilibrium.
+* If $0 < P(0) < 500$ then the population increases to the carrying capacity 500.
+* If $P(0) = 500$ then the population remains at this equilibrium value. This is a stable equilibrium, and it is the carrying capacity.
+* If $P(0) > 500$ then the population decreases down to the carrying capacity 500.
+
+
+
+3. Constrained growth with constant harvesting
+
+
+
+```r
+vectorfield_plot(t ~ 1,
+P ~  0.05  * P *  (1 - 0.002 * P) - 4,
+bounds(t=0:50, P=0:600))
+```
+
+<img src="math135_handbook_files/figure-html/unnamed-chunk-5-1.png" width="70%" />
+
+Let's set $\frac{dP}{dt}=0$ and solve to find the equilibrium points. We have
+\begin{align}
+-0.0001 P^2 + 0.05 P   - 4 &= 0 \\
+ P^2 - 500 P   + 40000 &= 0 \\
+ (P-100)(P-400) &= 0
+\end{align}
+
+* If $P(0) < 100$ then the population decreases to 0  at 0.
+* If $P(0) = 100$ then the population remains at 100. This is an unstable equilibrium.
+* If $100 < P(0) < 400$ then the population increases to 400.
+* If $P(0) = 400$ then the population remains at this equilibrium value. This is a stable equilibrium.
+* If $P(0) > 400$ then the population decreases down to 400.
+--></p></li>
 </ol>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="slope-fields-1.html#cb215-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb215-2"><a href="slope-fields-1.html#cb215-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.2</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">40</span>,</span>
-<span id="cb215-3"><a href="slope-fields-1.html#cb215-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">300</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-171-1.png" width="70%" /></p>
-<ul>
-<li>If <span class="math inline">\(P(0) &gt; 200\)</span> then the population increases without bound</li>
-<li>If <span class="math inline">\(P(0) = 200\)</span> then the population remains at this equilibrium value. This is an unstable equilibrium.</li>
-<li>If <span class="math inline">\(P(0) &lt; 200\)</span> then the population decreases to zero.</li>
-</ul>
-<ol start="2" style="list-style-type: decimal">
-<li>Constrained growth</li>
-</ol>
-<div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="slope-fields-1.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb216-2"><a href="slope-fields-1.html#cb216-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P),</span>
-<span id="cb216-3"><a href="slope-fields-1.html#cb216-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-172-1.png" width="70%" /></p>
-<ul>
-<li>If <span class="math inline">\(P(0) = 0\)</span> then the population remains at 0. This is an unstable equilibrium.</li>
-<li>If <span class="math inline">\(0 &lt; P(0) &lt; 500\)</span> then the population increases to the carrying capacity 500.</li>
-<li>If <span class="math inline">\(P(0) = 500\)</span> then the population remains at this equilibrium value. This is a stable equilibrium, and it is the carrying capacity.</li>
-<li>If <span class="math inline">\(P(0) &gt; 500\)</span> then the population decreases down to the carrying capacity 500.</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Constrained growth with constant harvesting</li>
-</ol>
-<div class="sourceCode" id="cb217"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb217-1"><a href="slope-fields-1.html#cb217-1" aria-hidden="true" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
-<span id="cb217-2"><a href="slope-fields-1.html#cb217-2" aria-hidden="true" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P) <span class="sc">-</span> <span class="dv">4</span>,</span>
-<span id="cb217-3"><a href="slope-fields-1.html#cb217-3" aria-hidden="true" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-173-1.png" width="70%" /></p>
-<p>Let’s set <span class="math inline">\(\frac{dP}{dt}=0\)</span> and solve to find the equilibrium points. We have
-<span class="math display">\[\begin{align}
--0.0001 P^2 + 0.05 P   - 4 &amp;= 0 \\
-P^2 - 500 P   + 40000 &amp;= 0 \\
-(P-100)(P-400) &amp;= 0
-\end{align}\]</span></p>
-<ul>
-<li>If <span class="math inline">\(P(0) &lt; 100\)</span> then the population decreases to 0 at 0.</li>
-<li>If <span class="math inline">\(P(0) = 100\)</span> then the population remains at 100. This is an unstable equilibrium.</li>
-<li>If <span class="math inline">\(100 &lt; P(0) &lt; 400\)</span> then the population increases to 400.</li>
-<li>If <span class="math inline">\(P(0) = 400\)</span> then the population remains at this equilibrium value. This is a stable equilibrium.</li>
-<li>If <span class="math inline">\(P(0) &gt; 400\)</span> then the population decreases down to 400.</li>
-</ul>
 
 </div>
 </div>
