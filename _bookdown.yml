@@ -4,7 +4,7 @@ delete_merged_file: true
 rmd_files: ["index.Rmd", 
   "Unit0-R_Primer.Rmd",
   "Unit0-R_QuickRef.Rmd",
-   "Unit1-R_Intro.Rmd",
+   "Unit0-R_Intro.Rmd",
    "Unit1-Functions.Rmd",
   "Unit1-LinearFunctions.Rmd",
   "Unit1-RateOfChange.Rmd",
