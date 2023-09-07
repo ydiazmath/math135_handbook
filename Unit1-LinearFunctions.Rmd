@@ -82,7 +82,7 @@ plotPoints(R~Y,main="World Population Growth Rate",xlab="Year (since 1995)",ylab
    
 -->
 
-
+<!--
 
 ## Solutions
 
@@ -128,4 +128,4 @@ $$ B(t) =  - 35.11t+ 1650.$$
 
 
 
-
+-->

@@ -72,7 +72,7 @@ In 1980, there were about 170 million vehicles (cars and trucks) and about 227 m
 
 3. Use your models to predict the number of vehicles and the number of people in 2020. Then use Google to see how accurate these models are over time.
 
-
+<!--
 ## Solutions
 
 ### Growing population
@@ -193,3 +193,4 @@ p(40) & = & 227(1.01)^{40} \approx 337.97 \text{ million vehicles.}
 \end{array}
 $$
 Google says that in 2020, there were about 273.6 million vehicles  and 328.2 million people. So our model's predictions are not accurate.
+-->

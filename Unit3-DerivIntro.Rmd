@@ -87,7 +87,7 @@ $$
 1. Find the velocity at $t=1$ and $t=2$ numerically (using small subintervals). Remember that the velocity is the derivative of the position.
 2. Use desmos to graph the position curve $s(t)$ and the tangent lines at both  $t=1$ and $t=2$.
 
-
+<!--
 ## Solutions
 
 ### Studying
@@ -157,3 +157,4 @@ y = 5.03(t-2) + s(2) \\
 $$
 
 
+-->

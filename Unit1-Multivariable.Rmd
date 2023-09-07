@@ -1,4 +1,3 @@
-# Multivariable Functions
 
 ## Goals
 
@@ -145,7 +144,7 @@ Try out different horizontal and vertical domains that are centered around the o
 2. $g(x,y) = 100 x^2 y^2 e^{-x^2-y^2}$
 3. $h(x,y) = \sin^2x + \frac{1}{4}y^2$ 
 
-
+<!--
 ## Solutions
 
 
@@ -276,7 +275,7 @@ plotFun(g(x,y) ~ x & y,
 
 ```
 
-
+-->
 
 
 
