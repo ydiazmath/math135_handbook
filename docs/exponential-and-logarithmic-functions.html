@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>7 Exponential and Logarithmic Functions | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
-  <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
   <meta property="og:title" content="7 Exponential and Logarithmic Functions | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
@@ -52,66 +52,11 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; } /* Alert */
-code span.an { color: #008000; } /* Annotation */
-code span.at { } /* Attribute */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #0000ff; } /* ControlFlow */
-code span.ch { color: #008080; } /* Char */
-code span.cn { } /* Constant */
-code span.co { color: #008000; } /* Comment */
-code span.cv { color: #008000; } /* CommentVar */
-code span.do { color: #008000; } /* Documentation */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.im { } /* Import */
-code span.in { color: #008000; } /* Information */
-code span.kw { color: #0000ff; } /* Keyword */
-code span.op { } /* Operator */
-code span.ot { color: #ff4000; } /* Other */
-code span.pp { color: #ff4000; } /* Preprocessor */
-code span.sc { color: #008080; } /* SpecialChar */
-code span.ss { color: #008080; } /* SpecialString */
-code span.st { color: #008080; } /* String */
-code span.va { } /* Variable */
-code span.vs { color: #008080; } /* VerbatimString */
-code span.wa { color: #008000; font-weight: bold; } /* Warning */
-</style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="m135style.css" type="text/css" />
 </head>
@@ -139,6 +84,24 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="1.1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
 </ul></li>
 <li class="chapter" data-level="1.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a>
+<ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a>
+<ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a>
 <ul>
@@ -147,7 +110,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="2.1.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1.1</b> Common Functions</a></li>
 <li class="chapter" data-level="2.1.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.1.2</b> Defining Your Own Function</a></li>
 <li class="chapter" data-level="2.1.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.1.3</b> Creating Lists of Data</a></li>
-<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
+<li class="chapter" data-level="2.1.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-1"><i class="fa fa-check"></i><b>2.1.4</b> Plotting Data</a></li>
 <li class="chapter" data-level="2.1.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i><b>2.1.5</b> Plotting Functions</a></li>
 <li class="chapter" data-level="2.1.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i><b>2.1.6</b> Plotting Data and Functions</a></li>
 <li class="chapter" data-level="2.1.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.1.7</b> Fitting a Function to Data</a></li>
@@ -216,6 +179,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="5.3.2" data-path="linear-functions.html"><a href="linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i><b>5.3.2</b> Height and weight of American men</a></li>
 <li class="chapter" data-level="5.3.3" data-path="linear-functions.html"><a href="linear-functions.html#scooter-rates"><i class="fa fa-check"></i><b>5.3.3</b> Scooter rates</a></li>
 <li class="chapter" data-level="5.3.4" data-path="linear-functions.html"><a href="linear-functions.html#oil-reserves"><i class="fa fa-check"></i><b>5.3.4</b> Oil reserves</a></li>
+<li class="chapter" data-level="5.3.5" data-path="linear-functions.html"><a href="linear-functions.html#world-population-growth-rate"><i class="fa fa-check"></i><b>5.3.5</b> World population growth rate</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="linear-functions.html"><a href="linear-functions.html#solutions"><i class="fa fa-check"></i><b>5.4</b> Solutions</a>
 <ul>
@@ -317,16 +281,19 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="10.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#activities-6"><i class="fa fa-check"></i><b>10.2</b> Activities</a>
 <ul>
 <li class="chapter" data-level="10.2.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours"><i class="fa fa-check"></i><b>10.2.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.2.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.2.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.2.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.2.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.2.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.2.4</b> Plotting in RStudio</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.3</b> Solutions</a>
+<li class="chapter" data-level="10.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#drawing-contours-on-a-data-table"><i class="fa fa-check"></i><b>10.3</b> Drawing contours on a data table</a>
 <ul>
-<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.3.1</b> Matching Contours</a></li>
-<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.3.2</b> Plotting in RStudio</a></li>
-<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.3.3</b> Cross Sections</a></li>
-<li class="chapter" data-level="10.3.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.3.4</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i><b>10.3.1</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.3.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections"><i class="fa fa-check"></i><b>10.3.2</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.3.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i><b>10.3.3</b> Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#solutions-5"><i class="fa fa-check"></i><b>10.4</b> Solutions</a>
+<ul>
+<li class="chapter" data-level="10.4.1" data-path="multivariable-functions.html"><a href="multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i><b>10.4.1</b> Matching Contours</a></li>
+<li class="chapter" data-level="10.4.2" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i><b>10.4.2</b> Plotting in RStudio</a></li>
+<li class="chapter" data-level="10.4.3" data-path="multivariable-functions.html"><a href="multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i><b>10.4.3</b> Cross Sections</a></li>
+<li class="chapter" data-level="10.4.4" data-path="multivariable-functions.html"><a href="multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i><b>10.4.4</b> Plotting in RStudio</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i><b>11</b> Unit 1 Summary</a>
