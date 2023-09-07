@@ -1,0 +1,281 @@
+# Intro to RStudio
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+Welcome to our RStudio Introduction! RStudio is a front end (user friendly) interface for R, a programming
+language for statistics.  We’ll be using it to work with data and our various forms of functions.
+
+
+RStudio is a **long term learning goal** for us. We will be adding new functions and learning new
+things throughout the semester.
+
+
+## Getting Started
+
+Follow my lead as we get ourselves going with RStudio. We will
+
+* Log in to RStudio
+* Add some *packages* to the R environment
+* Create a math135 directory to work in
+* Create our first Rmd ('R Markdown') file
+* Knit that Rmd file to create a PDF
+
+You will need to replace the auto-generated code block at the top of your Rmd file with this one, which loads the mosaic functionality into the R environment when we knit to PDF.
+
+````
+```{r setup, include=FALSE, warning=FALSE}`r ''`
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+````
+
+**Pro Tip:** Be kind to future you. 
+
+* Save all of your work for this class in the `math135` subdirectory that we create today.
+* Give your files meaningful names. Include the unit, the topic,  the date, etc, or a helpful combination of these identifiers.
+
+
+## R Markdown files
+
+An R Markdown file is a hybrid file that has both text and code. You can then **knit** this Rmd file to make a lovely PDF.
+
+### Formatting Regular Text
+
+The regular text uses Markdown, which has simple commands to create formatting such has sections, bold, italic, links, itemized lists, and much more. Here are is some example Markdown syntax.
+
+```
+# Heading 
+
+This is a regular sentence.
+
+## Sub Heading
+
+You get *italics like this.* 
+
+Skipping a line starts a new paragraph.
+But if you don't skip a line then it's part of the same paragraph
+
+### Sub Sub Heading
+
+You get **bold text like this.**
+
+Here is how to make an itemized list
+
+* Make sure to skip a line before your first item
+* The asterisk must be the **first** character on the line (no spaces!)
+* If you want a sublist
+   + Start the sublist on the line below the item
+   + Indent by three spaces.
+   + Use a plus sign
+
+```
+
+Here is a nice reference page for [common R Markdown syntax](https://rmarkdown.rstudio.com/authoring_basics.html).
+
+
+### Code Chunks
+
+Your R code must be placed inside **code chunks.** Here is what a code chuck looks like
+
+````
+```{r}`r ''`
+1 + 1
+
+sin(pi/4)
+```
+````
+
+When you knit your Rmd file, the code chunks are executed in order. You can also 
+run an individual chunk by clicking on the green arrow in its upper right corner.
+
+
+Adding a code chunk is easy!
+
+* In the top bar of the Markdown window, there’s a small, green plus C button.
+* When you click this button, it’ll bring up options for code blocks to insert
+* Select "R" which is the first option. (It's the only one we will use.)
+
+
+## Writing Code
+
+Add a code chunk and let's get cracking! 
+
+
+### Basic Calculations
+We can use that code chunk to do some basic calculations.
+
+
+#### You Try
+
+Create a code block and try to calculate each of the following. Try some other calculations, too!
+
+* $8+13$
+* $7*9$
+* $\sin(\pi/2)$
+* $\sqrt{121}$
+* $(2.25)^3$
+* $8 \cos( \pi/6)$
+
+Which ones work? If you got an error, can you fix it? Can you guess the name of the square root function?
+
+
+### Variables, Lists and Sequences
+
+When we do a calculation, we can store the result for later. Here are some examples:
+
+```{r echo=TRUE}
+a = 15
+b = 4 * a
+
+```
+  
+R is particularly good at doing calculations on lists of data. So let's make some lists!
+
+RStudio makes a list with the `c()` command. The "c" in short for "combine".
+
+```{r}
+P=c(3, 5, 11, -1, 4)
+P
+```
+
+If you want to make a sequence, you use the `seq()` command. For example:
+
+
+```{r, echo=TRUE}
+S=seq(1, 10)
+S
+```
+
+
+Notice that the values increment by 1. You can use a different step size by adding a third argument.
+For exmaple, if I wanted a sequence 1, 1.1, 1.2, 1.3, etc... all the way up to 2, I would write
+
+```{r, echo=TRUE}
+T=seq(1, 2, 0.1)
+T
+```
+
+Now look at the **Environment** tab in the upper right window. What do you notice?
+
+
+**Pro Tips**: Be kind to future you as well as current collaborators.
+
+* Always write `0.1` instead of `.1` in your code. It is much easier to read and to debug later!
+* Consider adding a space after your commas to separate parameters. It's easier to read!
+
+
+#### You Try
+
+Try to do the following:
+
+* Create a list `X` containing the values 8, 6, 7, 5, 3, 0, 9.
+* Create a list `Y` containing the sequence of odd integers between (and including) 1 and 19
+* What is the output of the command `X^2'? Can you see what R is doing?
+* Try making another lists. Apply some functions to that list.
+
+
+### Functions
+
+Now it's time to write your own function. Here is how you create $f(x)= x^2 -3$. 
+
+```{r, echo=TRUE}
+f = makeFun(x^2 - 3 ~ x)
+```
+
+Much of this is pretty intuitive, except for maybe the final `~ x`. This tilde symbol comes up a lot in RStudio and it indicates *dependence*. We need to tell RStudio that $f$ is in terms of this variable $x$, so it knows where to put an input when I ask it to.
+
+
+Notice! In the right upper window, you now have a function called `f`. We can do a lot with this function, but
+to start, let’s evaluate it at 1.
+
+```{r, echo=TRUE}
+f(1)
+```
+
+What do you think this code is doing?
+
+```{r, echo=TRUE}
+S=seq(1, 10)
+f(S)
+```
+
+
+#### You Try
+
+* Create a new function $g$ where $g(t) = \sqrt{t-4}$
+* Evaluate this function at $t=8$, and $t=12.34$ and $t=100$
+* What happens when you try to evaluate this function at $t=2$? What do you think that means?
+
+
+
+### Plotting
+
+
+Let's see how to create plots using RStudio. First, let's create a plot of this data
+
+  |   |   |   |   |   |
+--|---|---|---|---|---|---
+x | 0 | 1 | 2 | 3 | 4 | 5
+h(x) | 0 | 1 |  4 | 9  | 16 | 25
+
+from the function $h(x)=x^2$.
+
+
+```{r, echo=TRUE}
+
+X = seq(0,5)
+Y = X^2
+plotPoints(Y ~ X)
+```
+
+Notice! We list the **dependent** variable `Y` first and then the **independent** variable `X` after the tidle `~` (which matches the syntax of `makeFun`).
+
+We can also plot a function. Once again the dependent variable appears after the tilde.
+
+```{r, echo=TRUE}
+
+
+plotFun(x^2 ~ x)
+```
+
+
+We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the  `add=TRUE` parameter for `plotFun`. I will also use the optional `col` parameter to change the color of the function curve.
+
+
+```{r, echo=TRUE}
+
+plotPoints(Y ~ X)
+plotFun(x^2 ~ x, add=TRUE, col='red')
+```
+
+#### You Try
+
+* Create a sequence of integer points `P` from 1 to 10.
+* Define `Q = sin(P)`
+* Create a plot of `Q` versus `P` and then add the function plot of `sin(x)`
+* Try plotting some other data and fuunctions.
+
+## Troubleshooting
+
+Without fail, you will make mistakes. Things will break and you’ll get error messages. That’s ok! That’s how
+we learn.
+
+### You Try 
+
+Each of the following lines of code will break when run. Try them out, notice the error, and see if
+you can fix it.
+
+* `2 sin(pi/2)`
+* `sqrt(3*(7+5)`
+* `Sqrt(3*(7+5))`
+* `makeFun(x^2-4, x)`
+* `makeFun(x+1 ~ t)`
+* `makefun(2x+1 ~ x)`
+
+
+
+

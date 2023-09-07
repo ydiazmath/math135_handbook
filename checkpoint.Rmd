@@ -1,0 +1,45 @@
+---
+title: "Checkpoint"
+author: "Andrew Beveridge"
+date: "9/20/2021"
+output: html_document
+---
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+
+## Power Functions
+
+
+Biologists study the relative sizes of physiological features based on the total length $x$ of the animal. The general hypothesis is that the size $y$ of a feature is a power function $y = k x^p$ of the length for some appropriate choice of constants $k$ and $p$.
+
+A fish researcher has collected some data in the length $x$ of a fish and the area $y$ of its pectoral fin.
+
+
+|   |   |   |   |    |   |
+|---|---|---|---|---|---|
+length of fish (cm) | 33.8 | 23.1 | 13.4 | 11.3 | 4.85 | 3.92 |
+area of fin (cm) | 6.75 | 2.81 | 1.64 | 0.95 | 0.20 | 0.14 |
+
+
+The basic variable $x$ is the length of the fish. 
+
+The experimenter measured the surface area of the pectoral fin. The expected scaling constant for the area of the fin is 2.
+
+```{r}
+
+lengths = c(33.8, 23.1, 13.4, 11.3, 4.85, 3.92)
+areas = c(6.75, 2.81, 1.64, 0.95, 0.20, 0.14)
+
+log_lengths = log(lengths)
+log_areas = log(areas)
+
+plotPoints(log_areas ~ log_lengths)
+fitModel(log_areas~A * log_lengths + B)
+
+```
+
+

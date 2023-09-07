@@ -1,0 +1,242 @@
+# 2D Optimization
+
+## Summary
+
+The **critical points** of $f(x,y)$ are the points $(a,b)$ where both $f_x(a,b)=0$ and $f_y(a,b)=0$.
+
+
+There are three ways to determine whether a critical point $(a,b)$ is a minimum, a maximum, or a saddle point.
+  
+1. The second derivative test relies on the value
+$$
+D = f_{xx} f_{yy} - (f_{xy})^2.
+$$
+   * If $D > 0$ and $f_{xx} > 0$ then $(a,b)$ is a local minimum.
+   * If $D > 0$ and $f_{xx} < 0$ then $(a,b)$ is a local maximum
+   * If $D < 0$ then $(a,b)$ is a saddle point
+   * If $D=0$ then the test fails
+   
+2. Create a contour plot for $f(x,y)$ on a very small neighborhood of $(a,b)$. Use the contours to figure out whether it is a local max, a local min, or a saddle point.
+
+3. Find the values of $f(a,b) - f(x,y)$ for points $(x,y)$ in a small circle around $(a,b)$. 
+   * If these values are ALL positive then $(a,b)$ is a local maximum
+   * If these values are ALL negative then $(a,b)$ is a local minimum
+   * If some values are positive and some values are negative, then $(a,b)$ is a saddle point.
+
+Here is some R code that you can use to check values of $f(x,y)$ in a small circle around a point $(a,b)$.
+
+```{}
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+
+## Activities
+
+
+### Characterize the Extrema
+
+Multiple 2D functions have been (contour) plotted below. For each, identify the critical points and determine if they are maximums, minimums, or saddle points. 
+
+```{r fig.align="center"}
+f = makeFun(x^2+y^2+3~x&y)
+plotFun(f(x,y)~x&y, xlim=range(-2,2), ylim=range(-2,2), filled=FALSE)
+```
+
+```{r fig.align="center"}
+f = makeFun(-x*y*exp(-x^2-y^2)~x&y)
+plotFun(f(x,y)~x&y, xlim=range(-1.5,1.5), ylim=range(-1.5,1.5), filled=FALSE)
+```
+
+```{r fig.align="center"}
+f = makeFun(y^2-x^2~x&y)
+plotFun(f(x,y)~x&y, xlim=range(-2,2), ylim=range(-2,2), filled=FALSE)
+```
+
+```{r fig.align="center"}
+f = makeFun(cos(x)*(x^2-y^2)~x&y)
+plotFun(f(x,y)~x&y, xlim=range(-1.5,1.5), ylim=range(-1.5,1.5), filled=FALSE)
+```
+
+
+### Classifying a critical point using a small circle of values
+
+The function $f(x,y) =3x^2y + y^3 -3x^2-3y^2+3$ has four critical points:
+$$
+(0,0) \qquad (0,2) \qquad (1,1) \qquad (1,,-1).
+$$
+For each critical point $(a,b)$, evaluate $f(a,b) - f(x,y)$ in a small circle centered at $(a,b)$ to determine whether it is a local minimum, a local maximum, or a saddle point
+
+
+### The 2D Second Derivative Test
+
+The function $f(x,y)=10 + x^3 + 8y^3 - 3xy$ has two critical points: $(0,0)$ and $(1/2,1/4)$. 
+
+1. Use the second derivative test to classify each point as a local minimum, local maximum, or saddle point. For convenience, here are the second derivatives of $f(x,y)$.
+
+$$
+f_{xx} = 6x, \qquad f_{yy} = 48y, \qquad f_{xy} = -3.
+$$
+
+2. Confirm that your answer is correct by creating a contour plot on a very small neighborhood around each critical point.
+
+
+### Classify the Critical Points
+
+Find the critical points of $f(x,y)=9-2x+4y-x^2-4y^2$. Then use any method that you like to classify each one as a local minimum, a local maximum or a saddle point.
+
+### Optimizing Flight Control
+
+The range over which a flying drone can be guided is related to the atmospheric temperature and humidity. The range function is 
+$$
+R(t,h)=27800-5t^2-6ht-3h^2+400t+300h
+$$
+What are the optimal atmospheric conditions?
+
+
+## Solutions
+
+
+### Characterize the Extrema
+
+Plot 1
+* Local minimum at $(0,0)$
+
+Plot 2
+* Local minima at $(-0.75, -0.75)$ and $(0.75, 0.75)$
+* Local maxima at $(-0.75, 0.75)$ and $(0.75, -0.75)$
+* Saddle point at $(0,0)$
+
+Plot 3
+* Saddle point at $(0,0)$
+
+Plot 4
+* Local maxima at $(-1,0)$ and $(1,0)$
+* Saddle point at $(0,0)$
+
+
+
+### Classifying a critical point using a small circle of values
+
+Let's define our function and then check each of our critical points.
+
+```{r}
+f = makeFun(3*x^2*y + y^3 -3*x^2-3*y^2+3~x&y)
+```
+
+First, we check $(0,0)$ and find that it is a **local maximum**.
+
+```{r}
+a=0
+b=0
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
+```
+
+
+Next, we check $(0,2)$ and find that it is also a **local minimum**.
+
+```{r}
+a=0
+b=2
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+
+Next up is  $(1,1)$.It is a **saddle point**!
+
+```{r}
+a=1
+b=1
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+
+One more point to go: $(1,-1)$. This is also a **saddle point**.
+
+```{r}
+a=1
+b=-1
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+
+
+### The 2D Second Derivative Test
+
+The function $f(x,y)=10 + x^3 + 8y^3 - 3xy$ has two critical points: $(0,0)$ and $(1/2,1/4)$. 
+
+1. The critical points are $(0,0)$ and $(1/2,1/4)$. The second derivatives are
+$$
+f_{xx} = 6x, \qquad f_{yy} = 48y, \qquad f_{xy} = -3.
+$$
+so our second derivative test function is
+$$
+D(x,y) = (6x)(48y) - 9.
+$$
+We have $D(0,0) = -9$ so $(0,0)$ is a saddle point. We have $D(1/2,1/4)= 3 \cdot 12 - 99 = 36 - 9 > 0$. So we further check that $f_{xx}(1/2,1/4) = 3 > 0$ which means that $(1/2, 1/4) is a local minimum.
+
+2. Here is a plot that shows that $(0,0)$ is a saddle point.
+
+
+```{r fig.align="center"}
+f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
+plotFun(f(x,y)~x&y, xlim=range(-1,1), ylim=range(-1,1), filled=FALSE, levels=c(0,2.5,5,7.5,10,12.5,15))
+```
+
+Here is another plot that zooms in on $(1/2,1/4)$. It is clear that this is a local minimum.
+
+```{r fig.align="center"}
+f = makeFun(10 + x^3 + 8*y^3 - 3*x*y~x&y)
+plotFun(f(x,y)~x&y, xlim=range(0,1), ylim=range(0,1), filled=FALSE)
+```
+
+
+### Classify the Critical Points
+
+Let's find the critical points of $f(x,y)=9-2x+4y-x^2-4y^2$. We have
+$$
+f_x(x,y) = -2-2x, \qquad f_y(x,y) = 4 - 8y.
+$$
+
+The only critical point is $(-1, 1/2)$. Let's compare $f(-1,1/2)$ to the values of $f(x,y)$ on  a small circle around this point.
+
+
+```{r}
+f=makeFun(9 - 2*x + 4*y - x^2 - 4*y^2 ~ x&y)
+a=-1
+b=1/2
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta)) 
+```
+
+This is a local maximum!
+
+### Optimizing Flight Control
+
+Our function is $R(t,h)=27800-5t^2-6ht-3h^2+400t+300h$. Our partial derivatives are
+$$
+\begin{array}{rcl}
+f_t(t,h) &=& -10t - 6h + 400 \\
+f_h(t,h) &=& -6t-6h+300
+\end{array}
+$$
+Setting both to zero,
+$$
+\begin{array}{rcl}
+ -10t - 6h + 400 &=& 0\\
+ -6t-6h+300 &=& 0
+\end{array}
+$$
+we subtract the second from the first to find that
+$-4t+100 = 0$
+and so $t=25$. This means that $-250 - 6h +400 = 0$ which becomes $6h = 150$ and therefore $h = 25$. So the optimal conditions are $t=25$ and $h=25$.

@@ -1,0 +1,159 @@
+# (PART) Computational Derivatives {-}
+
+# The Derivative
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+## The Derivative
+
+The derivative is the **instantaneous rate of change**. 
+
+* The derivative of $f(x)$ is denoted by $f'(x)$ and by $\displaystyle{\frac{df}{dx}}$.
+* We approximate this the derivative $f'(x)$ at the point $x=a$ with the formula
+$$
+ f'(a)  \approx \frac{f(a+h) - f(a)}{h} 
+$$
+where $h$ is a **very, very small number**.
+* The **derivative** measures the **sensitivity** of outputs to a small change in input. 
+$$
+\text{the derivative} \, \approx \, \frac{\text{change in output}}{\text{change in input}} \, = \, \frac{\Delta y}{\Delta x}
+$$
+
+* The **derivative of a function** $f$ at a point $a$ is the slope of the tangent line at $x=a$.
+
+* **Economics.** Given a cost function $C(x)$, the **marginal cost** at $x=a$ is the cost of producing one additional unit of a good. The formula is for the marginal cost at $x=a$ is $C(a+1)-C(a)$.
+
+* **Physics.** Given a displacement function $s(t)$, the velocity is $v(t) = s'(t)$, and the acceleration is $a(t)=v'(t)$.
+
+<!-- 
+We have two notations for the derivative of $f(x)$ at $x=c$:
+$$
+f'(c) \qquad \mbox{and} \qquad \frac{df}{dx}(c)
+$$
+-->
+
+## Activities
+
+### Studying
+
+Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent. 
+
+1. Calculate the derivative, give the units, and give an interpretation of the number you get. 
+2. Is this rate of change constant? Explain.
+
+### Marginal Cost
+
+Economists use the term "marginal cost" for the derivative of the cost of production. Here is the definition: 
+
+\bigskip
+
+The **marginal cost** is the cost to produce 1 additional good. 
+
+\bigskip
+
+Suppose that it costs \$250,000 to produce 1000 iPhones. 
+
+1. If it costs \$250,440 to produce 1002 iPhones, what's the marginal cost of 1 iPhone?
+2. Using the marginal cost from part 1, estimate how much it will cost to produce 1030 iPhones.
+
+
+### Farmland in the United States
+
+The total acreage of farmland has been shrinking in the United States since 1980.
+
+
+Year | 1980 | 1985 | 1990 | 1995 | 2000 
+----------------------------|------|------|------|------|------
+Farmland (millions of acres) | 1039 | 1012 | 987  | 963  | 945 
+
+
+1. Let $F(t)$ denote the amount of farmland at a time $t$. Use the data to estimate $F'(1995)$, the derivative at $t=1995$.
+2. Did you use 1990 or 2000 as your estmation point? Did it matter? What does that mean? 
+3. You got a negative number for $F'(1995)$. Does that make sense with the situation? Why?
+4. Give an example of a year that, if you had the data for it, would better help us estimate $F'(1995)$.  Why? 
+
+
+### A Moving Particle
+
+A particle's position over time is given by the formula 
+$$
+s(t)=2+3\sin(4t)+1.2t^2
+$$
+
+1. Find the velocity at $t=1$ and $t=2$ numerically (using small subintervals). Remember that the velocity is the derivative of the position.
+2. Use desmos to graph the position curve $s(t)$ and the tangent lines at both  $t=1$ and $t=2$.
+
+
+## Solutions
+
+### Studying
+
+Suppose that spending 3 extra hours on studying increases our percent grade on an exam by 14 percent. 
+
+1. The derivative is $\frac{14}{3} = 4.67$ percent per hour. The interpretation: for every hour that you spend studying, your grade increases by $4.67\%$.
+2. This rate of change is not constant. After studying for a while, you reach "burn out", or perhaps you run out of new material to master. In addition, your grade tops out at 100\%, so we cannot increase forever.
+
+### Marginal Cost
+
+
+
+1. The marginal cost is
+$$ 
+\frac{250,440 - 250,000}{102-100}=\frac{440}{2} =220 \mbox{ dollars per phone}
+$$
+
+
+2. I estimate that the cost of making 1030 phones is
+$$
+250,000 + 200 \cdot 30 = 256,600.
+$$
+
+
+### Farmland in the United States
+
+
+
+
+1. When estimating the derivative, we need to "stay local" in order to get the most reliable estimate. There are three equally good choices here:
+$$
+\begin{array}{rcl}
+f'(1995) &\approx& \frac{f(2000)-f(1995)}{2000-1995}=\frac{945-963}{5} = - \frac{18}{5} = -3.6 \\
+f'(1995) &\approx& \frac{f(1995)-f(1990)}{1995-1990}=\frac{963-987}{5} = - \frac{24}{5} = -4.8 \\
+f'(1995) &\approx& \frac{f(2000)-f(1990)}{2000-1990}=\frac{945-987}{10} = - \frac{42}{10} = -4.2 \\
+\end{array}
+$$
+
+2. Any of the three estimates are good answers. Since we are estimating there isn't a "right answer." All three stay close to 1995, so each one is good. 
+3. We got a negative number because the acreage is decreasing. 
+4. If we had the data for 1994 or 1996, using these values would give us a better estimate. Using smaller and smaller intervals will give us a more accurate estimation. (But we cannot tell up front how "small" we need to be to get the accurracy we desire.)
+
+
+### A Moving Particle
+
+1. Using desmos, we know that
+$$
+s'(1) \approx \frac{s(1+h)-s(1)}{h} \approx -5.44
+$$
+when $0 < h < 0.00001$. Similarly, we have
+$$
+s'(1) \approx \frac{s(2+h)-s(2)}{h} \approx 5.03
+$$
+when $0 < h < 0.00001$.
+
+2. Here are the commands to plot the curve and the two tangent lines.
+
+$$
+\begin{array}{l}
+s\left(t\right)=2+3\sin(4t)+1.2t^{2} \\
+\\
+y = -5.44(t-1) + s(1) \\
+\\
+y = 5.03(t-2) + s(2) \\
+\end{array}
+$$
+
+

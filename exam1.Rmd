@@ -1,0 +1,265 @@
+---
+title: "Untitled"
+author: "Andrew Beveridge"
+date: "9/23/2021"
+output: html_document
+---
+
+
+
+```{r, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+
+The exam will have:
+
+
+1. Power Function Zipf law (fit power function, thinking about models and conclusions)
+
+2. Exp/Log Beer froth decay (exponential function from 2 points)? ACTUALLY GIVE A TABLE OF DATA INSTEAD
+
+3. Periodic Measels in the 1950s periodic
+
+
+4. Multivariable Drug Surge
+
+5. Dimensional Analysis Object in fluid dimensional analysis
+
+6. Fermi Problem
+
+7. Linear Function: locational rent = gross income - production costs - transport costs.
+
+8. Rate of change: MSP unemployment
+
+
+linear functions
+rate of change
+multivariable functions
+
+units
+dimension
+fermi
+
+Lava java sketch the contour (pick from choices), estimate rate of change
+or Kristin's Cobb-Douglas function about diminishing returns
+
+Coffee consumed by Macalester students in a semester?
+
+```{r}
+2000 * 1.5  * 4*30 * 16 / 128
+```
+
+
+Pouring a beer into a mug creates a froth of foam. The height h(t) of the froth experiences continuous exponential decay where $i$ is measured in seconds. Find the rate $r$ of exponential decay for a beer that starts with a froth of height 12.35 mm that decays to height 5.02 mm after 60 seconds. Your numeric answer must use 3 decimal places.
+
+
+```{r}
+log(5.02/12.35)/60
+exp(-0.0150)
+0.985^60 * 12.35
+```
+
+
+
+```{r}
+plotFun(35.74+0.6215*T-35.75*V^(0.16)+0.4275*T*V^(0.16)~T & V, T.lim=range(-30,30),
+V.lim=range(5,40),zlab="V",xlab="T",ylab="W")
+```
+```{r}
+tdata = seq(0.05,.5, .05)
+distdata = c(0.3, 1.25, 2.4, 4.6, 7.1, 10, 13.8, 18.1, 22.6, 28.0)
+plotPoints(distdata~tdata)
+logtdata = log(tdata)
+logdistdata = log(distdata)
+fitModel(logdistdata~A*logtdata+B)
+plotFun(exp(4.68) * x^1.97~x, add=TRUE, col='red')
+```
+```{r}
+plotFun(exp(4.68) * x^1.97~x,  col='red')
+```
+
+```{r}
+x = seq(1,14)
+pop=c(8.80, 3.90, 2.75, 2.31, 1.61, 1.60, 1.43, 1.39, 1.30, 1.01, 0.96, 0.95, 0.92, 0.91)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+plotFun(exp(2.007)*x^(-0.84)~x, add=TRUE, col='red')
+```
+
+###### Zipf Law
+
+It has been long observed that the populations of the largest cities seem to follow a power law
+$pop(r) = C r^p$ where $r$ is the rank of the city's population (1st, 2nd, 3rd, 4th largest, and so on). Find the values of C and p for US Metro Areas
+
+```{r}
+x = seq(1,14)
+pop=c(18.82, 12.46, 8.88, 6.49, 6.40, 6.17, 5.91, 5.73, 5.38, 4.58, 4.32, 3.53, 3.46, 3.31)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+exp(2.9139173)
+exp(2.91)
+plotPoints(pop~x)
+plotFun(exp(2.91)*x^(-0.62)~x, add=TRUE, col='red')
+```
+
+
+
+
+Find the values of C and p for World Metro Areas
+
+```{r}
+x = seq(1,14)
+pop=c(37.34, 31.18, 27.80, 22.24, 21.92, 21.74, 21.32, 20.90, 20.67, 19.11, 18.82, 16.50, 16.38, 15.42)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+exp(3.6339626)
+plotPoints(pop~x)
+plotFun(exp(3.62)*x^(-0.31)~x, add=TRUE, col='red')
+```
+How about European metro?
+```{r}
+x = seq(1,14)
+pop=c(11.02, 6.13, 6.03, 4.91, 4.59, 3.97, 3.57, 3.33, 3.19, 2.77, 2.66, 2.40, 2.09, 1.99)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+plotPoints(pop~x)
+exp(2.405931)
+exp(2.41)
+exp(2.406)
+plotFun(exp(2.41)*x^(-0.61)~x, add=TRUE, col='red')
+```
+
+
+
+How about African metro?
+```{r}
+x = seq(1,14)
+pop=c(20.90, 16.73, 14.37, 8.33, 7.77, 6.70, 6.58, 5.83, 5.78, 5.28, 5.20, 4.80, 4.62, 4.00)
+plotPoints(log(pop) ~ log(x))
+fitModel(log(pop)~A*log(x)+B)
+exp(3.1471)
+exp(3.15)
+plotPoints(pop~x)
+plotFun(exp(3.15)*x^(-0.65)~x, add=TRUE, col='red')
+```
+
+
+It has been long observed that the populations of the largest cities in a geographic region seem to follow a power law
+$pop(x) = C x^p$ where $x$ is the rank of the city's population (1st, 2nd, 3rd, 4th largest, and so on). 
+
+Here are the populations of the 14 largest metro areas in Africa, Europe and the United States.
+
+africaPop = c(20.90, 16.73, 14.37, 8.33, 7.77, 6.70, 6.58, 5.83, 5.78, 5.28, 5.20, 4.80, 4.62, 4.00)
+europePop = c(11.02, 6.13, 6.03, 4.91, 4.59, 3.97, 3.57, 3.33, 3.19, 2.77, 2.66, 2.40, 2.09, 1.99)
+usPop = c(18.82, 12.46, 8.88, 6.49, 6.40, 6.17, 5.91, 5.73, 5.38, 4.58, 4.32, 3.53, 3.46, 3.31)
+
+(a) Find the values of C and p for each of these three geographic regions. Enter them below
+
+(b) Let's call two values a and b "similar" if their ratio is close to one (0.9 < a/b < 1.1). Otherwise they are dissimilar. How would you describe the set of constants that you found?
+
+* The p's are similar and the C's are similar
+* The p's are similar and the C's are dissimilar
+* The p's are dissimilar and the C's are similar
+* The p's are dissimilar and the C's are dissimilar
+
+(c) Do your observations support the hypothesis that there is a "universal growth law" for metro areas? Why or why not?
+
+(c) Do your values for $C$ and/or $p$ support the hypothesis that there is one "universal growth law" 
+
+There are two possible
+
+There is a universal growth rate for metro areas that applies to all geographic regions
+Different geographic regions have very different growth rates. 
+
+Compare the three values for $$p$$ that you found. 
+
+Answer the following questions:
+* What is the meaning of the power $$p$$ in this situation?
+* Do your three values of $$p$$ results suggest that there is a "universal law" for the relative sizes of metro areas,  or that "local factors" play an important role? Explain.
+
+
+
+##### Dimensional Analysis
+
+
+A scientist wants to determine a formula for the resistive force $f$ experienced when an object moves through a fluid. Experiments suggest that this force depends upon
+* the velocity $v$ that the object is moving
+* the area $a$ of the cross-section of the object
+* The density $\mu$ of the liquid.
+
+This scientist has asked you to suggest a formula for $f(v,a,\mu)$. 
+
+(This scientist will then test your proposed formula against their experimental data for various objects and fluids.)
+
+###### Periodic
+
+Prior to the introduction of a vaccine in 1968, measles outbreaks in the United States had a periodic behavior. The graph below shows the weakly cases of measles reported between 1948 and 1968. 
+
+Let $M(t)$ be the number of weakly measels cases where $t$ is the number of **years** since January 1, 1950. Use this graph to model $M(t)$ using either a sine function or a cosine function. 
+
+
+
+###### Rate of Change
+
+Here is a link to the graph of the unemployment rate (%) in Minneapolis-St Paul Metro Area for January 1990 - August 2021.
+
+https://fred.stlouisfed.org/series/MINN427URN
+
+When you mouse over a particular point, it will give you the unemployment rate for the corresponding month.
+
+1. Calculate the average rate of change of the unemployment rate between January 1990 and August 2021. Measure time in years (not months).
+1. Calculate the average rate of change of the unemployment rate between November 2008 and November 2019. Once again, measure time in years (not months).
+1. Does this graph show any year-to-year seasonal patterns to unemployment? Explain.
+
+
+
+##### Linear Function
+
+An apple farmer will grow crops whenever they can sell those crops for a profit at the local market. They are considering buying an orchard located $d$ miles from the market.
+The market price for a bushel of apples is \$30. Meanwhile, it costs the farmer \$17 to produce those apples, and \$0.50 per mile to transport those apples to the market.
+
+Find the distance maximum distance $M$ that the farmer would agree to buy a farm. (In other words, if $d < M$ then the farmer would buy the orchard.)
+
+```{r}
+(30-17)/.5=26
+```
+
+
+
+
+##### Drug Surge
+
+Consider the concentration C(x,t) in micrograms per liter (mg/L), of a drug in the blood as a function of x, the amount, in mg, of the drug given and t, the time in hours since the injection. For 0 \leq x \leq 4 and t  \geq 0  , we have
+
+plotFun(22*t*exp(-(5-x)*t),x&t, x.lim=c(0,30),t.lim=c(0,30))
+
+```{r}
+h = makeFun(22*t*exp(-(5-x)*t)~x&t)
+h(0,0)
+plotFun(1000* t*exp(-(5-x/1000)*t)~x&t, x.lim=c(0,4000),t.lim=c(0,4), levels=seq(0,1500,50), filled=FALSE, xlab='dosage (micrograms)', ylab='time (hours)',title='Concentration (micrograms per liter)')
+```
+
+On this domain, for a fixed TIME this function is  INCREASING/DECREASING/ INCREASING THEN DECREASING? DECREASING THEN INCREASING
+
+On this domain, for a fixed DOSAGE this function is  INCREASING/DECREASING/ INCREASING THEN DECREASING? DECREASING THEN INCREASING
+
+The drug is effective at concentrations of 150 micrograms/liter. What is the minimum dose that we should give if we want the drug to be at an effective level at least 1 hour? 2500, 3000, 3500, 4000
+
+
+
+
+
+#### Exam 2
+
+
+```{r}
+h = makeFun(22*t*exp(-(5-x)*t)~x&t)
+h(0,0)
+plotFun(1000* t*exp(-(5-x/1000)*t)~x&t, x.lim=c(0,4000),t.lim=c(0,4), levels=seq(0,1500,50), filled=FALSE, xlab='dosage (micrograms)', ylab='time (hours)',title='Concentration (micrograms per liter)')
+```
+
+

@@ -1,0 +1,108 @@
+
+# (PART) Units, Dimension, Estimation {-}
+
+# Units, Dimension, Estimation Review
+
+## Review Problems
+
+### Units
+
+  1. Convert a density of 3 g/mL into pounds/in$^3$.
+
+  1. A car is going 35 miles per hour. How many feet per second is it traveling? How many centimeters per second is it traveling?
+
+<!--  1. A sample of calcium nitrate Ca(NO$_2$)$_3$ contains $4 \times 10^{24}$ oxygen atoms. How many kilograms of Calcium Nitrate are present? It will be helpful to know that 1 mole = $6.02 \times 10^{23}$ molecules, and that 1 mole of calcium nitrate weighs 164 grams. Finally, one molecule of calcium nitrate contains 6 oxygen molecules. -->
+
+### Dimensional Analysis
+
+  1. A mixer with power $P$ turns a mixer with wings of length $D$ through a liquid of viscosity $H$. Find a formula for the angular velocity $A = A(P,D,H)$. Note that since angles are dimensionless, we have $[A] = 1/T$. The dimensions of viscosity are $[H] = M/(LT)$.
+
+  1. The velocity $V$ of a large ocean wave depends upon the period $P$, the acceleration of gravity $g$, and the density $\mu$ of the water. Find a formula for the velocity $V=V(P,g,\mu)$.
+
+### Fermi Estimation
+  1. How many babies are born each day? It will be helpful to know that there are 7.8 billion people on the planet and that the average life expectancy is 73 years.
+
+  1. If all the humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Hint: start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
+
+  1. If you combined all the liquid you’ve consumed over your lifetime, how many Olympic swimming pools would it fill?
+  
+##  Solutions
+
+### Units
+
+  1. We have
+$$
+\frac{3 \mbox{ g}}{1 \mbox{ mL}} \cdot \frac{1 \mbox{ mL}}{1 \mbox{ in$^{3}$}} \cdot \frac{(2.54)^3 \mbox{ cm$^3$}}{1 \mbox{ cm$^3$}} \cdot \frac{1 \mbox{ pound}}{453.6 \mbox{ g}} = 0.108 \frac{\mbox{ pounds}}{\mbox{ in$^3$}}
+$$
+
+  1. First we convert from 35 miles per hour to feet per second
+$$\frac{35 \mbox{ miles}}{1 \mbox{ hour}} \cdot \frac{5280 \mbox{ feet}}{1 \mbox{ miles}} \cdot\frac{1 \mbox{ hour}}{60 \mbox{ minutes}}\cdot \frac{1 \mbox{ minute}}{60 \mbox{ seconds}} = 51.33 \frac{\mbox{feet}}{\mbox{sec}}$$
+  Now let's convert to centimeters per second
+$$
+\frac{51.33 \mbox{ feet}}{1 \mbox{ sec}} \cdot \frac{12 \mbox{ inches}}{1 \mbox{ feet}} \cdot \frac{2.54 \mbox{ cm}}{1 \mbox{ inch}} = 1564.64 \frac{\mbox{cm}}{\mbox{sec}}
+$$
+
+
+<!--
+  2. 
+  
+  We have
+$$\frac{164 \mbox{ grams}}{1 \mbox{ mole}}  \frac{1 \mbox{ mole}}{6.02 \times 10^{23} \mbox{ molecules of Ca(NO$_2$)$_3$}}  \frac{1 \mbox{ molecule  of Ca(NO$_2$)$_3$}}{6 \mbox{ atoms of oxygen}}  \frac{4 \times 10^{24} \mbox{ atoms  of oxygen}}{1 \mbox{ sample}}$$
+-->
+
+### Dimensional Analysis
+
+  1. We have
+$$
+\begin{array}{rcl}
+A &=& k P^a D^b H^c \\
+[A] &=&  [P]^a [D]^b [H]^c \\
+T^{-1} &=& \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
+M^0L^0T^{-1} &=& M^{a+c} L^{2a+b-c} T^{-3a-c}
+\end{array}
+$$
+and so  we have
+$$
+0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
+$$
+which means that $a=1/2$ and $c=-1/2$ and $b=-3/4$. So our final equation is
+$$
+A = k \sqrt{\frac{P}{D^3H}}
+$$
+
+  1. We have
+$$
+\begin{array}{rcl}
+V &=& k P^a g^b \mu^c \\
+[V] &=& [P]^a [g]^b [\mu]^c \\
+LT^{-1} &=& (T)^a (LT^{-2})^b (ML^{-3})^c \\
+ L^1 T^{-1} M^0 &=& L^{b-3c} T^{a-2b} M^{c}
+\end{array}
+$$
+so we have the equations
+$$
+1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
+$$
+which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
+$$
+V = k Pg
+$$
+
+
+### Fermi Estimation
+  1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
+$$
+7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}} 
+$$
+  
+ 
+
+  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need $7.8 \times 10^8$ square meters to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2$, which gives $780$ square kilometers. This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. In fact, $30 km \times 30 km$  is similar to the size of the  "metro area"  of a big city.
+  
+
+
+  1. How much do you drink each day? It's probably between 1 liter and 3 liters. So let's assume that it's 3 liters per day. You've been alive for about 20 years. So the amount of liquids that you've consumed is at most
+$$
+\frac{3 \mbox{ liters}}  {1 \mbox{ day}} \times \frac{365 \mbox{ days}}{1 \mbox{ year}} \times (20 \mbox{ years}) = 21,900 \mbox{ liters}.
+$$
+Now we need to approximate the volume of a swimming pool. I know that Olympic  swimming pools are $50$ meters long. The width smaller: let's guess  $30$ meters, and the depth is about 3 meters (not 1 meter). So the volume of a pool is $50m \times 30m \times 3m = 4500 m^3$. There are 1000 liters in a  cubic meter, so you've consumed about 22 cubic meters of liquids in your life. That's much smaller than one swimming pool. It would only have a depth of $22/(50*30)=0.015$  meters, which is 1.5 cm. That's enough water to get your feet wet.

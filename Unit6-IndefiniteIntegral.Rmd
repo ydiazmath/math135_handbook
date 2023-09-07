@@ -1,0 +1,227 @@
+# The Indefinite Integral
+
+
+
+
+
+
+
+
+## Activities
+
+### Indefinite Integral Practice
+
+Find the indefinite integral.
+
+1. $\displaystyle{\int 3x^4\,dx}$
+2. $\displaystyle{\int r^5-\frac{7}{r^3}+r^{3/4}\,dr}$
+3. $\displaystyle{\int 8t^2-t^{13}\,dt}$
+4. $\displaystyle{\int 5e^{4x}\,dx}$
+5. $\displaystyle{\int(x+2)^2\,dx}$
+6. $\displaystyle{\int 4\sqrt{x}-9x+e\,dx}$
+7. $\displaystyle{\int 3^t-7t^4 +\frac{9}{t}\,dt}$
+8. $\displaystyle{\int \cos(x)+2e^x +7\,dx}$
+9. $\displaystyle{\int \sin(3x)-2\cos(x)dx}$
+10. $\displaystyle{\int 7e^{-0.02t}+\frac{4}{t}\,dt}$
+
+
+### Definite Integral Practice
+
+Evaluate the definite integral using antiderivates.
+
+1. $\displaystyle{\int_{-2}^5 x^2 \,dx}$
+2. $\displaystyle{\int_0^{\pi/4} \sin(x) + e^{x}\,dx}$
+3. $\displaystyle{\int_1^e 4t + \frac{1}{4t} \,dt}$
+
+
+
+### Area Between Curves
+
+Find the area enclosed by the curves $f(x)=5-x^2$ and $g(x)=x^2-3$ by following the steps below
+
+1. Find the points of intersection of $f(x)$ and $g(x)$.
+2. Which curve is above the other?
+3. Set up the definite integral.
+4. Evaluate (symbolically or with RStudio)
+
+### Average Value
+
+The average value of a function $f(x)$ on interval $[a,b]$ is given by
+$$ \frac{1}{b-a} \int_a^b f(x) \, dx.$$
+
+Find the average value of function    on the given interval.
+
+1. The average value of $\sin(x)$ on $[0, \pi]$.
+2. The average value of $e^{2x}$ on $[0,5]$.
+3. The average value of $x^2 + 3$ on $[4,6]$
+
+### Modeling Population Growth
+
+The second phase of bacteria growth is called the *log phase*. The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words
+
+$$
+\frac{dP}{dt} = 0.003 P
+$$
+
+This is equivalent to the integration formula
+$$
+\int \frac{1}{P} \, dP = \int 0.003 \, dt.
+$$
+
+1. Integrate both sides of this equation and find a general equation for $P$. 
+2.  Suppose there are 1000 bacteria initially. Find the specific equation for $P$. 
+
+
+### Zombie Apocalypse
+
+The **rate** $r(t)$ at which people become zombies during the inevitable zombie apocalypse can be approximated by 
+$$ r(t)=1000 e^{-0.5t}$$
+where $t$ is the number of days since the start of the outbreak.
+
+1. Write the number of infected people $I(T)$ as an indefinite integral.
+2.  How many total people get infected by time $T$ where $T$ is a very large number? 
+
+
+
+## Solutions
+
+### Indefinite Integral Practice
+
+Find the indefinite integral.
+
+1. $\frac{3}{5}x^5 + C$
+2. $\frac{1}{6}r^6 + \frac{7}{2}r^{-2} + \frac{4}{7}r^{7/4}+C$
+3. $\frac{8}{3}t^3 - \frac{1}{14}t^{14} + C$
+4. $\frac{5}{4} e^{4x}+C$
+5. $\frac{1}{3}x^3 +2x^2 + 4x + C$
+6. $\frac{8}{3} x^{3/2} - \frac{9}{2}x^2 + ex + C$
+7. $\frac{1}{\ln 3}3^t - \frac{7}{5}t^5 + 9 \ln t + C$
+8. $\sin(x) + 2e^{x} + 7x + C$
+9. $-\frac{1}{3} \cos(3x) - 2\sin(x) + C$
+10. $-350 e^{-0.02t} + 4\ln t + C$
+
+### Definite Integral Practice
+
+We solve each of these using the Fundamental Theorem of Calculus. If $F'(x)=f(x)$ then
+$$
+\int_a^b f(x) dx = F(b) - F(a).
+$$
+
+1. We have
+\begin{align}
+\int_{-2}^5 x^2 \,dx &=& \left. \frac{1}{3}x^3  \right|_{-2}^5 = \frac{125}{3} + \frac{8}{3} = \frac{133}{3}. 
+\end{align}
+
+
+
+2. We have
+\begin{align}
+\int_0^{\pi/4} \sin(x) + e^{x}\,dx &= \left. -\cos(x) + e^x \right|_0^{\pi/4} = -\cos(\pi/4) + e^{\pi/4} - (-\cos(0) + e^0)  \\
+&= -\frac{\sqrt{2}}{2} + e^{\pi/4} - (-1+1) = -\frac{\sqrt{2}}{2} + e^{\pi/4}.
+\end{align}
+
+
+3. We have
+\begin{align}
+\int_1^e 4t + \frac{1}{4t} \,dt &=& \left. 2t^2 + \frac{1}{4} \ln(t) \right|_1^e = 2e^2 + \frac{1}{4} \ln(e^2) - \left( 2e^0 + \frac{1}{4} \ln(1) \right) \\
+&=& 2e^2 + \frac{1}{2} - 2 - 0 = 2e^2 + \frac{3}{2}
+\end{align}
+
+### Area Between Curves
+
+Find the area enclosed by the curves $f(x)=5-x^2$ and $g(x)=x^2-3$ by following the steps below
+
+1. Setting $f(x)=g(x)$ gives $5-x^2=x^2-3$ which means that $x^2=4$. So the curves  intersect at $x=\pm 2$.
+2. On the interval $[-2, 2]$, function $f(x)$ is above function $g(x)$.
+3. The area between these curves is
+$$
+\int_{-2}^{2} ( f(x) -g(x)) dx
+=
+\int_{-2}^{2} ( 8 -2x^2) dx
+$$
+4. Let's use RStudio. It's easier!
+
+```{r}
+f=makeFun(8 - 2*x^2 ~ x)
+a = -2 
+b = 2 
+num = 100000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+
+### Average Value
+
+1. The average value of $\sin(x)$ on $[0, \pi]$ is
+$$
+\frac{1}{\pi} \int_0^{\pi} \sin(x) dx =
+\left. - \frac{1}{\pi}  \cos(x) \right|_{0}^{\pi}
+= - \frac{1}{\pi} (\cos(\pi) - \cos(0))
+= \frac{2}{\pi}
+$$
+2. The average value of $e^{2x}$ on $[0,5]$ is
+$$
+\frac{1}{5} \int_0^{5} e^{2x} dx =
+\left.  \frac{1}{5} \cdot \frac{1}{2} e^{2x} \right|_{0}^{5}
+= \frac{1}{10} (e^{10} - 1)
+$$
+3. The average value of $x^2 + 3$ on $[4,6]$ is
+
+$$
+\frac{1}{6-4} \int_4^{6} (x^2 + 3) dx = \left.  \frac{1}{2} \left( \frac{1}{3} x^3 + 3x \right) \right|_{4}^{6} = \frac{1}{2} \left(\frac{6^3}{3} + 18 -  \frac{4^3}{3} - 12 \right)= 28.33
+$$
+
+### Modeling Population Growth
+
+The second phase of bacteria growth is called the \emph{log phase}. The rate of population growth is proportional to the number of bacteria at that time with proportionality constant 0.003. In other words
+
+$$
+\frac{dP}{dt} = 0.003 P
+$$
+
+This is equivalent to the integration formula
+$$
+\int \frac{1}{P} \, dP = \int 0.003 \, dt.
+$$
+
+1. Integrate both sides of this equation and find a general equation for $P$. 
+
+$$
+\begin{array}{rcl}
+\int \frac{1}{P} \, dP &=& \int 0.003 \, dt \\
+\ln(P) &=& 0.003t + C \\
+P &=& K e^{0.003t}
+\end{array}
+$$
+
+where $K = e^C$.
+
+2.  We know that $P(t) = K e^{0.003t}$ and that $P(0)=1000$. This means that $K=1000$. So our function is
+$$
+P(t) = 1000 e^{0.003t}.
+$$
+
+
+### Zombie Apocalypse
+
+The **rate** $r(t)$ at which people become zombies during the inevitable zombie apocalypse can be approximated by 
+$$ r(t)=1000 e^{-0.5t}$$
+where $T$ is the number of days since the start of the outbreak.
+
+1. The number of infected people is
+$$I(T) = \int_0^T r(t) \, dt = \int_0^T 1000 e^{-0.5t} \, dt$$
+
+2.  We have
+$$
+\int_0^T 1000 e^{-0.5t} \, dt = \left. \frac{1000}{-0.5} e^{-0.5t} \right|_0^T = - \frac{1000}{0.5} e^{-0.5 T} + \frac{1000}{0.5} e^{0} = 2000 \left( 1 - \frac{1}{e^{0.5 T}}\right).
+$$
+For very large $T$ the second term is basically 0. So we have 2000 zombies by the end of the outbreak. Gosh, that's not too bad! 
+
+
+
+

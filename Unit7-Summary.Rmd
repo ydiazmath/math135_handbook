@@ -1,0 +1,49 @@
+# Unit 7 Summary
+
+
+## Differential Equations
+
+I can ...
+
+* Recognize a differential equation.
+* Test whether a given function is a solution to a  given differential equation.
+* Solve a simple differential equation of the form $\frac{dy}{dx} = f(x)$ using antiderivatives.
+* Explain why a differential equation has an infinite family of solutions.
+* Use an initial condition to turn a general solution into the unique solution to the differential equation.
+* Create a differential equation to model a written description of the rate of change.
+
+##  Population Models
+
+I can ...
+
+* Solve the differential equation $\frac{dP}{dt} = rP$ using $P(t)=Ce^{rt}$.
+* Solve the differential equation $\frac{dP}{dt} = r(P-A)$ using $P(t)=A+Ce^{rt}$.
+* Solve the differential equation $\frac{dP}{dt} = rP\left( 1- \frac{P}{K}\right)$ using  the logistic function $P(t)=\frac{K}{1+Ce^{-rt}}$.
+* Find the constant $C$  in each of the above functions using an initial condition.
+* Solve a problem using Newton's Law of Heating and Cooling.
+
+## Euler's Method
+
+I can ...
+
+* Explain what Euler's Method is, and why we must use numerical approximation to  solve many differential equations.
+* Manually perform a few steps of Euler's Method.
+* Use RStudio to find an Euler's Method solution to a differential equation with initial conditions.
+
+## Slope Fields
+
+* Explain what a slope field is.
+* Draw trajectories on a slope field and describe the dynamics of those solution curves.
+* Use a slope field to determine the long-term behavior of a solution curve.
+* Match a slope field to its differential equation.
+
+## SIR Model
+
+* Describe the Susceptible-Infected-Removed model for the spread of disease.
+* Explain the various terms in the differential equations of the SIR model.
+* Define the infection rate $a$ and the removal rate $b$.
+* Create an SIR slope field using RStudio, and interpret what I see.
+* Create an SIR trajectory plot using RStudio, and interpret what I see.
+* Explain what the epidemic phase of a disease outbreak is
+* Identify the threshold population by looking  at an SIR slope field, looking  at an SIR trajectory, or calculating $b/a$ in the SIR differential equations
+* Describe the effect of various actions to mitigate the spread of disease, and how that changes the SIR Model.

@@ -1,0 +1,28 @@
+# Unit 2 Summary
+
+
+## Dimensions and Units
+
+I can ...
+
+* Explain the difference between dimensions and units
+* Identify the seven fundamental dimensions
+* Look up the dimensions for various physical quantities such as velocity, acceleration and force.
+* Find the dimension for a given formula
+* Perform a unit conversion
+
+## Dimensional Analysis
+
+I can ...
+
+* Determine whether an equation is dimensionally feasible (consistent) or dimensionally infeasible (inconsistent)
+* Perform a dimensional analysis to guess the formula for a physical system, given the inputs and the output.
+
+## Fermi Estimation
+
+I can ...
+
+* Find the order of magnitude of a number
+* Estimate the order of magnitude of a simple quantity 
+* Explain why 300 is a good choice to estimate a magnitude that is definitely bigger than 100 but less than 1000 
+* Make a Fermi Estimation of a complicated quantity by making a sequence of simpler estimations.

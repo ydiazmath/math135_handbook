@@ -1,0 +1,36 @@
+# Unit 4 Summary
+
+
+## Symbolic Derivatives
+
+I can ...
+
+* Find the derivative of $x^n$, $\sin(x)$, $\cos(x)$, $e^x$, $a^x$, $\ln(x)$, and $\log_a(x)$. 
+* Find the derivative ... 
+  * of the sum of two functions
+  * using the product rule
+  * using the quotient rule
+  * using the chain rule
+* Explain why the derivative is not defined for a cusp point.
+* Solve a "word problem" about rates of change by using derivatives.
+
+## Partial Derivatives
+
+I can ...
+
+* Interpret the partial derivatives $\frac{\partial f}{\partial x}$ and $\frac{\partial f}{\partial y}$ as rates of change.
+* Find the partial derivatives of a function $f(x,y)$ by holding one variable fixed and then applying the rules of differentiation.
+* Find the second partial derivatives $f_{xx}, f_{xy}, f_{yx}, f_{yy}$.
+* Solve a "word problem" about rates of change of a multivariable function using partial derivatives.
+
+## The Gradient
+
+I can ...
+
+* Explain what a vector $\langle a, b \rangle$  is, draw it as an arrrow, and find its magnitude $\| \langle a, b \rangle \| = \sqrt{a^2+b^2}.$
+* Find the gradient vector $\nabla f(x,y) = \langle f_x, f_y \rangle$
+* Evaluate the gradient vector at a point $(a,b)$
+* Use the gradient to find the direction of greatest increase, and the magnitude of the gradient to find the rate of change (slope) in that direction
+* Draw a vector in the direction of greatest increase on a contour diagram.
+
+

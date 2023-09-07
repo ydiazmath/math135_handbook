@@ -1,0 +1,137 @@
+# (PART) Units and Estimation {-}
+
+# Dimensions and Units
+
+
+There are 7 **fundamental dimensions**. 
+
+| Dimension | Symbol |  Sample Units  |
+|----------|-------|--------------|
+Length           | $L$                             | meter (m), foot (ft), mile (mi)     |
+Time             | $T$                                                    | second (s), day, hour (hr)           |
+Mass             | $M$                                               | gram (g), kilogram (kg)              |
+Amount           | $N$                                                     | mole (mol)                            |
+Temperature      | $\theta$                                               | Kelvin (K), Celsius ($^\circ \mbox{C}$)       |
+Electric Current | $I$                                                    | Ampere (amp)                          |
+Luminosity       | $J$                                                  | Candela (cd)                            |
+
+Table: Fundamental Dimensions
+
+
+Everything else is a **derived dimension**. Here are some examples.
+
+| Dimension | Symbol  | Intuition  | Sample Units  |
+|-----------|---------|------------|---------------|
+Area             | L$^2$              | length $\times$ width                 | square foot (ft$^2$), square meter (m$^2$), acre    |
+Volume           | $L^3$              | length $\times$ width $\times$ height | cubic meter (m$^3$), liter(L), gallon (gal)              |
+Velocity         | $\frac{L}{T}$      | distance/time                         | meter/second, miles/hour                 |
+Acceleration     | $\frac{L}{T^2}$    | velocity/time                         | meters/second$^2$                        |
+Force            | $\frac{ML}{T^2}$   | mass $\times$ acceleration            | Newton (N), pound (lb)                            |
+Energy (Work)    | $\frac{ML^2}{T^2}$ | force $\times$ displacement           | Joule (J), calorie, kilowatt hour (kwh), foot-pound|
+Power            | $\frac{ML^2}{T^3}$ | energy/time                           | Watt (W), horsepower                         |
+Density          | $\frac{M}{L^3}$    | mass/volume                     | kilogram/meter$^3$                       |
+Pressure         | $\frac{M}{LT^2}$   | force/area                            | newton/meter$^2$, pascal (Pa), psi, atm       |  
+Electric Charge | $I T$ | current $\times$ time | coulomb
+
+Table: Derived Dimensions
+
+
+
+## Activities
+
+### Find the Dimension
+
+Find the dimension of the following quantities.
+
+1. Momentum is the product of mass and velocity.
+1. Jerk is the rate at which acceleration changes with respect to time.
+1. Voltage is the work needed per unit charge to move a test charge between two points.
+
+
+
+### Dimensionally Feasible
+
+A formula is **dimensionally feasible** when the units for the two sides match.
+Decide whether each of the following formulas is dimensionally feasible or infeasible.
+
+1. $s = vt + \frac{1}{2}at^2$ where $s$ is displacement, $v$ is velocity and $a$ is acceleration.
+1. $P = E/A$ where $P$ is pressure, $E$ is energy and $A$ is area.
+
+
+### Geometric Formulas for a Cylinder
+
+A student is trying to remember the formulas for the surface area $A$ and the volume $V$ of a cylinder of radius $r$ and height $h$. They come across the following two formulas:
+$$ \pi r^2 h$$
+and
+$$ 2\pi r (r+h).$$
+What are the dimensions for each of these formulas? Why does this tell you which one is $A$ and which one is $V$?
+
+### Unit Conversions
+
+Solve the following problems by multiplying by the appropriate unit conversions.
+This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_chart.pdf)  will be helpful, or you can use Google to find a particular conversion, for example just search for "km to miles".
+<!-- This [online unit converter](https://www.unitconverters.net/) or [Google's unit converter](https://www.google.com/search?q=unit+conversion) will help you to solve these problems -->
+
+1. Convert a density of 3 g/mL into pounds/in$^3$.
+
+1. A car is going 35 miles per hour. How many feet per second is it traveling? 
+
+1. Sunlight deposits energy at a rate of 250 W/m$^2$ on a 10 m$^2$ garden. How much energy (in Joules) is deposited in a week? Note that 1 Watt is 1 Joule per second) 
+
+
+## Solutions
+
+### Find the Dimension
+
+
+
+1. $M L T^{-1}$
+1. $L T^{-3}$
+1. $ML^2T^{-2} / IT = ML^2 T^{-3}I^{-1}$
+
+
+
+### Dimensionally Feasible
+
+
+
+1. $[s]=L$ and $\left[vt + \frac{1}{2}at^2\right] = [vt] + [at^2] = L + LT^{-2}T^2 = L + L = L$. So this formula is dimensionally feasible. 
+1. $[P] = ML^{-1}T^{-2}$ and $[E/A] = ML^2T^{-2}L^{-2} = MT^{-2}$. This formula is **not** dimensionally feasible. 
+
+
+### Geometric Formulas for a Cylinder
+
+We know that $[V]=L^3$ and $[A]=L^2$.
+
+We have $[\pi r^2h] = L^3$ and $[2\pi r (r+h)] = L (L+L) = L^2$. So dimensional analysis tells us that $V=\pi r^2h$ and $A=2\pi r (r+h)$.
+
+### Unit Conversions
+
+Solve the following problems by multiplying by the appropriate unit conversions.
+This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_chart.pdf)  will be helpful, or you can use Google to find a particular conversion, for example just search for "km to miles".
+
+1. The density is
+
+$$ 
+\left( 3 \, \frac{g}{mL} \right) \left( \frac{1}{1000} \, \frac{kg}{g} \right)\left( \frac{1}{0.45} \, \frac{pound}{kg} \right)\left( \frac{16.39}{1} \,\frac{mL}{in^3} \right)
+= 0.11
+\frac{pound}{in^3}
+$$
+
+2. The car is traveling at 
+
+$$ 
+\left( 35  \, \frac{mi}{hr} \right) \left( \frac{5280}{1} \, \frac{ft}{mi} \right)\left( \frac{1}{3600} \, \frac{hr}{sec} \right)
+= 51.33
+\frac{ft}{sec}
+$$
+
+
+3. The energy is
+
+
+$$ 
+\left( 250   \frac{W}{m^2} \right) \left( 10 \, m^2 \right) \left( 7 \, days \right)  \left( \frac{1}{1} \, \frac{J/sec}{W} \right)  \left( \frac{24}{1} \, \frac{hr}{day} \right)  
+\left( \frac{3600}{1} \frac{sec}{hr} \right)
+= 1.512 \times 10^9 \, J
+$$

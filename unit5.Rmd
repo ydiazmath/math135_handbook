@@ -1,0 +1,91 @@
+---
+title: "Untitled"
+author: "Andrew Beveridge"
+date: "11/18/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
+
+
+
+```{r}
+partialx=makeFun(1-x^4-3*x+y^2~x&y)
+partialy=makeFun(1-x*y-y^2~x&y)
+partialx(1,1)
+partialy(1,1)
+```
+
+```{r}
+f=makeFun(exp(t)*sin(t)/(1+t^2)~t)
+y=c(1,0.5,0.25,0.125,0.0625,0.03125,0.015625,0.0078125,0.0001,0.00001,0.00000000001)
+d=(f(1+y)-f(1))/y
+d
+```
+
+
+
+```{r}
+F=makeFun ((exp(x)*sin(x))/(1+x^2)~x)
+alpha=c (1, 0.9, 0.9, 0.7, 0.6, 0.5, 0.4)
+d2= (F(1+alpha)-f(1))/alpha
+d2
+```
+
+
+
+
+
+```{r}
+f=makeFun(x^(2/3)*y^(1/3)~x&y)
+g=makeFun(100*x+100*y~x&y)
+plotFun(f(x,y)~x&y,filled=FALSE,xlim=range(0,3500),ylim=range(0,3500))
+plotFun(g(x,y)~x&y,filled=FALSE,add=TRUE,levels=378000)
+```
+
+
+```{r}
+f=makeFun(x^(2/3)*y^(1/3)~x&y)
+g=makeFun(100*x+100*y~x&y)
+plotFun(f(x,y)~x&y,filled=FALSE,xlim=range(0,3500),ylim=range(0,3500), levels=seq(1000,3000,250))
+plotFun(g(x,y)~x&y,filled=FALSE,add=TRUE,levels=c(378000, 425000), col = hcl.colors(10, "YlOrRd"))
+```
+
+
+
+```{r}
+f=makeFun(2*x^2+x*y+y^2+500~x&y)
+g=makeFun(x+y~x&y)
+plotFun(f(x,y)~x&y,filled=FALSE,xlim=range(0,200),ylim=range(0,200), levels=seq(25000, 75000,10000))
+plotFun(g(x,y)~x&y,filled=FALSE,add=TRUE,levels=200)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

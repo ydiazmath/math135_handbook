@@ -1,0 +1,261 @@
+\contentsline {chapter}{Preface}{5}{chapter*.2}
+\contentsline {chapter}{\numberline {1}R Studio Primer}{7}{chapter.1}
+\contentsline {section}{\numberline {1.1}Getting Oriented}{7}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1}First login}{7}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}The RStudio window}{8}{subsection.1.1.2}
+\contentsline {subsubsection}{\numberline {1.1.2.1}Panels}{8}{subsubsection.1.1.2.1}
+\contentsline {subsubsection}{\numberline {1.1.2.2}Specific functions}{9}{subsubsection.1.1.2.2}
+\contentsline {subsubsection}{\numberline {1.1.2.3}Command Line Console}{9}{subsubsection.1.1.2.3}
+\contentsline {subsection}{\numberline {1.1.3}Packages}{9}{subsection.1.1.3}
+\contentsline {section}{\numberline {1.2}RMarkdown}{10}{section.1.2}
+\contentsline {chapter}{\numberline {2}RStudio Quick Referrence}{11}{chapter.2}
+\contentsline {section}{\numberline {2.1}Common Functions}{11}{section.2.1}
+\contentsline {section}{\numberline {2.2}Defining your own function}{12}{section.2.2}
+\contentsline {section}{\numberline {2.3}Creating Lists of Data}{12}{section.2.3}
+\contentsline {section}{\numberline {2.4}Plotting Data}{13}{section.2.4}
+\contentsline {section}{\numberline {2.5}Plotting Functions}{14}{section.2.5}
+\contentsline {section}{\numberline {2.6}Plotting Data and Functions}{19}{section.2.6}
+\contentsline {section}{\numberline {2.7}Fitting a Function to Data}{20}{section.2.7}
+\contentsline {subsection}{\numberline {2.7.1}Fitting a Power Function to Data}{22}{subsection.2.7.1}
+\contentsline {subsection}{\numberline {2.7.2}Fitting a Model by Specifying Starting Values}{24}{subsection.2.7.2}
+\contentsline {section}{\numberline {2.8}Plotting Surfaces in 3D}{27}{section.2.8}
+\contentsline {section}{\numberline {2.9}Estimating the Derivative}{30}{section.2.9}
+\contentsline {section}{\numberline {2.10}Gradient Search}{31}{section.2.10}
+\contentsline {section}{\numberline {2.11}Constrained Optimization}{32}{section.2.11}
+\contentsline {section}{\numberline {2.12}Estimating the Definite Integral}{36}{section.2.12}
+\contentsline {section}{\numberline {2.13}Troubleshooting}{36}{section.2.13}
+\contentsline {chapter}{\numberline {3}Intro to RStudio}{39}{chapter.3}
+\contentsline {section}{\numberline {3.1}Getting Started}{39}{section.3.1}
+\contentsline {section}{\numberline {3.2}R Markdown files}{40}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Formatting Regular Text}{40}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Code Chunks}{41}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Writing Code}{41}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Basic Calculations}{41}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}You Try}{41}{subsubsection.3.3.1.1}
+\contentsline {subsection}{\numberline {3.3.2}Variables, Lists and Sequences}{42}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}You Try}{42}{subsubsection.3.3.2.1}
+\contentsline {subsection}{\numberline {3.3.3}Functions}{43}{subsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.3.1}You Try}{43}{subsubsection.3.3.3.1}
+\contentsline {subsection}{\numberline {3.3.4}Plotting}{43}{subsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.4.1}You Try}{46}{subsubsection.3.3.4.1}
+\contentsline {section}{\numberline {3.4}Troubleshooting}{46}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}You Try}{46}{subsection.3.4.1}
+\contentsline {part}{I\hspace {1em}Functions}{47}{part.1}
+\contentsline {chapter}{\numberline {4}Functions}{49}{chapter.4}
+\contentsline {section}{\numberline {4.1}Steps of the Modeling Cycle}{49}{section.4.1}
+\contentsline {section}{\numberline {4.2}Goals}{49}{section.4.2}
+\contentsline {section}{\numberline {4.3}Activities}{50}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Life insurance}{50}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Bat species}{50}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Slope and concavity}{50}{subsection.4.3.3}
+\contentsline {subsection}{\numberline {4.3.4}Relative change of the Dow Jones average}{50}{subsection.4.3.4}
+\contentsline {subsection}{\numberline {4.3.5}Measuring rainfall}{50}{subsection.4.3.5}
+\contentsline {chapter}{\numberline {5}Linear Functions}{53}{chapter.5}
+\contentsline {section}{\numberline {5.1}Goals}{53}{section.5.1}
+\contentsline {section}{\numberline {5.2}Activities}{53}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Graph of a linear function}{53}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Height and weight of American men}{54}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Scooter rates}{54}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Oil reserves}{54}{subsection.5.2.4}
+\contentsline {chapter}{\numberline {6}Average Rate of Change}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}Goals}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}Activities}{57}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}AROC of a function}{57}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Measuring daily rainfall}{57}{subsection.6.2.2}
+\contentsline {subsection}{\numberline {6.2.3}Sketching a function}{58}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Slope and Concavity}{58}{subsection.6.2.4}
+\contentsline {subsection}{\numberline {6.2.5}Example Function}{58}{subsection.6.2.5}
+\contentsline {subsection}{\numberline {6.2.6}Vinyl LPs}{59}{subsection.6.2.6}
+\contentsline {subsection}{\numberline {6.2.7}Relative change of the Dow Jones average}{59}{subsection.6.2.7}
+\contentsline {chapter}{\numberline {7}Exponential and Logarithmic Functions}{61}{chapter.7}
+\contentsline {section}{\numberline {7.1}Goals}{61}{section.7.1}
+\contentsline {section}{\numberline {7.2}Activities}{61}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Growing population}{61}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Consumer price index}{61}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}Two data sets}{62}{subsection.7.2.3}
+\contentsline {subsection}{\numberline {7.2.4}Interest rate for an investment}{62}{subsection.7.2.4}
+\contentsline {subsection}{\numberline {7.2.5}Exponential decay}{62}{subsection.7.2.5}
+\contentsline {subsection}{\numberline {7.2.6}Doubling time}{62}{subsection.7.2.6}
+\contentsline {subsection}{\numberline {7.2.7}People and vehicles}{62}{subsection.7.2.7}
+\contentsline {chapter}{\numberline {8}Power Functions}{65}{chapter.8}
+\contentsline {section}{\numberline {8.1}Goals}{65}{section.8.1}
+\contentsline {section}{\numberline {8.2}Activities}{65}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Examples and non-examples}{65}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Descriptions of power functions}{66}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}Allometry of pectoral fins}{66}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}Specific heat}{66}{subsection.8.2.4}
+\contentsline {chapter}{\numberline {9}Periodic Functions}{67}{chapter.9}
+\contentsline {section}{\numberline {9.1}Goals}{67}{section.9.1}
+\contentsline {section}{\numberline {9.2}Activities}{67}{section.9.2}
+\contentsline {subsection}{\numberline {9.2.1}Periodic function examples}{67}{subsection.9.2.1}
+\contentsline {subsection}{\numberline {9.2.2}Find a periodic formula}{67}{subsection.9.2.2}
+\contentsline {subsection}{\numberline {9.2.3}Variable star}{68}{subsection.9.2.3}
+\contentsline {subsection}{\numberline {9.2.4}Tides and currents}{68}{subsection.9.2.4}
+\contentsline {subsection}{\numberline {9.2.5}Rainfall in Seattle}{69}{subsection.9.2.5}
+\contentsline {chapter}{\numberline {10}Multivariable Functions}{71}{chapter.10}
+\contentsline {section}{\numberline {10.1}Goals}{71}{section.10.1}
+\contentsline {section}{\numberline {10.2}Activities}{71}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Matching Contours}{71}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Plotting in RStudio}{72}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Cross Sections}{75}{subsection.10.2.3}
+\contentsline {subsection}{\numberline {10.2.4}Plotting in RStudio}{75}{subsection.10.2.4}
+\contentsline {subsection}{\numberline {10.2.5}Plotting in RStudio}{82}{subsection.10.2.5}
+\contentsline {part}{II\hspace {1em}Units and Estimation}{85}{part.2}
+\contentsline {chapter}{\numberline {11}Dimensions and Units}{87}{chapter.11}
+\contentsline {section}{\numberline {11.1}Activities}{88}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Find the Dimension}{88}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Dimensionally Feasible}{88}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}Geometric Formulas for a Cylinder}{88}{subsection.11.1.3}
+\contentsline {subsection}{\numberline {11.1.4}Unit Conversions}{89}{subsection.11.1.4}
+\contentsline {chapter}{\numberline {12}Dimensional Analysis}{91}{chapter.12}
+\contentsline {section}{\numberline {12.1}Performing a Dimensional Analysis}{91}{section.12.1}
+\contentsline {section}{\numberline {12.2}Activities}{91}{section.12.2}
+\contentsline {subsection}{\numberline {12.2.1}Vocal Chord Frequency}{91}{subsection.12.2.1}
+\contentsline {subsection}{\numberline {12.2.2}Mixer Power}{91}{subsection.12.2.2}
+\contentsline {subsection}{\numberline {12.2.3}Velocity of an Ocean Wave}{92}{subsection.12.2.3}
+\contentsline {chapter}{\numberline {13}Fermi Estimation}{93}{chapter.13}
+\contentsline {section}{\numberline {13.1}Working Fermi Problems}{93}{section.13.1}
+\contentsline {section}{\numberline {13.2}Some Useful Data}{94}{section.13.2}
+\contentsline {section}{\numberline {13.3}Activities}{94}{section.13.3}
+\contentsline {part}{III\hspace {1em}Computational Derivatives}{95}{part.3}
+\contentsline {chapter}{\numberline {14}The Derivative}{97}{chapter.14}
+\contentsline {section}{\numberline {14.1}The Derivative}{97}{section.14.1}
+\contentsline {section}{\numberline {14.2}Activities}{98}{section.14.2}
+\contentsline {subsection}{\numberline {14.2.1}Studying}{98}{subsection.14.2.1}
+\contentsline {subsection}{\numberline {14.2.2}Marginal Cost}{98}{subsection.14.2.2}
+\contentsline {subsection}{\numberline {14.2.3}Farmland in the United States}{98}{subsection.14.2.3}
+\contentsline {subsection}{\numberline {14.2.4}A Moving Particle}{99}{subsection.14.2.4}
+\contentsline {chapter}{\numberline {15}The Second Derivative}{101}{chapter.15}
+\contentsline {section}{\numberline {15.1}Activities}{101}{section.15.1}
+\contentsline {subsection}{\numberline {15.1.1}Estimating the first and second derivatives from a graph}{101}{subsection.15.1.1}
+\contentsline {subsection}{\numberline {15.1.2}Function Matching}{102}{subsection.15.1.2}
+\contentsline {subsection}{\numberline {15.1.3}A Plot of Velocity}{102}{subsection.15.1.3}
+\contentsline {subsection}{\numberline {15.1.4}Characterize the Derivatives}{103}{subsection.15.1.4}
+\contentsline {chapter}{\numberline {16}Partial Derivatives}{105}{chapter.16}
+\contentsline {section}{\numberline {16.1}Activities}{105}{section.16.1}
+\contentsline {subsection}{\numberline {16.1.1}Estimating From Data}{105}{subsection.16.1.1}
+\contentsline {subsection}{\numberline {16.1.2}Estimating From a Contour Plot}{106}{subsection.16.1.2}
+\contentsline {subsection}{\numberline {16.1.3}Estimating Using Desmos}{107}{subsection.16.1.3}
+\contentsline {chapter}{\numberline {17}Local Linear Approximation}{109}{chapter.17}
+\contentsline {section}{\numberline {17.1}Activities}{109}{section.17.1}
+\contentsline {subsection}{\numberline {17.1.1}Estimating Sugar Solution Temperature}{109}{subsection.17.1.1}
+\contentsline {subsection}{\numberline {17.1.2}Comparing Linearizations}{109}{subsection.17.1.2}
+\contentsline {subsection}{\numberline {17.1.3}Estimating a Function}{110}{subsection.17.1.3}
+\contentsline {subsection}{\numberline {17.1.4}Estimating the Windchill}{110}{subsection.17.1.4}
+\contentsline {chapter}{\numberline {18}Unit 3 Summary}{113}{chapter.18}
+\contentsline {section}{\numberline {18.1}The Derivative}{113}{section.18.1}
+\contentsline {section}{\numberline {18.2}The Second Derivative}{114}{section.18.2}
+\contentsline {section}{\numberline {18.3}Partial Derivatives}{114}{section.18.3}
+\contentsline {section}{\numberline {18.4}Local Linear Approximation}{114}{section.18.4}
+\contentsline {part}{IV\hspace {1em}Symbolic Derivatives}{115}{part.4}
+\contentsline {chapter}{\numberline {19}Rules of Differentiation}{117}{chapter.19}
+\contentsline {section}{\numberline {19.1}Derivatives of Familiar Functions}{117}{section.19.1}
+\contentsline {subsection}{\numberline {19.1.1}Constant Rule}{117}{subsection.19.1.1}
+\contentsline {subsection}{\numberline {19.1.2}Linear Function Rule}{117}{subsection.19.1.2}
+\contentsline {subsection}{\numberline {19.1.3}Power Rule}{117}{subsection.19.1.3}
+\contentsline {subsection}{\numberline {19.1.4}Trig Rules}{117}{subsection.19.1.4}
+\contentsline {subsection}{\numberline {19.1.5}Exponential Rules}{118}{subsection.19.1.5}
+\contentsline {subsection}{\numberline {19.1.6}Logarithmic Rules}{118}{subsection.19.1.6}
+\contentsline {section}{\numberline {19.2}Arithmetic Rules for Derivatives}{118}{section.19.2}
+\contentsline {subsection}{\numberline {19.2.1}Constant Multiple Rule}{118}{subsection.19.2.1}
+\contentsline {subsection}{\numberline {19.2.2}Sum and Difference Rules}{118}{subsection.19.2.2}
+\contentsline {section}{\numberline {19.3}Rules for Combinations of Functions}{118}{section.19.3}
+\contentsline {subsection}{\numberline {19.3.1}Product Rule}{118}{subsection.19.3.1}
+\contentsline {subsection}{\numberline {19.3.2}Quotient Rule}{119}{subsection.19.3.2}
+\contentsline {subsection}{\numberline {19.3.3}Chain Rule}{119}{subsection.19.3.3}
+\contentsline {chapter}{\numberline {20}Symbolic Differentiation}{121}{chapter.20}
+\contentsline {section}{\numberline {20.1}Activities}{121}{section.20.1}
+\contentsline {subsection}{\numberline {20.1.1}Basic Derivative Practice}{121}{subsection.20.1.1}
+\contentsline {subsection}{\numberline {20.1.2}More Basic Derivative Practice}{121}{subsection.20.1.2}
+\contentsline {subsection}{\numberline {20.1.3}Product Rule and Quotient Rule Practice}{122}{subsection.20.1.3}
+\contentsline {chapter}{\numberline {21}The Chain Rule}{123}{chapter.21}
+\contentsline {section}{\numberline {21.1}Activities}{123}{section.21.1}
+\contentsline {subsection}{\numberline {21.1.1}Chain Rule Practice}{123}{subsection.21.1.1}
+\contentsline {subsection}{\numberline {21.1.2}More Chain Rule Practice}{123}{subsection.21.1.2}
+\contentsline {subsection}{\numberline {21.1.3}Conceptual Chain Rule Problems}{124}{subsection.21.1.3}
+\contentsline {subsection}{\numberline {21.1.4}Visual Chain Rule Problem}{124}{subsection.21.1.4}
+\contentsline {chapter}{\numberline {22}The Gradient}{125}{chapter.22}
+\contentsline {section}{\numberline {22.1}Activities}{125}{section.22.1}
+\contentsline {subsection}{\numberline {22.1.1}Partial Derivative Practice}{125}{subsection.22.1.1}
+\contentsline {subsection}{\numberline {22.1.2}Second Partial Derivative Practice}{125}{subsection.22.1.2}
+\contentsline {subsection}{\numberline {22.1.3}Gradient Practice}{125}{subsection.22.1.3}
+\contentsline {subsection}{\numberline {22.1.4}Gradient on a Contour Diagram}{126}{subsection.22.1.4}
+\contentsline {subsection}{\numberline {22.1.5}Gradient and the Direction of Greatest Increase}{126}{subsection.22.1.5}
+\contentsline {subsection}{\numberline {22.1.6}Gradient and the Direction of Greatest Increase}{126}{subsection.22.1.6}
+\contentsline {chapter}{\numberline {23}Unit 4 Summary}{127}{chapter.23}
+\contentsline {section}{\numberline {23.1}Symbolic Derivatives}{127}{section.23.1}
+\contentsline {section}{\numberline {23.2}Partial Derivatives}{127}{section.23.2}
+\contentsline {section}{\numberline {23.3}The Gradient}{128}{section.23.3}
+\contentsline {part}{V\hspace {1em}Optimization}{129}{part.5}
+\contentsline {chapter}{\numberline {24}1D Optimization}{131}{chapter.24}
+\contentsline {section}{\numberline {24.1}Activities}{131}{section.24.1}
+\contentsline {subsection}{\numberline {24.1.1}Characterize the Extrema}{131}{subsection.24.1.1}
+\contentsline {subsection}{\numberline {24.1.2}First Derivative Test}{132}{subsection.24.1.2}
+\contentsline {subsection}{\numberline {24.1.3}Second Derivative Test}{132}{subsection.24.1.3}
+\contentsline {subsection}{\numberline {24.1.4}Cupcake Store}{132}{subsection.24.1.4}
+\contentsline {chapter}{\numberline {25}2D Optimization}{133}{chapter.25}
+\contentsline {section}{\numberline {25.1}Summary}{133}{section.25.1}
+\contentsline {section}{\numberline {25.2}Activities}{134}{section.25.2}
+\contentsline {subsection}{\numberline {25.2.1}Characterize the Extrema}{134}{subsection.25.2.1}
+\contentsline {subsection}{\numberline {25.2.2}Classifying a critical point using a small circle of values}{136}{subsection.25.2.2}
+\contentsline {subsection}{\numberline {25.2.3}The 2D Second Derivative Test}{136}{subsection.25.2.3}
+\contentsline {subsection}{\numberline {25.2.4}Classify the Critical Points}{137}{subsection.25.2.4}
+\contentsline {subsection}{\numberline {25.2.5}Optimizing Flight Control}{137}{subsection.25.2.5}
+\contentsline {chapter}{\numberline {26}Gradient Search}{139}{chapter.26}
+\contentsline {section}{\numberline {26.1}Gradient Search Example}{139}{section.26.1}
+\contentsline {section}{\numberline {26.2}Activities}{140}{section.26.2}
+\contentsline {subsection}{\numberline {26.2.1}Finding a Local Minimum}{140}{subsection.26.2.1}
+\contentsline {chapter}{\numberline {27}Constrained 2D Optimization}{141}{chapter.27}
+\contentsline {section}{\numberline {27.1}Creating a Contour Plot for 2D Optimization}{141}{section.27.1}
+\contentsline {section}{\numberline {27.2}Activities}{141}{section.27.2}
+\contentsline {subsection}{\numberline {27.2.1}Constrained Production}{141}{subsection.27.2.1}
+\contentsline {subsection}{\numberline {27.2.2}Constrained Optimization on a Circle}{142}{subsection.27.2.2}
+\contentsline {subsection}{\numberline {27.2.3}Estimating the Lagrange Multiplier}{142}{subsection.27.2.3}
+\contentsline {subsection}{\numberline {27.2.4}Constrained Optimization on a Circle}{146}{subsection.27.2.4}
+\contentsline {subsection}{\numberline {27.2.5}Estimating the Lagrange Multiplier}{146}{subsection.27.2.5}
+\contentsline {chapter}{\numberline {28}Unit 5 Summary}{147}{chapter.28}
+\contentsline {section}{\numberline {28.1}1D Optimization}{147}{section.28.1}
+\contentsline {section}{\numberline {28.2}2D Optimization}{147}{section.28.2}
+\contentsline {section}{\numberline {28.3}Gradient Search}{148}{section.28.3}
+\contentsline {section}{\numberline {28.4}Constrained Optimization}{148}{section.28.4}
+\contentsline {part}{VI\hspace {1em}Integration}{149}{part.6}
+\contentsline {chapter}{\numberline {29}Accumulating Change}{151}{chapter.29}
+\contentsline {section}{\numberline {29.1}Activities}{151}{section.29.1}
+\contentsline {subsection}{\numberline {29.1.1}Growing Bacteria}{151}{subsection.29.1.1}
+\contentsline {subsection}{\numberline {29.1.2}The Change in World Population}{152}{subsection.29.1.2}
+\contentsline {subsection}{\numberline {29.1.3}Speed Tests}{152}{subsection.29.1.3}
+\contentsline {subsection}{\numberline {29.1.4}Estimating Area with RStudio}{152}{subsection.29.1.4}
+\contentsline {chapter}{\numberline {30}The Definite Integral}{155}{chapter.30}
+\contentsline {section}{\numberline {30.1}Introduction}{155}{section.30.1}
+\contentsline {section}{\numberline {30.2}Activities}{155}{section.30.2}
+\contentsline {subsection}{\numberline {30.2.1}Drive My Car}{155}{subsection.30.2.1}
+\contentsline {subsection}{\numberline {30.2.2}Accelerate My Car}{156}{subsection.30.2.2}
+\contentsline {subsection}{\numberline {30.2.3}Making Cupcakes}{157}{subsection.30.2.3}
+\contentsline {subsection}{\numberline {30.2.4}Area Between Curves}{157}{subsection.30.2.4}
+\contentsline {chapter}{\numberline {31}Rules of Integration}{159}{chapter.31}
+\contentsline {section}{\numberline {31.1}The Fundamental Theorem of Calculus}{159}{section.31.1}
+\contentsline {section}{\numberline {31.2}Integrals of Familiar Functions}{159}{section.31.2}
+\contentsline {subsection}{\numberline {31.2.1}Constant Rule}{159}{subsection.31.2.1}
+\contentsline {subsection}{\numberline {31.2.2}Power Rules}{159}{subsection.31.2.2}
+\contentsline {subsection}{\numberline {31.2.3}Trig Rules}{160}{subsection.31.2.3}
+\contentsline {subsection}{\numberline {31.2.4}Exponential Rules}{160}{subsection.31.2.4}
+\contentsline {subsection}{\numberline {31.2.5}Logarithmic Rules}{160}{subsection.31.2.5}
+\contentsline {section}{\numberline {31.3}Arithmetic Rules for Integrals}{160}{section.31.3}
+\contentsline {subsection}{\numberline {31.3.1}Constant Multiple Rule}{160}{subsection.31.3.1}
+\contentsline {subsection}{\numberline {31.3.2}Sum and Difference Rules}{160}{subsection.31.3.2}
+\contentsline {subsection}{\numberline {31.3.3}Substitution Rule}{161}{subsection.31.3.3}
+\contentsline {section}{\numberline {31.4}Rules for Endpoints}{161}{section.31.4}
+\contentsline {subsection}{\numberline {31.4.1}Decomposition Rule}{161}{subsection.31.4.1}
+\contentsline {subsection}{\numberline {31.4.2}Zero Integral Rule}{161}{subsection.31.4.2}
+\contentsline {chapter}{\numberline {32}The Indefinite Integral}{163}{chapter.32}
+\contentsline {section}{\numberline {32.1}Activities}{163}{section.32.1}
+\contentsline {subsection}{\numberline {32.1.1}Indefinite Integral Practice}{163}{subsection.32.1.1}
+\contentsline {subsection}{\numberline {32.1.2}Definite Integral Practice}{164}{subsection.32.1.2}
+\contentsline {subsection}{\numberline {32.1.3}Area Between Curves}{164}{subsection.32.1.3}
+\contentsline {subsection}{\numberline {32.1.4}Average Value}{164}{subsection.32.1.4}
+\contentsline {subsection}{\numberline {32.1.5}Modeling Population Growth}{164}{subsection.32.1.5}
+\contentsline {subsection}{\numberline {32.1.6}Zombie Apocalypse}{165}{subsection.32.1.6}
+\contentsline {chapter}{\numberline {33}Unit 6 Summary}{167}{chapter.33}
+\contentsline {section}{\numberline {33.1}Accumulating Change}{167}{section.33.1}
+\contentsline {section}{\numberline {33.2}The Definite Integral}{167}{section.33.2}
+\contentsline {section}{\numberline {33.3}The Indefinite Integral}{168}{section.33.3}

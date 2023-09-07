@@ -1,0 +1,38 @@
+# Unit 6 Summary
+
+
+## Accumulating Change
+
+I can ...
+
+* Estimate the accumulated change of $f(x)$ using rectangles under the curve of $y=f(x)$ and
+   * Using a left endpoint approximation (LEP)
+   * Using a right endpoint approximation (REP)
+* Evaluate when a LEP or REP approximation is an under-estimate or an over-estimate.
+* Estimate the accumulated change for a table of data
+* Estimate the accumulated change of $f(x)$ using RStudio   
+
+
+## The Definite Integral
+
+I can ...
+
+* Calculate or estimate a definite integral using a sum of signed areas.
+* Interpret a definite integral of a rate of change as the total accumulated change.
+* Find the change in distance (or displacement) using a velocity versus time graph.
+* Find the change in velocity using an acceleration versus time graph.
+* Find the total cost by finding the definite integral of a marginal cost function.
+* Find the area between two curves.
+
+## The Indefinite Integral
+
+I can ...
+
+* Find the antiderivative(s) of our familiar functions.
+* Explain why we need "$+ C$" when finding antiderivatives.
+* Use the rules of integration to write a complicated indefinite integral as the sum of multiple indefinite integrals.
+* Use substitution to evaluate and integral of the form $\int f(kx) \, dx$ wherre $k$ is a constant.
+* Calculate the average value of $f(x)$ on interval $[a,b]$ using the formula
+$$
+\mbox{average value} = \frac{1}{b-a} \int_a^b f(x) \, dx.
+$$

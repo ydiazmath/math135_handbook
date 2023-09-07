@@ -1,0 +1,62 @@
+
+# Unit 3 Summary
+
+
+## The Derivative
+
+I can...
+
+* Define what a derivative is.
+* Interpret the derivative \(f'(x)\) as
+  * a rate of change
+  * a measure of the sensitivity of output to changes in input
+  * the slope of a tangent line.
+* Estimate the derivative using a table of data.
+* Estimate the derivatives from the plot of a function and its tangent line.
+* Estimate the derivative $f'(x)$ at $x=a$ using the average rate of change.
+$$
+f'(a) = \frac{f(a+h)-f(a)}{h}
+$$
+where $h$ is a very small number
+* Use desmos to find an approximation of the derivative of a function to a desired accuracy.
+* Use the derivative to determine whether a function is increasing or decreasing.
+* Define marginal cost.
+* Calculate the marginal cost of $C(x)$ at $x=a$ using the formula $C(a+1)-C(a)$
+* Explain why marginal cost is an example of an approximate derivative
+* Explain how the derivative connects displacement, velocity and acceleration.
+
+## The Second Derivative
+
+I can...
+
+* Give the definition of the $k$th derivative
+$\displaystyle{\frac{d^kf}{dx^k} = f^{(k)}(x)}.$
+* Explain why acceleration $a(t)$ is the second derivative of displacement $s(t)$. That is, $a(t) = s''(t).$
+* Use the second derivative to determine the concavity of a function.
+
+## Partial Derivatives
+
+* Define what a partial derivative is.
+* Explain the difference between $\displaystyle{f_x = \frac{df}{dx}}$ and $\displaystyle{f_y = \frac{df}{dy}}$
+* Estimate the partial derivatives from a table of data
+* Estimate the partial derivatives from a contour plot.
+* Use desmos to approximate the partial derivatives using
+$$
+\frac{\partial f}{\partial x} \approx \frac{f(x+h,y) - f(x,y)}{h} \quad \mbox{and} \quad \frac{\partial f}{\partial y} \approx \frac{f(x,y+h) - f(x,y)}{h}
+$$
+where $h$ is a very, very small number.
+
+## Local Linear Approximation
+
+I can...
+
+* Create the linearization $L_a(x)$ for function $f(x)$ at $x=a$ using the formula
+$$
+L_a(x) = f(a) + f'(a) (x-a).
+$$
+* Approximate $f(x)$ using the linearization $L_a(x)$.
+* Create the linearization $L_{(a,b)}(x,y)$ for function $f(x,y)$ at point $(a,b)$ using the formula
+$$
+L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (y-b).
+$$
+* Approximate $f(x,y)$ near the point $(x,y)$ using the linearization $L_{(a,b)}(x)$.

@@ -1,0 +1,238 @@
+# The Definite Integral
+
+## Introduction
+
+Here is some code that approximates the area under $f(x)=x^2$ on the interval $[a,b]$ using **right hand endpoints** on 100 subintervals. (How would you change this code to use **left hand endpoints** instead?)
+
+```{r}
+f=makeFun(x^2 ~ x)
+a = 0
+b = 3
+num = 100
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+## Activities
+
+### Drive My Car
+
+A car is driving at a rate of $v(t)=-t+5$. Here is a plot of the velocity.
+
+```{r  echo=FALSE, fig.keep='last'}
+plotFun(-t+5~t, xlim=range(0,12),xlab='t',ylab='v(t)')
+plotFun(0*t~t, add=TRUE)
+```
+
+
+1. Use RStudio to approximate these definite integrals using 1000 subintervals.
+  a. $\displaystyle{\int_0^5 v(x)dx}$
+  b. $\displaystyle{\int_0^8 v(x)dx}$
+  c. $\displaystyle{\int_0^{12} v(x)dx}$
+
+2. When does the car **turn around**? 
+
+3. When does the car **return to where it started**? 
+
+
+### Accelerate My Car
+
+A car is traveling at 55 feet per second at time $t=0$. The plot below shows the car's **acceleration** on the interval $[0,18]$.
+
+```{r echo=FALSE, fig.align="center", fig.keep="last"}
+a=makeFun(ifelse(x<2,8,ifelse(x<10,-2*x+12,ifelse(x<14,-8,ifelse(x<18,4*x-64,8))))~x)
+plotFun(a(t)~t,xlim=range(0,18))
+plotFun(0*t~t, add=TRUE)
+```
+
+1. Is the velocity increasing or decreasing at $t=2$? $t=15$? 
+2. What happens when $t=6$?
+3. When else (besides $t=0$) is the velocity 55 feet per second?
+4. When is velocity at a **global maximum**? 
+5. When is velocity at a **global minimum**? 
+
+
+
+
+
+### Making Cupcakes
+
+The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
+where $q$ is in dozens of cupcakes. 
+
+1. Set up a definite integral to calculate $K(30)-K(0)$, which is the change in costs when we create 30 dozen cupcakes.
+2. Estimate this definite integral using *RStudio*. 
+3. If our fixed costs are \$1500, what is the **total cost** to make 30 dozen cupcakes? 
+
+### Area Between Curves
+
+Below is a graph of both $\sin(x)$ and $\cos(x)$ on the interval $[0,2\pi]$. 
+
+
+
+```{r fig.align="center", fig.keep='last'}
+plotFun(sin(x)~x,xlim=range(0,2*pi),ylim=range(-1.1,1.1),xlab="",ylab="")
+plotFun(cos(x)~x,add=TRUE)
+```
+
+1. Write a **sum of integrals** which represents the \emph{area} enclosed by the two curves.   
+Hint: $\sin(x) = \cos(x)$ at $x=\pi/4$ and $x=5\pi/4$.
+2. Use *RStudio* to estimate the area between these two curves.
+
+
+
+## Solutions
+
+
+### Drive My Car
+
+1. We approximate these definite integrals using 1000 subintervals.
+  a. $\displaystyle{\int_0^5 v(x)dx}$
+  
+```{r}
+f=makeFun(-t+5 ~ t)
+a = 0
+b = 5
+num = 1000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```  
+  
+  b. $\displaystyle{\int_0^8 v(x)dx}$
+  
+```{r}
+f=makeFun(-t+5 ~ t)
+a = 0
+b = 8
+num = 1000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```   
+  c. $\displaystyle{\int_0^{12} v(x)dx}$
+
+
+```{r}
+f=makeFun(-t+5 ~ t)
+a = 0
+b = 12
+num = 1000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+``` 
+
+
+2. The car turns around at $t=5$. We have $v(t) > 0$ for $t < 5$ and $v(t) < 0$ for $t > 5$. 
+
+3. We must look at the signed area. When is the (positive) area above the $x$-axis equal to the (negative) area below the $x$-axis? This happens at $t=12$. So this is the time that the car returns to where it started.
+
+### Accelerate My Car
+
+*See the class slides for a visual explanation of this problem. Here is a descriptive solution.*
+
+1. The car's velocity is **increasing** at $t=2$ because acceleration is positive. The car's velocity is **decreasing** at $t=15$ because acceleration is negative 
+
+2. At $t=6$, the acceleration is zero. We accelerate up to this point, and we decelerate after this point. So it is a local maximum for velocity.
+3. The velocity is 55 feet per second at $t=12$ because the area above the $x$-axis (positive acceleration so far) equals the area below the $x$-axis (negative acceleration so far).
+4. The **maximum** velocity occurs at $t=6$? The car accelerates for the first 6 seconds. Then it decelerates for the next 10 seconds (until $t=16$). Then it accelerates again for 2 seconds. However by $t=18$, the total deceleration (area below the $x$-axis) is more than the total acceleration.
+5. The **minimum** velocity occurs at $t=12$. This is when we've seen the most deceleration, and we've decelerated more than we've accelerated.
+
+
+
+### Making Cupcakes
+
+The marginal cost of making cupcakes is given by $$K'(q)=\frac{1}{100}q^2+\frac{1}{5}q+1,$$ 
+where $q$ is in dozens of cupcakes. 
+
+1. By the Fundamental Theorem of Calculus, the definite integral that calculates $K(30)-K(0)$ is
+
+$$\int_0^{30} K'(q) dq = \int_0^{30} \left( \frac{1}{100}q^2+\frac{1}{5}q+1 \right) dq 
+$$
+
+2. Here is our *RStudio* estimate. 
+
+```{r}
+f=makeFun(1/100 * q^2 + 1/5*q + 1 ~ q)
+a = 0
+b = 30
+num = 100000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+3. The total costs are approximate $1500+210$, which is the sum of our fixed costs and our production costs.
+
+### Area Between Curves
+
+
+
+
+
+1. The sine curve and the cosine curve intersect when $x=\pi/4$ and $x=5\pi/4$. The cosine curve is above the sine curve on $[0,\pi/4]$.  Then the sine curve is on top on $[\pi/4,5\pi/4]$. Then cosine is back on top on $[5\pi/4, 2\pi$. So the area is
+$$\int_{\pi/4}^{5\pi/4} ( \cos(x) - \sin(x)) dx  + \int_{\pi/4}^{5\pi/4} ( \sin(x) - \cos(x)) dx + \int_{5\pi/4}^{2\pi} ( \cos(x) - \sin(x)) dx.$$
+
+2. Our *RStudio* estimates for each part are
+
+```{r}
+f=makeFun(cos(x) - sin(x) ~ x)
+a = 0
+b = pi /4
+num = 100000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+```{r}
+f=makeFun(sin(x) - cos(x) ~ x)
+a = pi/4
+b = 5* pi /4
+num = 100000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+```{r}
+f=makeFun(cos(x) - sin(x) ~ x)
+a = 5*pi/4
+b = 2*pi 
+num = 100000
+### the approximation of f(x) on interval [a,b]
+base = (b-a)/num
+points = seq(from=a+base, to=b, by=base)
+heights = f(points)
+areas = base*heights
+sum(areas)
+```
+
+
+So our estimate of the area is
+```{r}
+0.414 + 2.828 + 2.414
+```

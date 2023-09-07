@@ -1,0 +1,39 @@
+--- 
+title: "MATH 135: AMC I"
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    config:
+      sharing:
+        facebook: false
+        twitter: false
+documentclass: book
+link-citations: yes
+github-repo: mathbeveridge/math135_f21
+description: "This is the class activity manual for MATH 135 at Macalester College."
+header-includes:
+  - \usepackage{pgf}
+  - \usepackage{pgfplots}
+---
+
+
+**Macalester College**    
+**Fall 2021**
+
+# Preface {-}
+
+
+
+This is the class handbook for Math 135 AMC I at Macalester College. The content here was made by [Andrew Beveridge](https://mathbeveridge.github.io) 
+and draws upon:
+
+* Material prepared by [Kristin Heysse](https://www.macalester.edu/~kheysse/), [Lori Ziegelmeier](https://www.loriziegelmeier.com/) and other faculty in the [Department  of Mathematics, Statistics and Computer Science](https://www.macalester.edu/mscs/) at [Macalester College](https://www.macalester.edu/).
+* The open textbook [Applied Calculus](http://www.opentextbookstore.com/details.php?id=14) by Shana Calaway, Dale Hoffman, and David Lippman.
+
+<br>
+<br>
+<br>
+
+![](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
+
+This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).

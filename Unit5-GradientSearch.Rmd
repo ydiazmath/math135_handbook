@@ -1,0 +1,106 @@
+
+# Gradient Search
+
+
+## Gradient Search Example
+
+Let's use gradient search to find the maximum of the function 
+$$
+f(x,y) = - x^4 -  x^3 + 10 x y + 2y - 8 y^2 
+$$
+whose partial derivatives are
+$$
+\frac{\partial f}{\partial x} = -4 x^3 -3 x^2  + 10 y
+\quad \mbox{and} \quad
+\frac{\partial f}{\partial x} = 10 x + 2 - 16 y
+$$
+
+
+First, you define the partial derivatives and then choose your starting point `(newx, newy)`. In this case, we start at `(1,1)`.
+
+\medskip
+
+```{r}
+partialx = makeFun( -4*x^3 -3*x^2 + 10*y ~ x&y)
+partialy = makeFun(10*x + 2 - 16*y ~ x&y)
+newx = 1
+newy = 1
+```
+
+\medskip
+
+Next, you **repeatedly**  run the following code block, which updates the current point by moving `0.1` times the gradient vector. This takes a small step in the uphill direction.
+
+```{r eval=FALSE}
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx + 0.05*slopex
+newy = newy + 0.05*slopey
+# print new partial derivatives
+c(partialx(newx, newy), partialy(newx, newy))
+# print new point
+c(newx, newy)
+```
+
+
+Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.
+
+You will end at the point `(1.04,0.77)`. But note that starting at another initial point might take you to a different local maximum!
+
+You can check that this critical point is a local maximum (and not a saddle point) by using the same method that we used for 2D Optimizatiion
+
+```{r}
+f = makeFun( -x^4 - x^3 + 10*x*y + 2* y - 8* y^2 ~ x&y)
+a=1.0405
+b=0.7753
+r = 0.1
+theta = seq(0,2*pi,pi/10)
+f(a,b) - f(a+r*cos(theta), b+r*sin(theta))
+```
+
+
+
+## Activities
+
+### Finding a Local Minimum
+
+1. How should I change to the code if I want to find a **local minimum** instead of a local maximum? (Hint: we want to take a small step downhill.)
+2. Use gradient search to find a **local minimum** of 
+$$f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.$$
+
+## Solutions
+
+### Finding a Local Minimum
+
+1. In order to find a local minimum, we need to move in the opposite direction of the gradient. This is the "downhill direction." All we need to do in the code is replace the two `+ 0.1` with `- 0.1`.
+
+2. We want to find the local minimum of 
+$$f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.$$
+We have 
+$$
+f_x(x,y) = 2x +2y + 3, \qquad f_y(x,y) = 2x + 4 + 10y.
+$$
+Here is our updated code to walk downhill. We set up our partials and pick our starting point.
+
+```{r}
+partialx = makeFun(2*x +2*y + 3 ~ x&y)
+partialy = makeFun(2*x + 4 + 10*y ~ x&y)
+newx = 1
+newy = 1
+```
+
+Now we repeatedly run this "move downhill" block until the partial derivatives are (basically) zero.
+
+```{r }
+slopex=partialx(newx, newy)
+slopey=partialy(newx, newy)
+newx = newx - 0.05*slopex
+newy = newy - 0.05*slopey
+# print new partial derivatives
+c(partialx(newx, newy), partialy(newx, newy))
+# print new point
+c(newx, newy)
+```
+
+If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point $(-1.37, -0.13)$.
+

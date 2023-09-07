@@ -1,0 +1,14 @@
+bookdown::gitbook:
+  highlight: haddock
+  css: m135style.css
+  split_by: chapter
+  config:
+    toc:
+      collapse: section
+      before: |
+        <li><a href = "./">MATH 135: AMC I</a></li>
+      after: |
+        <li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+    # download: [pdf]
+bookdown::pdf_book:
+  keep_tex: yes

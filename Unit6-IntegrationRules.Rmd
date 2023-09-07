@@ -1,0 +1,86 @@
+# Rules of Integration
+
+## The Fundamental Theorem of Calculus
+
+$$ \int f'(x) \, dx = f(x) + C$$
+and
+$$ \int_a^b f'(x) \, dx = f(b)-f(a)$$
+
+## Integrals of Familiar Functions
+
+
+
+### Constant Rule
+
+The integral of a constant $a$  is $ax+C$.
+$$\int a \, dx= ax +C$$
+
+
+
+### Power Rules
+
+For $n \neq -1$, 
+$$\int x^n \, dx= \frac{1}{n+1} x^{n+1} +C$$
+and
+$$
+\int \frac{1}{x} \, dx = \ln (x) + C
+$$
+
+
+### Trig Rules
+
+$$\int \sin(x) \, dx = -\cos(x) +C$$
+and
+$$\int \cos(x) \, dx= \sin(x) + C$$
+
+### Exponential Rules
+
+$$\int e^x \, dx=e^x +C$$ 
+and for any positive number $a >0$, 
+$$\int a^x \, dx =\frac{1}{\ln(a)}a^x + C$$
+
+
+### Logarithmic Rules
+
+$$\int \ln (x) \, dx =x \ln(x) -x + C$$
+and for any positive number $a >0$, 
+$$\int \log_a (x) \, dx = x \log_a(x) - \frac{1}{\ln (a)} x + C $$
+
+## Arithmetic Rules for Integrals
+
+### Constant Multiple Rule
+
+If $c$ is a constant, then
+$$\int  cf(x) \, dx =c \int f(x) \, dx$$
+
+### Sum and Difference Rules  
+
+$$\int (f(x)+g(x)) \,dx= \int f(x) \, dx + \int g(x)\, dx$$
+and
+$$\int (f(x)-g(x)) \,dx= \int f(x) \, dx - \int g(x)\, dx$$
+
+### Substitution Rule
+
+For any constant  $k$,
+$$\int f'(kx) = \frac{1}{k} f(kx) + C$$
+
+
+## Rules for Endpoints
+
+### Decomposition Rule
+
+For $a < c < b$, we have 
+$$ \int_a^b f(x) \, dx = \int_a^c f(x) \, dx + \int_c^b f(x) \, dx$$
+
+### Zero Integral Rule
+
+
+$$\int_c^c f(x) dx = 0$$
+
+
+ 
+
+
+
+
+

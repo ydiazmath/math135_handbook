@@ -1,0 +1,42 @@
+# Unit 5 Summary
+
+
+## 1D Optimization
+
+I can ...
+
+* Find the local maxima, local minima, global maximum and global minimum for the graph of a function.
+* Find the critical points of $f(x)$ by solving $f'(x)=0$.
+* Use the first derivative test to determine whether a critical point is a local minimum, a local maximum or a point of inflection.
+* Use the second derivative test to determine whether a critical point is a local minimum or a local maximum.
+
+
+## 2D Optimization
+
+I can ...
+
+* Find the 2D critical points of $f(x,y)$ by (simultaneously) solving $f_x(x,y)=0$ and $f_y(x,y)=0$.
+* Characterize a 2D critical point $(a,b)$ as a local minimimum, local maximum or saddle point by:
+   * Using the 2D second derivative test at $(a,b)$
+   * Making a contour plot near $(a,b)$
+   * Looking at the values of $f(a,b)-f(x,y)$ on a small circle around $(a,b)$.
+   
+   
+## Gradient Search
+
+I can ...
+
+*  Find a local maximum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+*  Find a local minimum of a 2D function $f(x,y)$ using gradient search in *RStudio*.
+* Simulate gradient search using the contour plot of a 2D function to find the trajectory that gradient search follows to reach an extreme point.
+* Explain why the extreme point found by gradient search depends upon the starting point that we use. 
+
+## Constrained Optimization
+
+I can ...
+
+* Identify the objective function and the constaint function for a constrained optimization problem.
+* Explain why the extreme point for a constrained optimization problem occurs where the constraint contour is tangent to a contour of the objective function.
+* Use RStudio to create a contour plot to solve a constrained optimization problem.
+* Estimate the value of the Lagrange multiplier $\lambda$ using a contour plot.
+* Interpret the Lagrange multiplier $\lambda$ as a rate of change.

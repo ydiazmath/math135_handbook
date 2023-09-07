@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Topic 10 Power Functions | MATH 135: AMC I</title>
+  <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Topic 10 Power Functions | MATH 135: AMC I" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="github-repo" content="mathbeveridge/math135_f21" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Topic 10 Power Functions | MATH 135: AMC I" />
+  
+  <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="units-dimension-estimation-review.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+<link rel="stylesheet" href="m135style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href = "./">MATH 135: AMC I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="1" data-path="r-studio-primer.html"><a href="r-studio-primer.html"><i class="fa fa-check"></i><b>1</b> R Studio Primer</a><ul>
+<li class="chapter" data-level="1.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#getting-oriented"><i class="fa fa-check"></i><b>1.1</b> Getting Oriented</a><ul>
+<li class="chapter" data-level="1.1.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#first-login"><i class="fa fa-check"></i><b>1.1.1</b> First login</a></li>
+<li class="chapter" data-level="1.1.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#the-rstudio-window"><i class="fa fa-check"></i><b>1.1.2</b> The RStudio window</a></li>
+<li class="chapter" data-level="1.1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#packages"><i class="fa fa-check"></i><b>1.1.3</b> Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#rmarkdown"><i class="fa fa-check"></i><b>1.2</b> RMarkdown</a></li>
+<li class="chapter" data-level="1.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#calculations-in-rstudio"><i class="fa fa-check"></i><b>1.3</b> Calculations in RStudio</a><ul>
+<li class="chapter" data-level="1.3.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#basic-commands"><i class="fa fa-check"></i><b>1.3.1</b> Basic Commands</a></li>
+<li class="chapter" data-level="1.3.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#variables"><i class="fa fa-check"></i><b>1.3.2</b> Variables</a></li>
+<li class="chapter" data-level="1.3.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#lists-and-sequences"><i class="fa fa-check"></i><b>1.3.3</b> Lists and sequences</a></li>
+<li class="chapter" data-level="1.3.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#making-functions"><i class="fa fa-check"></i><b>1.3.4</b> Making functions</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="r-studio-primer.html"><a href="r-studio-primer.html#data"><i class="fa fa-check"></i><b>1.4</b> Data</a><ul>
+<li class="chapter" data-level="1.4.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-data-from-rstudiomosaic"><i class="fa fa-check"></i><b>1.4.1</b> Importing data from RStudio/mosaic</a></li>
+<li class="chapter" data-level="1.4.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#importing-.csv-files"><i class="fa fa-check"></i><b>1.4.2</b> Importing .csv files</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plots"><i class="fa fa-check"></i><b>1.5</b> Plots</a><ul>
+<li class="chapter" data-level="1.5.1" data-path="r-studio-primer.html"><a href="r-studio-primer.html#single-variable-plots"><i class="fa fa-check"></i><b>1.5.1</b> Single variable plots</a></li>
+<li class="chapter" data-level="1.5.2" data-path="r-studio-primer.html"><a href="r-studio-primer.html#multivariable-plots"><i class="fa fa-check"></i><b>1.5.2</b> Multivariable plots</a></li>
+<li class="chapter" data-level="1.5.3" data-path="r-studio-primer.html"><a href="r-studio-primer.html#plotting-data"><i class="fa fa-check"></i><b>1.5.3</b> Plotting data</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i><b>2</b> RStudio Quick Referrence</a><ul>
+<li class="chapter" data-level="2.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i><b>2.1</b> Common Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i><b>2.2</b> Defining your own function</a></li>
+<li class="chapter" data-level="2.3" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i><b>2.3</b> Creating Lists of Data</a></li>
+<li class="chapter" data-level="2.4" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-plotting-functions"><i class="fa fa-check"></i><b>2.4</b> Plotting Data and Plotting Functions</a></li>
+<li class="chapter" data-level="2.5" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i><b>2.5</b> Fitting a Function to Data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-power-function-to-data"><i class="fa fa-check"></i><b>2.5.1</b> Fitting a Power Function to Data</a></li>
+<li class="chapter" data-level="2.5.2" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-model-by-specifying-starting-values"><i class="fa fa-check"></i><b>2.5.2</b> Fitting a Model by Specifying Starting Values</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-surfaces-in-3d"><i class="fa fa-check"></i><b>2.6</b> Plotting Surfaces in 3D</a></li>
+<li class="chapter" data-level="2.7" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#estimating-the-derivative"><i class="fa fa-check"></i><b>2.7</b> Estimating the Derivative</a></li>
+<li class="chapter" data-level="2.8" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i><b>2.8</b> Troubleshooting</a></li>
+</ul></li>
+<li class="part"><span><b>I Functions</b></span></li>
+<li class="chapter" data-level="3" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>3</b> Functions</a><ul>
+<li class="chapter" data-level="3.1" data-path="functions.html"><a href="functions.html#steps-of-the-modeling-cycle"><i class="fa fa-check"></i><b>3.1</b> Steps of the Modeling Cycle</a></li>
+<li class="chapter" data-level="3.2" data-path="functions.html"><a href="functions.html#goals"><i class="fa fa-check"></i><b>3.2</b> Goals</a></li>
+<li class="chapter" data-level="3.3" data-path="functions.html"><a href="functions.html#tasks"><i class="fa fa-check"></i><b>3.3</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="linear-functions.html"><a href="linear-functions.html"><i class="fa fa-check"></i><b>4</b> Linear Functions</a><ul>
+<li class="chapter" data-level="4.1" data-path="linear-functions.html"><a href="linear-functions.html#goals-1"><i class="fa fa-check"></i><b>4.1</b> Goals</a></li>
+<li class="chapter" data-level="4.2" data-path="linear-functions.html"><a href="linear-functions.html#tasks-1"><i class="fa fa-check"></i><b>4.2</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i><b>5</b> Intro to RStudio</a><ul>
+<li class="chapter" data-level="5.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#getting-started"><i class="fa fa-check"></i><b>5.1</b> Getting Started</a></li>
+<li class="chapter" data-level="5.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#r-markdown-files"><i class="fa fa-check"></i><b>5.2</b> R Markdown files</a><ul>
+<li class="chapter" data-level="5.2.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#formatting-regular-text"><i class="fa fa-check"></i><b>5.2.1</b> Formatting Regular Text</a></li>
+<li class="chapter" data-level="5.2.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#code-chunks"><i class="fa fa-check"></i><b>5.2.2</b> Code Chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="5.3" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#writing-code"><i class="fa fa-check"></i><b>5.3</b> Writing Code</a><ul>
+<li class="chapter" data-level="5.3.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#basic-calculations"><i class="fa fa-check"></i><b>5.3.1</b> Basic Calculations</a></li>
+<li class="chapter" data-level="5.3.2" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#variables-lists-and-sequences"><i class="fa fa-check"></i><b>5.3.2</b> Variables, Lists and Sequences</a></li>
+<li class="chapter" data-level="5.3.3" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#functions-1"><i class="fa fa-check"></i><b>5.3.3</b> Functions</a></li>
+<li class="chapter" data-level="5.3.4" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#plotting"><i class="fa fa-check"></i><b>5.3.4</b> Plotting</a></li>
+</ul></li>
+<li class="chapter" data-level="5.4" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#troubleshooting-1"><i class="fa fa-check"></i><b>5.4</b> Troubleshooting</a><ul>
+<li class="chapter" data-level="5.4.1" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#you-try-4"><i class="fa fa-check"></i><b>5.4.1</b> You Try</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i><b>6</b> Exponential and Logarithmic Functions</a><ul>
+<li class="chapter" data-level="6.1" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#goals-2"><i class="fa fa-check"></i><b>6.1</b> Goals</a></li>
+<li class="chapter" data-level="6.2" data-path="exponential-and-logarithmic-functions.html"><a href="exponential-and-logarithmic-functions.html#tasks-2"><i class="fa fa-check"></i><b>6.2</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="power-functions.html"><a href="power-functions.html"><i class="fa fa-check"></i><b>7</b> Power Functions</a><ul>
+<li class="chapter" data-level="7.1" data-path="power-functions.html"><a href="power-functions.html#tasks-3"><i class="fa fa-check"></i><b>7.1</b> Tasks</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="periodic-functions.html"><a href="periodic-functions.html"><i class="fa fa-check"></i><b>8</b> Periodic Functions</a><ul>
+<li class="chapter" data-level="8.1" data-path="periodic-functions.html"><a href="periodic-functions.html#tasks-4"><i class="fa fa-check"></i><b>8.1</b> Tasks</a></li>
+</ul></li>
+<li class="part"><span><b>II Units, Dimension, Estimation</b></span></li>
+<li class="chapter" data-level="9" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html"><i class="fa fa-check"></i><b>9</b> Units, Dimension, Estimation Review</a><ul>
+<li class="chapter" data-level="9.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#review-problems"><i class="fa fa-check"></i><b>9.1</b> Review Problems</a><ul>
+<li class="chapter" data-level="9.1.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#units"><i class="fa fa-check"></i><b>9.1.1</b> Units</a></li>
+<li class="chapter" data-level="9.1.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#dimensional-analysis"><i class="fa fa-check"></i><b>9.1.2</b> Dimensional Analysis</a></li>
+<li class="chapter" data-level="9.1.3" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#fermi-estimation"><i class="fa fa-check"></i><b>9.1.3</b> Fermi Estimation</a></li>
+</ul></li>
+<li class="chapter" data-level="9.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#solutions"><i class="fa fa-check"></i><b>9.2</b> Solutions</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#units-1"><i class="fa fa-check"></i><b>9.2.1</b> Units</a></li>
+<li class="chapter" data-level="9.2.2" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#dimensional-analysis-1"><i class="fa fa-check"></i><b>9.2.2</b> Dimensional Analysis</a></li>
+<li class="chapter" data-level="9.2.3" data-path="units-dimension-estimation-review.html"><a href="units-dimension-estimation-review.html#fermi-estimation-1"><i class="fa fa-check"></i><b>9.2.3</b> Fermi Estimation</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="power-functions-1.html"><a href="power-functions-1.html"><i class="fa fa-check"></i><b>10</b> Power Functions</a></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MATH 135: AMC I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="power-functions-1" class="section level1">
+<h1><span class="header-section-number">Topic 10</span> Power Functions</h1>
+<p>This activity is intended to further your understanding of power functions.</p>
+
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="units-dimension-estimation-review.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

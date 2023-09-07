@@ -1,0 +1,99 @@
+# Power Functions
+
+
+## Goals
+
+* Describe proportional and inversely proportional relationships
+* Recognize power functions by creating a log-log plot.
+* Fit a power function to data
+
+When you have data that you suspect comes from a power function 
+$$y=k x^p,$$ 
+here is how you can find the constants $p$ and $k$
+
+1. Take the natural log of both the $x$-axis data and the $y$-axis data
+2. Fit a line to the resulting data 
+3. Use the slope and $y$-intercept of this line to find the values of the power $p$ and the constant $k$.
+
+## Activities
+
+### Examples and non-examples
+
+Determine whether each of the following is a power function $y=k x^p$. If so, then find the leading constant $k$ and the power $p$. 
+
+
+1. $y=5 \cdot 3^x$
+2. $y = 10 \sqrt{x}$
+3. $\displaystyle{y = \frac{7}{2x}}$
+4. $y = 9x^2 -2$
+5. $y = (4x)^3$
+
+### Descriptions of power functions
+
+Write a formula representing the function.
+
+1. The energy $E$ expended by a swimming dolphin is proportional to the cube of its speed $v$.
+2. The number $N$ of animal species with body length $L$ is inversely proportional to the square of the body length.
+
+
+
+### Allometry of pectoral fins
+
+Allometry is the study of the relative sizes of parts of an animal.  Often, as an animal grows, the size of a body part will be a power function of its length. Here is a table of fish body lengths $L$ and pectoral fin lengths $F$.
+
+**Body Length (cm)**   | 6.35 | 7.03 | 8.17 | 9.03 | 9.21 | 9.39 | 9.58 | 11.59 
+-------|-------|-------|-------|-------|-------|-------|-------|-------|-------|-------
+**Pectoral Fin Length (cm)** | 2.72 | 3.49 | 4.06 | 4.95 | 4.86 | 5.00 | 5.05 | 6.05
+
+
+1. Create a log-log plot of this data and explain why this provides evidence that there is a proportional relationship between fin length and body length.
+2. Find the power function $F = k L^p$ that fits this data.
+3. Do the fin lengths increase faster, slower or at the same rate as the body lengths? How do you know?
+
+### Specific heat
+
+The specific heat $s$ of an element is the number of calories of heat required to raise the temperature of one gram of the element by one degree Celcius. Use the following data to decide if $s$ is proportional or inversely proportional to the atomic weight $w$. Then find the function $s(w)$.
+
+**Element**   | Li | Mg | Al | Fe | Ag | Pb | Hg 
+-------|-------|-------|-------|-------|-------|-------|-------|-------
+**weight** $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
+**specific heat** $s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
+
+
+## Solutions
+
+### Examples and non-examples
+
+1. $y=5 \cdot 3^x \quad$ No, this is an exponential function.
+2. $y = 10 x^{1/2} \quad$ Yes.
+3. $\displaystyle{y = \frac{7}{2} x^{-1}} \quad$ Yes.
+4. $y = 9x^2 -2 \quad$ No because it has a constant term.
+5. $y = (4x)^3 = 64x^3\quad$ Yes.
+
+### Descriptions of power functions
+
+Write a formula representing the function.
+
+1. $E = k v^3$
+2. $N = k L^{-2}$
+
+### Allometry of pectoral fins
+
+You can find my [desmos calculations here](https://www.desmos.com/calculator/rtmpxre4l4). 
+
+1. The log-log plot looks pretty linear. So the original function could be a power function.
+2. Fitting $\ln(F) \sim p \ln(L) + c$ gives $p=1.32$ and $c=-1.37$. Therefore $k=e^c=0.255$ and the power function is
+$$
+F = 0.255 L^{1.32}.
+$$
+3. Since $p>1$, the fin lengths increase faster than the body length. This makes sense to me, since those fins have to push around all of that mass (which grows faster than the length, too).
+
+### Specific heat
+
+Here are [my desmos calculations](https://www.desmos.com/calculator/mkpxf7fnaf).
+
+The log-log plot looks linear with a negative slope. So the specific heat is inversely proportional to atomic weight. Fitting $\ln(s) = p \ln(w) + c$ gives $p=-0.985$ and $c=1.760$. Therefore $k=e^{1.76} = 5.812$. So our power function is
+$$
+s = 5.812 w^{-0.985}.
+$$
+

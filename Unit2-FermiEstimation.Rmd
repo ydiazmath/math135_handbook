@@ -1,0 +1,82 @@
+# Fermi Estimation
+
+
+## Working Fermi Problems
+
+Here's a general game plan for Fermi Problems:
+
+1. Write down what you know. 
+2. Estimate what you don't know!
+    a. Ask a series of smaller questions. 
+    b. Estimate the answers to the smaller questions. 
+3. Multiply and pay attention to units.
+
+\bigskip
+
+Remember, **we're trying to estimate!**
+
+* Do not obsess over details, but also,
+* Do not guess blindly.
+* Find a middle ground!
+
+**Pro Tip \#1:** Identify smaller problems that you can estimate using your everyday common sense. For example, rather than estimating the height of of  a building, I would estimate the height of one floor and estimate the number of floors, and then multiply.
+
+**Pro Tip \#2:** When estimating, determine the order of magnitude (10, 100, 1000, etc). Use the geometric mean when you think the answer is somewhere in between. For example, if you think 1,000 is too small but that 10,000 is too big, then use 3,000.
+
+## Some Useful Data
+
+The following approximate data may be useful in various Fermi problems. Each has been stated with one or two significant figures.
+
+* Population of the world: $7 \times 10^9$ people 
+* Population of the United States: $3 \times 10^8$ people
+* Average human life span worldwide (in years): 71 years  
+* United States national debt (in dollars): $\$1.8 \times 10^{13}$ 
+* United States federal spending (in dollars per year): $\$3.8 \times 10^{12}$.
+* Fraction of United States federal spending devoted to defense (as a decimal): 0.16
+* Fraction of United States federal spending devoted to Medicare/Medicaid (as a decimal): 0.27
+* Radius of earth (in km): 6400 km
+* Acceleration due to gravity on the surface of the Earth: $9.8 \text{ m/}\text{s}^2$
+* Fraction of Earth’s surface covered by water (as a decimal): 0.7
+* Density of water at sea level: $1 \text{ g}/\text{cm}^3$
+
+
+## Activities
+
+
+1. How many blades of grass are there on a football field?
+
+1. How many babies are born each day? It will be helpful to know that (a) there are 7.8 billion people on the planet, (b) the average life expectancy is 73 years, and (c) the population doesn't change that much (relatively speakiing) in one year.
+
+1. If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
+
+
+
+## Solutions
+
+
+1. I think that I can estimate the number of blades in a square inch. 10 is too small, 100 seems okay, but 1000 is too many. Among my choices of 30, 100 and 300, I guess that I like 100 blades per square inch. I know that a football field is 100 yards long. I guess that the end zones are 10 yards deep, for 120 yards total.  I'll estimate that the field is 30 yards across. 
+So my answer would be
+$$
+\left(100 \, \frac{\mbox{blades}}{\mbox{in}^2} \right) \left(36^2 \, \frac{\mbox{in}^2}{\mbox{yard}^2} \right) \left(120 \mbox{ yards} \right) \left(30 \mbox{ yards} \right)
+= 4.7 \times 10^8
+$$
+and my final estimate is 500 million blades of grass.
+
+  1. The population  of the earth is growing, but not very quickly.  So let's assume that the number of deaths is the same as the number of births. Life expectancy is 73 years, so about 1/73 of the population dies each year. So 1/73 of the population is also born each year. This leads to the estimation:
+$$
+7.8 \times 10^9 \mbox{ people} \times \frac{1 \mbox{ birth/year}}{73 \mbox{ people}}  \times \frac{1 \mbox{ year}}{365 \mbox{ days}} = 292,738 \frac{\mbox{ births}}{\mbox{ day}}. 
+$$
+So my final estimation is $300,000$ babies born per day.
+  
+  1. Let's start with the hint: How many people could we cram  into one square meter? I think that we could fit about 10 people (but not 30). So  we would need 
+$$
+\left( 7.8 \times 10^9 \mbox{ people} \right) \left( \frac{1 \mbox{ m}^2}{10 \mbox{ people}} \right) = 7.8 \times 10^8 \mbox{ m}^2
+$$ 
+to fit everyone on the planet.  Converting to square kilometers requires dividing by $(10^3)^2 = 10^6$, which gives
+$$
+\left( 7.8 \times 10^8 \mbox{ m}^2 \right) \left( \frac{1 \mbox{ km}^2}{10^6 \mbox{ m}^2} \right)
+= 780 \mbox{ km}^2.
+$$
+
+This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. In fact, $30 \mbox{ km} \times 30 \mbox{ km}$  is similar to the size of the  "metro area"  of a big city. 
+

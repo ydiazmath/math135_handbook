@@ -1,0 +1,72 @@
+# (PART) Symbolic Derivatives {-}
+
+# Rules of Differentiation
+
+
+
+## Derivatives of Familiar Functions
+
+### Constant Rule
+
+The derivative of a constant is 0.
+$$\frac{d}{dx}(c)= 0$$
+
+### Linear Function Rule
+If $f(x)=mx+b$, then the derivative is the slope $m$.
+$$\frac{d}{dx}(mx+b)= m$$
+
+### Power Rule
+
+$$\frac{d}{dx}(x^n)=n x^{n-1}$$
+
+### Trig Rules
+
+$$\frac{d}{dx}\sin(x)=\cos(x)$$
+and
+$$\frac{d}{dx}\cos(x)=-\sin(x)$$
+
+### Exponential Rules
+
+$$\frac{d}{dx}(e^x)=e^x$$ 
+and for any positive number $a >0$, 
+$$\frac{d}{dx}(a^x)=(\ln a)a^x$$
+
+
+### Logarithmic Rules
+
+$$\frac{d}{dx}(\ln (x))=\frac{1}{x}$$
+and for any positive number $a >0$, 
+$$\frac{d}{dx}(\log_a x)= \frac{1}{\ln (a)} \cdot \frac{1}{x}$$
+
+## Arithmetic Rules for Derivatives
+
+### Constant Multiple Rule
+
+If $c$ is a constant, then
+$$\frac{d}{dx}(cf(x))=c\frac{d}{dx}f(x)=cf'(x)$$
+
+### Sum and Difference Rules  
+
+$$\frac{d}{dx}(f(x)+g(x))=\frac{d}{dx}f(x)+\frac{d}{dx}g(x)=f'(x)+g'(x)$$
+and
+$$\frac{d}{dx}(f(x)-g(x))=\frac{d}{dx}f(x)-\frac{d}{dx}g(x)=f'(x)-g'(x)$$
+
+## Rules for Combinations of Functions
+
+### Product Rule
+
+If $f(x)$ and $g(x)$ are functions then
+$$(fg)'=f'g+fg' \phantom{hihi} \text{ or } \phantom{hihi}(1st \cdot 2nd )'=D1st \cdot 2nd + 1st \cdot D2nd$$
+
+### Quotient Rule
+
+If $f(x)$ and $g(x)$ are functions then
+$$\left(\frac{f}{g} \right ) '=\frac{gf'-fg'}{g^2} \phantom{hihi}\text{ or } \phantom{hihi}\left(\frac{hi}{lo} \right ) '=\frac{loDhi-hiDlo}{lo^2}$$
+
+### Chain Rule 
+
+If $y=f(t)$ and $t=g(x)$ are functions, then the derivative of $y=f(g(x))$ is given by
+$$\frac{dy}{dx}=\frac{dy}{dt}\frac{dt}{dx} \phantom{hihi}\text{ or } \phantom{hihi}\frac{d}{dx}(f(g(x)))=f'(g(x))g'(x)=D(outside)D(inside)$$
+ 
+
+

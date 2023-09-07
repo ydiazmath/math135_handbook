@@ -1,0 +1,84 @@
+# Dimensional Analysis
+
+
+## Performing a Dimensional Analysis
+
+Given independent variables $x,y,z$ and dependent variable $w$:
+
+1. Write down the hypothesized "generalized product" $w = k x^a y^b z^c$
+2. Write \& simplify the dimensional version $[w] = [x]^a [y]^b [z]^c$
+3. List the dimensions of all quantities
+4. Invoke dimensional compatibility to solve.
+5. Rewrite your equation, marvel at your awesomeness!
+
+
+## Activities
+
+### Vocal Chord Frequency
+
+The frequency $f$ of the sound of an organism's vocal chords depend on their length $\ell$, tension $s$ (a force) and mass density $\mu$ (mass per unit length). Find a formula for the frequency $f = f(\ell, s, \mu).$
+
+### Mixer Power
+
+A mixer with power $P$ turns a mixer with wings of length $D$ through a liquid of viscosity $H$. Find a formula for the angular velocity $A = A(P,D,H)$. Note that since angles are dimensionless, we have $[A] = 1/T$. The dimensions of viscosity are $[H] = M/(LT)$.
+
+### Velocity of an Ocean Wave
+
+The velocity $V$ of a large ocean wave depends upon the period $P$, the acceleration of gravity $g$, and the density $\mu$ of the water. Find a formula for the velocity $V=V(P,g,\mu)$.
+
+
+
+## Solutions
+
+1. We have
+$$
+\begin{array}{rcl}
+f &=& k \ell^a s^b \mu^c \\
+[f] &=&  [\ell]^a [s]^b [\mu]^c \\
+T^{-1} &=& \left( L\right)^a \left(MLT^{-2}\right)^b \left( M L^{-1}  \right)^c \\
+M^0L^0T^{-1} &=& M^{b+c} L^{a+b-c} T^{-2b}
+\end{array}
+$$
+and so we have
+$$
+0 = b+c \qquad 0 = a+b-c \qquad -1=-2b.
+$$
+Therefore $b=1/2$ and $c=-1/2$ and $a=-1$. Our formula is
+$$
+f = k \ell^{-1} s^{1/2} \mu^{-1/2} k \frac{1}{\ell} \sqrt{\frac{s}{\mu}}.
+$$
+2. We have
+$$
+\begin{array}{rcl}
+A &=& k P^a D^b H^c \\
+[A] &=&  [P]^a [D]^b [H]^c \\
+T^{-1} &=& \left( ML^2T^{-3}\right)^a L^b \left( M L^{-1} T^{-1}  \right)^c \\
+M^0L^0T^{-1} &=& M^{a+c} L^{2a+b-c} T^{-3a-c}
+\end{array}
+$$
+and so  we have
+$$
+0 = a+c \qquad 0 = 2a+b-c \qquad -1 = -3a-c
+$$
+which means that $a=1/2$ and $c=-1/2$ and $b=-3/2$. So our final equation is
+$$
+A = k a^{1/2} b^{-3/2} c^{-1/2} = k \sqrt{\frac{P}{D^3H}}
+$$
+
+3. We have
+$$
+\begin{array}{rcl}
+V &=& k P^a g^b \mu^c \\
+[V] &=& [P]^a [g]^b [\mu]^c \\
+LT^{-1} &=& (T)^a (LT^{-2})^b (ML^{-3})^c \\
+ L^1 T^{-1} M^0 &=& L^{b-3c} T^{a-2b} M^{c}
+\end{array}
+$$
+so we have the equations
+$$
+1 = b - 3c \qquad -1 = a-2b \qquad 0 = c
+$$
+which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
+$$
+V = k Pg
+$$
