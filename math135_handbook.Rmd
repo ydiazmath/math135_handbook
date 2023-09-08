@@ -530,7 +530,6 @@ plotFun(g(x,y) ~ x & y,
 
 
 
-
 <!--
 
 Draw contours for $g(x,y)=k$ on the given table for $k=3,6,9$.
