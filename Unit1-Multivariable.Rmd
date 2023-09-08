@@ -1,9 +1,9 @@
+# Multivariable Functions
+
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
-
-# Multivariable Functions
 
 ## Goals
 

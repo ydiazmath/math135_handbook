@@ -102,7 +102,7 @@ Here is the average rainfall in Seattle.
 
 Model the monthly rainfall with a periodic function $r(t)$ where $t=0$ corresponds to January. Your function must attain its maximum in December, so you will need a horizontal shift!
 
-
+<!--
 ## Solutions
 
 
@@ -151,4 +151,4 @@ $$ w(t) = 3 \cos \left( \frac{2 \pi}{12.415} ( t - 3.1) \right)  +3$$
 The amplitude is about $5/2=2.5$ and the vertical shift is $7/2=3.5$. The period is 12 months. We reach our peak in December, so we must shift a cosine curve to the left by $\phi=1$ unit. So our function is
 $$ r(t) = 2.5 \cos \left( \frac{2\pi}{12} ( t + 1) \right) + 3.5.$$
 
-
+-->
