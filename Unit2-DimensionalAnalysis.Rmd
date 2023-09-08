@@ -27,7 +27,7 @@ A mixer with power $P$ turns a mixer with wings of length $D$ through a liquid o
 The velocity $V$ of a large ocean wave depends upon the period $P$, the acceleration of gravity $g$, and the density $\mu$ of the water. Find a formula for the velocity $V=V(P,g,\mu)$.
 
 
-
+<!--
 ## Solutions
 
 1. We have
@@ -82,3 +82,4 @@ which means that $c=0$ and $b=1$ and $a=1$. So our final equation is
 $$
 V = k Pg
 $$
+-->
