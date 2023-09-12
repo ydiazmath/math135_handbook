@@ -1,6 +1,6 @@
 
 
-# Linear Functions
+# 1.B: Linear Functions
 
 
 ## Goals
