@@ -9,7 +9,7 @@ output:
         twitter: false
 documentclass: book
 link-citations: yes
-github-repo: mathbeveridge/math135_f21
+github-repo: ydiazmath/math135_handbook
 description: "This is the class activity manual for MATH 135 at Macalester College."
 header-includes:
   - \usepackage{pgf}
@@ -18,7 +18,7 @@ header-includes:
 
 
 **Macalester College**    
-**Fall 2021**
+**Fall 2023**
 
 # Preface {-}
 

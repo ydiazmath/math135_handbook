@@ -1,4 +1,4 @@
-# Average Rate of Change
+# 1.C Average Rate of Change
 
 
 ```{r, include=FALSE, warning=FALSE}
