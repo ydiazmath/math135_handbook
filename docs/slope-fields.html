@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>15 Local Linear Approximation | MATH 135: AMC I</title>
+  <title>35 Slope Fields | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="15 Local Linear Approximation | MATH 135: AMC I" />
+  <meta property="og:title" content="35 Slope Fields | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="github-repo" content="ydiazmath/math135_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="15 Local Linear Approximation | MATH 135: AMC I" />
+  <meta name="twitter:title" content="35 Slope Fields | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="partial-derivatives.html"/>
-<link rel="next" href="unit-3-summary.html"/>
+<link rel="prev" href="eulers-method.html"/>
+<link rel="next" href="sir-model.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -749,111 +749,204 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="local-linear-approximation" class="section level1 hasAnchor" number="15">
-<h1><span class="header-section-number">15</span> Local Linear Approximation<a href="local-linear-approximation.html#local-linear-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The linearization of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span> is
-<span class="math display">\[
-L_a(x) = f(a) + f&#39;(a) (x-a).
-\]</span></p>
-<p>The linearization of <span class="math inline">\(f(x,y)\)</span> at point <span class="math inline">\((a,b)\)</span> is
-<span class="math display">\[
-L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (x-b).
-\]</span></p>
-<div id="activities-12" class="section level2 hasAnchor" number="15.1">
-<h2><span class="header-section-number">15.1</span> Activities<a href="local-linear-approximation.html#activities-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-sugar-solution-temperature" class="section level3 hasAnchor" number="15.1.1">
-<h3><span class="header-section-number">15.1.1</span> Estimating Sugar Solution Temperature<a href="local-linear-approximation.html#estimating-sugar-solution-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We are boiling a sugar solution to make salt water taffy. When we start, the temperature of the solution is <span class="math inline">\(80^\circ\)</span>F, after 5 minutes it’s <span class="math inline">\(115^\circ\)</span>F, and after 10 minutes it’s <span class="math inline">\(165^\circ\)</span>F.</p>
+<div id="slope-fields" class="section level1 hasAnchor" number="35">
+<h1><span class="header-section-number">35</span> Slope Fields<a href="slope-fields.html#slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="creating-a-slope-field-in-rstudio" class="section level2 hasAnchor" number="35.1">
+<h2><span class="header-section-number">35.1</span> Creating a Slope Field in RStudio<a href="slope-fields.html#creating-a-slope-field-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
+<div class="sourceCode" id="cb100"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb100-1"><a href="slope-fields.html#cb100-1" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 6 - 2 P}\)</span></p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="slope-fields.html#cb101-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb101-2"><a href="slope-fields.html#cb101-2" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb101-3"><a href="slope-fields.html#cb101-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-79-1.png" width="672" /></p>
+</div>
+<div id="activities-26" class="section level2 hasAnchor" number="35.2">
+<h2><span class="header-section-number">35.2</span> Activities<a href="slope-fields.html#activities-26" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="match-the-slope-field" class="section level3 hasAnchor" number="35.2.1">
+<h3><span class="header-section-number">35.2.1</span> Match the Slope Field<a href="slope-fields.html#match-the-slope-field" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Match each of the following differential equations with its slope field. <em>Hint:</em> start by setting <span class="math inline">\(\frac{dy}{dx} = 0\)</span> and solving for <span class="math inline">\(y\)</span>. The slopes along the resulting curve will always be horizontal.</p>
 <ol style="list-style-type: decimal">
-<li>Estimate the temperature after 17 minutes.</li>
-<li>The sugar solution needs to reach <span class="math inline">\(289^\circ\)</span>F to be the consistancy of taffy. Estimate when this will happen.</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=xy}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=\frac{x}{y}}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x+y}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x-y}\)</span></li>
+</ol>
+<table>
+<tr>
+<td>
+Slope Field A
+</td>
+<td>
+Slope Field B
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield1.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield2.png" style="width:100.0%" />
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Slope Field C
+</td>
+<td>
+Slope Field D
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield3.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield4.png" style="width:100.0%" />
+</td>
+</tr>
+</table>
+</div>
+<div id="draw-some-trajectories" class="section level3 hasAnchor" number="35.2.2">
+<h3><span class="header-section-number">35.2.2</span> Draw Some Trajectories<a href="slope-fields.html#draw-some-trajectories" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For each of the above slope fields, sketch the solution curves that satisfy</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(y(0) = 1\)</span></li>
+<li><span class="math inline">\(y(0) = 0\)</span></li>
+<li><span class="math inline">\(y(0) = -1\)</span></li>
 </ol>
 </div>
-<div id="comparing-linearizations" class="section level3 hasAnchor" number="15.1.2">
-<h3><span class="header-section-number">15.1.2</span> Comparing Linearizations<a href="local-linear-approximation.html#comparing-linearizations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="slope-fields-for-population-models" class="section level3 hasAnchor" number="35.2.3">
+<h3><span class="header-section-number">35.2.3</span> Slope Fields for Population Models<a href="slope-fields.html#slope-fields-for-population-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of <span class="math inline">\(P\)</span> does the population increase without bound? stabilize to a constant value? die out?</p>
 <ol style="list-style-type: decimal">
-<li>Draw two (nonlinear) functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> and their linearizations at <span class="math inline">\(x=1\)</span>. One function should be “well estimated” by the linearization around <span class="math inline">\(x=1\)</span> and the other should be “poorly estimated” by the linearization around <span class="math inline">\(x=1\)</span>.</li>
-<li>What feature(s) of the curve <span class="math inline">\(y=f(x)\)</span> result in a good approximation?</li>
-<li>What feature(s) of the curve <span class="math inline">\(y=g(x)\)</span> result in a bad approximation?</li>
-</ol>
-</div>
-<div id="estimating-a-function" class="section level3 hasAnchor" number="15.1.3">
-<h3><span class="header-section-number">15.1.3</span> Estimating a Function<a href="local-linear-approximation.html#estimating-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Find the linearization <span class="math inline">\(L_2(x)\)</span> the function <span class="math inline">\(g(t)=t^3+e^t-4\)</span>.</p>
-<ul>
-<li>Remember that <span class="math inline">\(L_2(x)\)</span> means “the local linear approximation at <span class="math inline">\(x=2\)</span>.”<br />
-</li>
-<li>You will need to use desmos to approximate <span class="math inline">\(f&#39;(2)\)</span>.</li>
-</ul></li>
-<li><p>Use your formula for <span class="math inline">\(L_2(x)\)</span> to estimate <span class="math inline">\(g(2.1)\)</span>, <span class="math inline">\(g(1.98)\)</span>, <span class="math inline">\(g(3)\)</span> and <span class="math inline">\(g(0.7)\)</span>.</p></li>
-<li><p>Check your estimations with the original function.</p></li>
-<li><p>What do you notice about your approximations as you get further from the spot where you built the linearization?</p></li>
-</ol>
-</div>
-<div id="estimating-the-windchill" class="section level3 hasAnchor" number="15.1.4">
-<h3><span class="header-section-number">15.1.4</span> Estimating the Windchill<a href="local-linear-approximation.html#estimating-the-windchill" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We’ve talked about windchill <span class="math inline">\(w(t,v)\)</span> as a function of temperature <span class="math inline">\(t\)</span> and wind speed <span class="math inline">\(v\)</span>. Here is the table that we’ve used</p>
-<p><img src="images/wind-chill.png" style="width:100.0%" /></p>
-<ol style="list-style-type: decimal">
-<li><p>The perceived temperature when <span class="math inline">\(t=-10 ^\circ\)</span>F and <span class="math inline">\(v=40\)</span> mph is <span class="math inline">\(w(-10,40)=-43\)</span>. I have used desmos to estimate that
+<li><p>Exponential growth with harvesting.
 <span class="math display">\[
-w_t(-10,-40) = 1.39, \qquad w_v(-10,40)= −0.28.
+\frac{dP}{dt} = 0.2 P - 40
 \]</span>
-Use these values to find the linearization <span class="math inline">\(L_{(-10,40)}(t,v)\)</span> at the point <span class="math inline">\((-10,40)\)</span>.</p></li>
-<li><p>Use your linearization (and desmos!) to estimate the four windchill values <span class="math inline">\(w(-5,40)\)</span>, <span class="math inline">\(w(-15,40)\)</span>, <span class="math inline">\(w(-10,45)\)</span> and <span class="math inline">\(w(-10,35)\)</span>. Are your estimates close to the actual values?</p></li>
-<li><p>Find the linearization of <span class="math inline">\(w(t,v)\)</span> at <span class="math inline">\(t=-10\)</span> and <span class="math inline">\(v=40\)</span> using the
-the partial derivatives of the formula <span class="math inline">\(w(t,v) = 35.74+0.6215 t-35.75 v^{0.16}+0.4275 t \, v^{0.16}\)</span>. Here is a <a href="https://www.desmos.com/calculator/dvuhpknthj">link to my desmos calculator for the partial derivatives of this function.</a></p></li>
-</ol>
-</div>
-</div>
-<div id="solutions-11" class="section level2 hasAnchor" number="15.2">
-<h2><span class="header-section-number">15.2</span> Solutions<a href="local-linear-approximation.html#solutions-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-sugar-solution-temperature-1" class="section level3 hasAnchor" number="15.2.1">
-<h3><span class="header-section-number">15.2.1</span> Estimating Sugar Solution Temperature<a href="local-linear-approximation.html#estimating-sugar-solution-temperature-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Let’s use <span class="math inline">\(f(t)\)</span> to denote the temperature.We need to estimate the rate of change at <span class="math inline">\(t=10\)</span>. We have
-<span class="math display">\[ f&#39;(10) \approx \frac{165 - 115}{10-5} = \frac{50}{5}=10\]</span>.
-We use the linear approximation
-<span class="math display">\[L_{10}(t) = 165 + 10 (t-10)\]</span>
-to estimate the temperature. We have
-<span class="math display">\[f(17) \approx L_{10}(17) = 165 + 10 (17-10) = 235.\]</span></p></li>
-<li><p>We must solve
-<span class="math display">\[ 289 = 165 + 10 (t-10) = 65t\]</span>
-to find that <span class="math inline">\(10t = 224\)</span> and so <span class="math inline">\(t=22.4\)</span> minutes.</p></li>
-</ol>
-</div>
-<div id="comparing-linearizations-1" class="section level3 hasAnchor" number="15.2.2">
-<h3><span class="header-section-number">15.2.2</span> Comparing Linearizations<a href="local-linear-approximation.html#comparing-linearizations-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>In the graph below, the blue function is well estimated by its tangent line, while the red function is not.</li>
-</ol>
-<p><img src="images/linear-approx.png" style="width:30.0%" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li>If the curve has low concavity near the point <span class="math inline">\(x=a\)</span> then the tangent line is a good approximation. In other words, the second derivative remains near zero around the point <span class="math inline">\(x=a\)</span></li>
-<li>If the curve has a lot of concavity near the point <span class="math inline">\(x=a\)</span> then then tangent line is not a good approximation. This is because the curve bends away from the tangent line.</li>
-</ol>
-</div>
-<div id="estimating-a-function-1" class="section level3 hasAnchor" number="15.2.3">
-<h3><span class="header-section-number">15.2.3</span> Estimating a Function<a href="local-linear-approximation.html#estimating-a-function-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Using desmos, I found that <span class="math inline">\(f(2)=11.39\)</span> and <span class="math inline">\(f&#39;(2)=19.39\)</span>. Therefore
-<span class="math display">\[ L_2(t) = 11.39 + 19.39 ( t-2).\]</span></p></li>
-<li><p>I get the estimates <span class="math inline">\(g(2.1) \approx 13.33\)</span>, <span class="math inline">\(g(1.98) \approx 11.00\)</span>, <span class="math inline">\(g(3) \approx 30.78\)</span> and <span class="math inline">\(g(0.7) \approx -13.82\)</span>.</p></li>
-<li><p>The true values are <span class="math inline">\(g(2.1) = 13.43\)</span>, <span class="math inline">\(g(1.98) = 11.01\)</span>, <span class="math inline">\(g(3) = 43.09\)</span> and <span class="math inline">\(g(0.7) \approx -1.64\)</span>..</p></li>
-<li><p>The approximations close to <span class="math inline">\(t=2\)</span> are much better!</p></li>
-</ol>
-</div>
-<div id="estimating-the-windchill-1" class="section level3 hasAnchor" number="15.2.4">
-<h3><span class="header-section-number">15.2.4</span> Estimating the Windchill<a href="local-linear-approximation.html#estimating-the-windchill-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(L_{(-10,40)}(t,v) = -43 + 1.39(t+10) -0.24(v-40)\)</span></p></li>
-<li><p>My estimates are <span class="math inline">\(w(-5,40) \approx -36.05\)</span>, <span class="math inline">\(w(-15,40) \approx -49.95\)</span>, <span class="math inline">\(w(-10,45) \approx 41.8\)</span> and <span class="math inline">\(w(-10,35) \approx -44.2\)</span>. These are pretty close to the values on the table.</p></li>
-<li><p>Using the function and the partial derivatives from <a href="https://www.desmos.com/calculator/dvuhpknthj">this desmos calculation</a>, we get
+for <span class="math inline">\(0 \leq P \leq 300\)</span> and <span class="math inline">\(0 \leq t \leq 100\)</span>.</p></li>
+<li><p>Constrained growth
 <span class="math display">\[
-L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
-\]</span></p></li>
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P)
+\]</span>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</p></li>
+<li><p>Constrained growth with constant harvesting
+<span class="math display">\[
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
+\]</span>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</p></li>
 </ol>
+</div>
+</div>
+<div id="solutions-24" class="section level2 hasAnchor" number="35.3">
+<h2><span class="header-section-number">35.3</span> Solutions<a href="slope-fields.html#solutions-24" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="match-the-slope-fields" class="section level3 hasAnchor" number="35.3.1">
+<h3><span class="header-section-number">35.3.1</span> Match the Slope Fields<a href="slope-fields.html#match-the-slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=xy}\)</span> is Slope Field B</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=\frac{x}{y}}\)</span> is Slope Field A</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x+y}\)</span> is Slope Field D</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x-y}\)</span> is Slope Field C</li>
+</ol>
+</div>
+<div id="draw-some-trajectories-1" class="section level3 hasAnchor" number="35.3.2">
+<h3><span class="header-section-number">35.3.2</span> Draw Some Trajectories<a href="slope-fields.html#draw-some-trajectories-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are some trajectories (not necessarily the ones that go through the three points specified).</p>
+<table>
+<tr>
+<td>
+Slope Field A
+</td>
+<td>
+Slope Field B
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield1soln.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield2soln.png" style="width:100.0%" />
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Slope Field C
+</td>
+<td>
+Slope Field D
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield3soln.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield4soln.png" style="width:100.0%" />
+</td>
+</tr>
+</table>
+</div>
+<div id="slope-fields-for-population-models-1" class="section level3 hasAnchor" number="35.3.3">
+<h3><span class="header-section-number">35.3.3</span> Slope Fields for Population Models<a href="slope-fields.html#slope-fields-for-population-models-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of <span class="math inline">\(P\)</span> does the population increase without bound? stabilize to a constant value? die out?</p>
+<ol style="list-style-type: decimal">
+<li>Exponential growth with harvesting.</li>
+</ol>
+<div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="slope-fields.html#cb102-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb102-2"><a href="slope-fields.html#cb102-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.2</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">40</span>,</span>
+<span id="cb102-3"><a href="slope-fields.html#cb102-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">300</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-80-1.png" width="70%" /></p>
+<ul>
+<li>If <span class="math inline">\(P(0) &gt; 200\)</span> then the population increases without bound</li>
+<li>If <span class="math inline">\(P(0) = 200\)</span> then the population remains at this equilibrium value. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(P(0) &lt; 200\)</span> then the population decreases to zero.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Constrained growth</li>
+</ol>
+<div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="slope-fields.html#cb103-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb103-2"><a href="slope-fields.html#cb103-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P),</span>
+<span id="cb103-3"><a href="slope-fields.html#cb103-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-81-1.png" width="70%" /></p>
+<ul>
+<li>If <span class="math inline">\(P(0) = 0\)</span> then the population remains at 0. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(0 &lt; P(0) &lt; 500\)</span> then the population increases to the carrying capacity 500.</li>
+<li>If <span class="math inline">\(P(0) = 500\)</span> then the population remains at this equilibrium value. This is a stable equilibrium, and it is the carrying capacity.</li>
+<li>If <span class="math inline">\(P(0) &gt; 500\)</span> then the population decreases down to the carrying capacity 500.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Constrained growth with constant harvesting</li>
+</ol>
+<div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="slope-fields.html#cb104-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb104-2"><a href="slope-fields.html#cb104-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P) <span class="sc">-</span> <span class="dv">4</span>,</span>
+<span id="cb104-3"><a href="slope-fields.html#cb104-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-82-1.png" width="70%" /></p>
+<p>Let’s set <span class="math inline">\(\frac{dP}{dt}=0\)</span> and solve to find the equilibrium points. We have
+<span class="math display">\[\begin{align}
+-0.0001 P^2 + 0.05 P   - 4 &amp;= 0 \\
+P^2 - 500 P   + 40000 &amp;= 0 \\
+(P-100)(P-400) &amp;= 0
+\end{align}\]</span></p>
+<ul>
+<li>If <span class="math inline">\(P(0) &lt; 100\)</span> then the population decreases to 0 at 0.</li>
+<li>If <span class="math inline">\(P(0) = 100\)</span> then the population remains at 100. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(100 &lt; P(0) &lt; 400\)</span> then the population increases to 400.</li>
+<li>If <span class="math inline">\(P(0) = 400\)</span> then the population remains at this equilibrium value. This is a stable equilibrium.</li>
+<li>If <span class="math inline">\(P(0) &gt; 400\)</span> then the population decreases down to 400.</li>
+</ul>
 
 </div>
 </div>
@@ -863,8 +956,8 @@ L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
           </div>
         </div>
       </div>
-<a href="partial-derivatives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="unit-3-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="eulers-method.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sir-model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

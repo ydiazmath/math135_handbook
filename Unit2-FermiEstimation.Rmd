@@ -54,7 +54,7 @@ The following approximate data may be useful in various Fermi problems. Each has
 1. If all 7.8 billion humans in the world were crammed together, how much area would we require? Is this closer to the size of a city, a state, the U.S., or North America? Start by figuring out how many people would fit in 1 square meter. Then figure out how many square kilometers we would need.
 
 
-<!--
+
 ## Solutions
 
 
@@ -84,4 +84,3 @@ $$
 
 This is less than $30^2=900$, which is much closer to the size of a city than the size of a state. In fact, $30 \mbox{ km} \times 30 \mbox{ km}$  is similar to the size of the  "metro area"  of a big city. 
 
--->

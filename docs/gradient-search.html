@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>15 Local Linear Approximation | MATH 135: AMC I</title>
+  <title>24 Gradient Search | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="15 Local Linear Approximation | MATH 135: AMC I" />
+  <meta property="og:title" content="24 Gradient Search | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="github-repo" content="ydiazmath/math135_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="15 Local Linear Approximation | MATH 135: AMC I" />
+  <meta name="twitter:title" content="24 Gradient Search | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="partial-derivatives.html"/>
-<link rel="next" href="unit-3-summary.html"/>
+<link rel="prev" href="d-optimization-1.html"/>
+<link rel="next" href="constrained-2d-optimization.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -749,111 +749,88 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="local-linear-approximation" class="section level1 hasAnchor" number="15">
-<h1><span class="header-section-number">15</span> Local Linear Approximation<a href="local-linear-approximation.html#local-linear-approximation" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>The linearization of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(x=a\)</span> is
+<div id="gradient-search" class="section level1 hasAnchor" number="24">
+<h1><span class="header-section-number">24</span> Gradient Search<a href="gradient-search.html#gradient-search" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="gradient-search-example" class="section level2 hasAnchor" number="24.1">
+<h2><span class="header-section-number">24.1</span> Gradient Search Example<a href="gradient-search.html#gradient-search-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s use gradient search to find the maximum of the function
 <span class="math display">\[
-L_a(x) = f(a) + f&#39;(a) (x-a).
-\]</span></p>
-<p>The linearization of <span class="math inline">\(f(x,y)\)</span> at point <span class="math inline">\((a,b)\)</span> is
-<span class="math display">\[
-L_{(a,b)}(x,y) = f(a,b) + f_x(a,b) (x-a) + f_y(a,b) (x-b).
-\]</span></p>
-<div id="activities-12" class="section level2 hasAnchor" number="15.1">
-<h2><span class="header-section-number">15.1</span> Activities<a href="local-linear-approximation.html#activities-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-sugar-solution-temperature" class="section level3 hasAnchor" number="15.1.1">
-<h3><span class="header-section-number">15.1.1</span> Estimating Sugar Solution Temperature<a href="local-linear-approximation.html#estimating-sugar-solution-temperature" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We are boiling a sugar solution to make salt water taffy. When we start, the temperature of the solution is <span class="math inline">\(80^\circ\)</span>F, after 5 minutes it’s <span class="math inline">\(115^\circ\)</span>F, and after 10 minutes it’s <span class="math inline">\(165^\circ\)</span>F.</p>
-<ol style="list-style-type: decimal">
-<li>Estimate the temperature after 17 minutes.</li>
-<li>The sugar solution needs to reach <span class="math inline">\(289^\circ\)</span>F to be the consistancy of taffy. Estimate when this will happen.</li>
-</ol>
-</div>
-<div id="comparing-linearizations" class="section level3 hasAnchor" number="15.1.2">
-<h3><span class="header-section-number">15.1.2</span> Comparing Linearizations<a href="local-linear-approximation.html#comparing-linearizations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>Draw two (nonlinear) functions <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> and their linearizations at <span class="math inline">\(x=1\)</span>. One function should be “well estimated” by the linearization around <span class="math inline">\(x=1\)</span> and the other should be “poorly estimated” by the linearization around <span class="math inline">\(x=1\)</span>.</li>
-<li>What feature(s) of the curve <span class="math inline">\(y=f(x)\)</span> result in a good approximation?</li>
-<li>What feature(s) of the curve <span class="math inline">\(y=g(x)\)</span> result in a bad approximation?</li>
-</ol>
-</div>
-<div id="estimating-a-function" class="section level3 hasAnchor" number="15.1.3">
-<h3><span class="header-section-number">15.1.3</span> Estimating a Function<a href="local-linear-approximation.html#estimating-a-function" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Find the linearization <span class="math inline">\(L_2(x)\)</span> the function <span class="math inline">\(g(t)=t^3+e^t-4\)</span>.</p>
-<ul>
-<li>Remember that <span class="math inline">\(L_2(x)\)</span> means “the local linear approximation at <span class="math inline">\(x=2\)</span>.”<br />
-</li>
-<li>You will need to use desmos to approximate <span class="math inline">\(f&#39;(2)\)</span>.</li>
-</ul></li>
-<li><p>Use your formula for <span class="math inline">\(L_2(x)\)</span> to estimate <span class="math inline">\(g(2.1)\)</span>, <span class="math inline">\(g(1.98)\)</span>, <span class="math inline">\(g(3)\)</span> and <span class="math inline">\(g(0.7)\)</span>.</p></li>
-<li><p>Check your estimations with the original function.</p></li>
-<li><p>What do you notice about your approximations as you get further from the spot where you built the linearization?</p></li>
-</ol>
-</div>
-<div id="estimating-the-windchill" class="section level3 hasAnchor" number="15.1.4">
-<h3><span class="header-section-number">15.1.4</span> Estimating the Windchill<a href="local-linear-approximation.html#estimating-the-windchill" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We’ve talked about windchill <span class="math inline">\(w(t,v)\)</span> as a function of temperature <span class="math inline">\(t\)</span> and wind speed <span class="math inline">\(v\)</span>. Here is the table that we’ve used</p>
-<p><img src="images/wind-chill.png" style="width:100.0%" /></p>
-<ol style="list-style-type: decimal">
-<li><p>The perceived temperature when <span class="math inline">\(t=-10 ^\circ\)</span>F and <span class="math inline">\(v=40\)</span> mph is <span class="math inline">\(w(-10,40)=-43\)</span>. I have used desmos to estimate that
-<span class="math display">\[
-w_t(-10,-40) = 1.39, \qquad w_v(-10,40)= −0.28.
+f(x,y) = - x^4 -  x^3 + 10 x y + 2y - 8 y^2
 \]</span>
-Use these values to find the linearization <span class="math inline">\(L_{(-10,40)}(t,v)\)</span> at the point <span class="math inline">\((-10,40)\)</span>.</p></li>
-<li><p>Use your linearization (and desmos!) to estimate the four windchill values <span class="math inline">\(w(-5,40)\)</span>, <span class="math inline">\(w(-15,40)\)</span>, <span class="math inline">\(w(-10,45)\)</span> and <span class="math inline">\(w(-10,35)\)</span>. Are your estimates close to the actual values?</p></li>
-<li><p>Find the linearization of <span class="math inline">\(w(t,v)\)</span> at <span class="math inline">\(t=-10\)</span> and <span class="math inline">\(v=40\)</span> using the
-the partial derivatives of the formula <span class="math inline">\(w(t,v) = 35.74+0.6215 t-35.75 v^{0.16}+0.4275 t \, v^{0.16}\)</span>. Here is a <a href="https://www.desmos.com/calculator/dvuhpknthj">link to my desmos calculator for the partial derivatives of this function.</a></p></li>
-</ol>
-</div>
-</div>
-<div id="solutions-11" class="section level2 hasAnchor" number="15.2">
-<h2><span class="header-section-number">15.2</span> Solutions<a href="local-linear-approximation.html#solutions-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-sugar-solution-temperature-1" class="section level3 hasAnchor" number="15.2.1">
-<h3><span class="header-section-number">15.2.1</span> Estimating Sugar Solution Temperature<a href="local-linear-approximation.html#estimating-sugar-solution-temperature-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Let’s use <span class="math inline">\(f(t)\)</span> to denote the temperature.We need to estimate the rate of change at <span class="math inline">\(t=10\)</span>. We have
-<span class="math display">\[ f&#39;(10) \approx \frac{165 - 115}{10-5} = \frac{50}{5}=10\]</span>.
-We use the linear approximation
-<span class="math display">\[L_{10}(t) = 165 + 10 (t-10)\]</span>
-to estimate the temperature. We have
-<span class="math display">\[f(17) \approx L_{10}(17) = 165 + 10 (17-10) = 235.\]</span></p></li>
-<li><p>We must solve
-<span class="math display">\[ 289 = 165 + 10 (t-10) = 65t\]</span>
-to find that <span class="math inline">\(10t = 224\)</span> and so <span class="math inline">\(t=22.4\)</span> minutes.</p></li>
-</ol>
-</div>
-<div id="comparing-linearizations-1" class="section level3 hasAnchor" number="15.2.2">
-<h3><span class="header-section-number">15.2.2</span> Comparing Linearizations<a href="local-linear-approximation.html#comparing-linearizations-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li>In the graph below, the blue function is well estimated by its tangent line, while the red function is not.</li>
-</ol>
-<p><img src="images/linear-approx.png" style="width:30.0%" /></p>
-<ol start="2" style="list-style-type: decimal">
-<li>If the curve has low concavity near the point <span class="math inline">\(x=a\)</span> then the tangent line is a good approximation. In other words, the second derivative remains near zero around the point <span class="math inline">\(x=a\)</span></li>
-<li>If the curve has a lot of concavity near the point <span class="math inline">\(x=a\)</span> then then tangent line is not a good approximation. This is because the curve bends away from the tangent line.</li>
-</ol>
-</div>
-<div id="estimating-a-function-1" class="section level3 hasAnchor" number="15.2.3">
-<h3><span class="header-section-number">15.2.3</span> Estimating a Function<a href="local-linear-approximation.html#estimating-a-function-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p>Using desmos, I found that <span class="math inline">\(f(2)=11.39\)</span> and <span class="math inline">\(f&#39;(2)=19.39\)</span>. Therefore
-<span class="math display">\[ L_2(t) = 11.39 + 19.39 ( t-2).\]</span></p></li>
-<li><p>I get the estimates <span class="math inline">\(g(2.1) \approx 13.33\)</span>, <span class="math inline">\(g(1.98) \approx 11.00\)</span>, <span class="math inline">\(g(3) \approx 30.78\)</span> and <span class="math inline">\(g(0.7) \approx -13.82\)</span>.</p></li>
-<li><p>The true values are <span class="math inline">\(g(2.1) = 13.43\)</span>, <span class="math inline">\(g(1.98) = 11.01\)</span>, <span class="math inline">\(g(3) = 43.09\)</span> and <span class="math inline">\(g(0.7) \approx -1.64\)</span>..</p></li>
-<li><p>The approximations close to <span class="math inline">\(t=2\)</span> are much better!</p></li>
-</ol>
-</div>
-<div id="estimating-the-windchill-1" class="section level3 hasAnchor" number="15.2.4">
-<h3><span class="header-section-number">15.2.4</span> Estimating the Windchill<a href="local-linear-approximation.html#estimating-the-windchill-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ol style="list-style-type: decimal">
-<li><p><span class="math inline">\(L_{(-10,40)}(t,v) = -43 + 1.39(t+10) -0.24(v-40)\)</span></p></li>
-<li><p>My estimates are <span class="math inline">\(w(-5,40) \approx -36.05\)</span>, <span class="math inline">\(w(-15,40) \approx -49.95\)</span>, <span class="math inline">\(w(-10,45) \approx 41.8\)</span> and <span class="math inline">\(w(-10,35) \approx -44.2\)</span>. These are pretty close to the values on the table.</p></li>
-<li><p>Using the function and the partial derivatives from <a href="https://www.desmos.com/calculator/dvuhpknthj">this desmos calculation</a>, we get
+whose partial derivatives are
 <span class="math display">\[
-L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
-\]</span></p></li>
+\frac{\partial f}{\partial x} = -4 x^3 -3 x^2  + 10 y
+\quad \mbox{and} \quad
+\frac{\partial f}{\partial x} = 10 x + 2 - 16 y
+\]</span></p>
+<p>First, you define the partial derivatives and then choose your starting point <code>(newx, newy)</code>. In this case, we start at <code>(1,1)</code>.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="gradient-search.html#cb19-1" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span><span class="dv">4</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">3</span> <span class="sc">-</span><span class="dv">3</span><span class="sc">*</span>x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb19-2"><a href="gradient-search.html#cb19-2" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">10</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">2</span> <span class="sc">-</span> <span class="dv">16</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb19-3"><a href="gradient-search.html#cb19-3" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb19-4"><a href="gradient-search.html#cb19-4" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<p>Next, you <strong>repeatedly</strong> run the following code block, which updates the current point by moving <code>0.1</code> times the gradient vector. This takes a small step in the uphill direction.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="gradient-search.html#cb20-1" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb20-2"><a href="gradient-search.html#cb20-2" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb20-3"><a href="gradient-search.html#cb20-3" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb20-4"><a href="gradient-search.html#cb20-4" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">+</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb20-5"><a href="gradient-search.html#cb20-5" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb20-6"><a href="gradient-search.html#cb20-6" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span>
+<span id="cb20-7"><a href="gradient-search.html#cb20-7" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb20-8"><a href="gradient-search.html#cb20-8" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<p>Repeatedly run this code block until the partial derivatives are essentially zero (at least two zeros after the decimal point). Congrats! You have found your local maximum.</p>
+<p>You will end at the point <code>(1.04,0.77)</code>. But note that starting at another initial point might take you to a different local maximum!</p>
+<p>You can check that this critical point is a local maximum (and not a saddle point) by using the same method that we used for 2D Optimizatiion</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="gradient-search.html#cb21-1" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="sc">-</span>x<span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> x<span class="sc">^</span><span class="dv">3</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>x<span class="sc">*</span>y <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span> y <span class="sc">-</span> <span class="dv">8</span><span class="sc">*</span> y<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb21-2"><a href="gradient-search.html#cb21-2" tabindex="-1"></a>a<span class="ot">=</span><span class="fl">1.0405</span></span>
+<span id="cb21-3"><a href="gradient-search.html#cb21-3" tabindex="-1"></a>b<span class="ot">=</span><span class="fl">0.7753</span></span>
+<span id="cb21-4"><a href="gradient-search.html#cb21-4" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
+<span id="cb21-5"><a href="gradient-search.html#cb21-5" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
+<span id="cb21-6"><a href="gradient-search.html#cb21-6" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta))</span></code></pre></div>
+<pre><code>##  [1] 0.10152236 0.06983861 0.04586756 0.03913009 0.05231624 0.07998000 0.11073639
+##  [8] 0.13203698 0.13536588 0.11957064 0.09102447 0.06080448 0.04028374 0.03696369
+## [15] 0.05199590 0.08002000 0.11113281 0.13426810 0.14099672 0.12862949 0.10152236</code></pre>
+</div>
+<div id="activities-18" class="section level2 hasAnchor" number="24.2">
+<h2><span class="header-section-number">24.2</span> Activities<a href="gradient-search.html#activities-18" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-a-local-minimum" class="section level3 hasAnchor" number="24.2.1">
+<h3><span class="header-section-number">24.2.1</span> Finding a Local Minimum<a href="gradient-search.html#finding-a-local-minimum" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>How should I change to the code if I want to find a <strong>local minimum</strong> instead of a local maximum? (Hint: we want to take a small step downhill.)</li>
+<li>Use gradient search to find a <strong>local minimum</strong> of
+<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span></li>
 </ol>
+</div>
+</div>
+<div id="solutions-17" class="section level2 hasAnchor" number="24.3">
+<h2><span class="header-section-number">24.3</span> Solutions<a href="gradient-search.html#solutions-17" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="finding-a-local-minimum-1" class="section level3 hasAnchor" number="24.3.1">
+<h3><span class="header-section-number">24.3.1</span> Finding a Local Minimum<a href="gradient-search.html#finding-a-local-minimum-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>In order to find a local minimum, we need to move in the opposite direction of the gradient. This is the “downhill direction.” All we need to do in the code is replace the two <code>+ 0.1</code> with <code>- 0.1</code>.</p></li>
+<li><p>We want to find the local minimum of
+<span class="math display">\[f(x,y) = x^2 + 2 x y + 3 x + 4 y + 5 y^2.\]</span>
+We have
+<span class="math display">\[
+f_x(x,y) = 2x +2y + 3, \qquad f_y(x,y) = 2x + 4 + 10y.
+\]</span>
+Here is our updated code to walk downhill. We set up our partials and pick our starting point.</p></li>
+</ol>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="gradient-search.html#cb23-1" tabindex="-1"></a>partialx <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span><span class="dv">2</span><span class="sc">*</span>y <span class="sc">+</span> <span class="dv">3</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb23-2"><a href="gradient-search.html#cb23-2" tabindex="-1"></a>partialy <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="dv">2</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span> <span class="sc">+</span> <span class="dv">10</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb23-3"><a href="gradient-search.html#cb23-3" tabindex="-1"></a>newx <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb23-4"><a href="gradient-search.html#cb23-4" tabindex="-1"></a>newy <span class="ot">=</span> <span class="dv">1</span></span></code></pre></div>
+<p>Now we repeatedly run this “move downhill” block until the partial derivatives are (basically) zero.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="gradient-search.html#cb24-1" tabindex="-1"></a>slopex<span class="ot">=</span><span class="fu">partialx</span>(newx, newy)</span>
+<span id="cb24-2"><a href="gradient-search.html#cb24-2" tabindex="-1"></a>slopey<span class="ot">=</span><span class="fu">partialy</span>(newx, newy)</span>
+<span id="cb24-3"><a href="gradient-search.html#cb24-3" tabindex="-1"></a>newx <span class="ot">=</span> newx <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopex</span>
+<span id="cb24-4"><a href="gradient-search.html#cb24-4" tabindex="-1"></a>newy <span class="ot">=</span> newy <span class="sc">-</span> <span class="fl">0.05</span><span class="sc">*</span>slopey</span>
+<span id="cb24-5"><a href="gradient-search.html#cb24-5" tabindex="-1"></a><span class="co"># print new partial derivatives</span></span>
+<span id="cb24-6"><a href="gradient-search.html#cb24-6" tabindex="-1"></a><span class="fu">c</span>(<span class="fu">partialx</span>(newx, newy), <span class="fu">partialy</span>(newx, newy))</span></code></pre></div>
+<pre><code>## [1] 4.7 7.3</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="gradient-search.html#cb26-1" tabindex="-1"></a><span class="co"># print new point</span></span>
+<span id="cb26-2"><a href="gradient-search.html#cb26-2" tabindex="-1"></a><span class="fu">c</span>(newx, newy)</span></code></pre></div>
+<pre><code>## [1] 0.65 0.20</code></pre>
+<p>If we run this 20 or 30 times, the partial derivatives become zero, and we estimate our local minimum to be the point <span class="math inline">\((-1.37, -0.13)\)</span>.</p>
 
 </div>
 </div>
@@ -863,8 +840,8 @@ L_{(-10,40)}(t,v) = -42.70 + 1.39(t+10) -0.29(v-40)
           </div>
         </div>
       </div>
-<a href="partial-derivatives.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="unit-3-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="d-optimization-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="constrained-2d-optimization.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

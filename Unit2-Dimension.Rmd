@@ -78,7 +78,7 @@ This [unit conversion chart](https://www.mustangps.org/Downloads/conversion_char
 
 1. Sunlight deposits energy at a rate of 250 W/m$^2$ on a 10 m$^2$ garden. How much energy (in Joules) is deposited in a week? Note that 1 Watt is 1 Joule per second) 
 
-<!--
+
 ## Solutions
 
 ### Find the Dimension
@@ -135,4 +135,3 @@ $$
 \left( \frac{3600}{1} \frac{sec}{hr} \right)
 = 1.512 \times 10^9 \, J
 $$
--->
