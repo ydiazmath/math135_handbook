@@ -17,19 +17,11 @@ diagrams
 
 ## Activities
 
-```{r setup, include=FALSE, warning=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-suppressPackageStartupMessages(library(mosaic))
-```
-
 ### Matching Contours
 
 Match contours I - IV to surfaces A - D.
 
 ![](images/contour-match.png){width=80%}
-<!--
-## Drawing contours on a data table
--->
 
 
 ### Plotting in RStudio
