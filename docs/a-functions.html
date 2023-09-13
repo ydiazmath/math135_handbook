@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Page not found | MATH 135: AMC I</title>
+  <title>1.A: Functions | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Page not found | MATH 135: AMC I" />
+  <meta property="og:title" content="1.A: Functions | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="github-repo" content="mathbeveridge/math135_f21" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Page not found | MATH 135: AMC I" />
+  <meta name="twitter:title" content="1.A: Functions | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="intro-to-rstudio.html"/>
+<link rel="next" href="b-linear-functions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -326,19 +326,129 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="page-not-found" class="section level1">
-<h1>Page not found</h1>
-<p>The page you requested cannot be found (perhaps it was moved or renamed).</p>
-<p>You may want to try searching to find the page's new location, or use
-the table of contents to find the page you are looking for.</p>
+<div id="a-functions" class="section level1 hasAnchor">
+<h1>1.A: Functions<a href="a-functions.html#a-functions" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="steps-of-the-modeling-cycle" class="section level2 hasAnchor">
+<h2>Steps of the Modeling Cycle<a href="a-functions.html#steps-of-the-modeling-cycle" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Ask a question about reality.</li>
+<li>Make some observations and collect the corresponding data.</li>
+<li>Conjecture a model or modify a known model based on the data.</li>
+<li>Test the model against known data (from step 2.) and modify the model as needed.</li>
+<li>Repeat steps 2, 3 and 4 to improve the model</li>
+</ol>
+</div>
+<div id="goals" class="section level2 hasAnchor">
+<h2>Goals<a href="a-functions.html#goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Explain what a function is</li>
+<li>Identify and explain independent and dependent variables</li>
+<li>Recognize functions in a variety of forms</li>
+<li>Find a function’s intercept(s)</li>
+<li>Identify regions where a function is increasing/decreasing</li>
+<li>Compute the average rate of change between two points on a function</li>
+<li>Determine where a function is concave up/down</li>
+<li>Compute the relative change between two points on a function</li>
+</ul>
+</div>
+<div id="activities" class="section level2 hasAnchor">
+<h2>Activities<a href="a-functions.html#activities" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="life-insurance" class="section level3 hasAnchor">
+<h3>Life insurance<a href="a-functions.html#life-insurance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A family needs to purchase life insurance. What possible inputs might be used to determine the premium (monthly payment) for life insurance?</p>
+</div>
+<div id="bat-species" class="section level3 hasAnchor">
+<h3>Bat species<a href="a-functions.html#bat-species" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>In the Andes mountains in Peru, the number <span class="math inline">\(N\)</span> of species of bats is a <em>function</em> of the elevation <span class="math inline">\(h\)</span> in feet above sea level.</p>
+<ol style="list-style-type: decimal">
+<li>What is the independent variable?</li>
+<li>What is the dependent variable?</li>
+<li>Interpret the statement <span class="math inline">\(f(500)=200\)</span> if <span class="math inline">\(f\)</span> represents this function.</li>
+<li>Do you expect this function to be increasing or decreasing? Why?</li>
+</ol>
+</div>
+<div id="slope-and-concavity" class="section level3 hasAnchor">
+<h3>Slope and concavity<a href="a-functions.html#slope-and-concavity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Sketch each of the following:</p>
+<ol style="list-style-type: decimal">
+<li>An increasing function that is concave up</li>
+<li>An increasing function that is concave down</li>
+<li>A decreasing function that is concave up</li>
+<li>A decreasing function that is concave down</li>
+</ol>
+</div>
+<div id="relative-change-of-the-dow-jones-average" class="section level3 hasAnchor">
+<h3>Relative change of the Dow Jones average<a href="a-functions.html#relative-change-of-the-dow-jones-average" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The <em>relative change</em> of a function <span class="math inline">\(f(x)\)</span> on interval <span class="math inline">\([a,b]\)</span> is
+<span class="math display">\[ \frac{f(b)-f(a)}{f(a)}.\]</span></p>
+<ol style="list-style-type: decimal">
+<li>What is the <em>relative change</em> in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)?</li>
+<li>Compare this to the <em>relative change</em> in the Dow Jones average from 35,443.82 to 35,369.09 (from 2 September 2021 to 3 September 2021).</li>
+</ol>
+</div>
+<div id="measuring-rainfall" class="section level3 hasAnchor">
+<h3>Measuring rainfall<a href="a-functions.html#measuring-rainfall" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>One rainy summer day, measurements were recorded (in inches) from a rain gauge every hour.</p>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+<col width="9%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Time</strong></th>
+<th>8 am</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+<th>noon</th>
+<th>1 pm</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5 pm</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Amount</strong></td>
+<td>0.15</td>
+<td>0.17</td>
+<td>0.2</td>
+<td>0.45</td>
+<td>0.48</td>
+<td>0.75</td>
+<td>1.03</td>
+<td>1.20</td>
+<td>1.45</td>
+<td>1.60</td>
+</tr>
+</tbody>
+</table>
+<ol style="list-style-type: decimal">
+<li>What was the average rate of rainfall from 8 a.m. to 5 p.m.?</li>
+<li>What are the units of this rate of change?</li>
+</ol>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="intro-to-rstudio.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="b-linear-functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

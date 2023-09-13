@@ -1,5 +1,9 @@
 # 1.F: Power Functions
 
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
 
 ## Goals
 

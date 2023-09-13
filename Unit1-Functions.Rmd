@@ -1,4 +1,7 @@
-
+```{r setup, include=FALSE, warning=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+suppressPackageStartupMessages(library(mosaic))
+```
 
 # (PART) Functions {-}
 
