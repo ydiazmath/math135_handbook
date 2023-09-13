@@ -1,4 +1,4 @@
-# 1.G: Periodic Functions
+# 1.G Periodic Functions
 
 
 ```{r, include=FALSE, warning=FALSE}
