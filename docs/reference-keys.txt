@@ -468,3 +468,4 @@ plotting-data-1
 world-population-growth-rate
 drawing-contours-on-a-data-table
 solutions-27
+functions-of-two-variables
