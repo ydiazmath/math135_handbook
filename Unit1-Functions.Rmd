@@ -5,7 +5,7 @@ suppressPackageStartupMessages(library(mosaic))
 
 # (PART) Functions {-}
 
-# 1.A Functions
+# Functions
 
 ## Steps of the Modeling Cycle
 

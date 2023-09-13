@@ -1,4 +1,4 @@
-# 1.C Average Rate of Change
+# Average Rate of Change
 
 ```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

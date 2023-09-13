@@ -3,7 +3,7 @@ knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
 
-# 1.D, 1.E Exponential and Logarithmic Functions
+# Exponential and Logarithmic Functions
 
 
 ```{r, include=FALSE, warning=FALSE}

@@ -3,7 +3,7 @@ knitr::opts_chunk$set(echo = TRUE)
 suppressPackageStartupMessages(library(mosaic))
 ```
 
-# 1.H Functions of Two Variables
+# Functions of Two Variables
 
 ## Goals
 

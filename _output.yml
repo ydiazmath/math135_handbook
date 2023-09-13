@@ -2,7 +2,6 @@ bookdown::gitbook:
   highlight: haddock
   css: m135style.css
   split_by: chapter
-  number_sections: false
   config:
     toc:
       collapse: section

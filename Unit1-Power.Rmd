@@ -1,4 +1,4 @@
-# 1.F Power Functions
+# Power Functions
 
 ```{r setup, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
