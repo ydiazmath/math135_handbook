@@ -462,3 +462,8 @@ population-models-1
 eulers-method-2
 slope-fields-2
 sir-model-2
+examples-and-non-examples-1
+descriptions-of-power-functions-1
+allometry-of-pectoral-fins-1
+specific-heat-1
+solutions-27
