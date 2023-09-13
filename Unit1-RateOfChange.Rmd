@@ -1,4 +1,9 @@
-# 1.C Average Rate of Change
+---
+output:
+  pdf_document: default
+  html_document: default
+---
+# Average Rate of Change
 
 
 ```{r, include=FALSE, warning=FALSE}
@@ -87,7 +92,7 @@ $$ \frac{f(b)-f(a)}{f(a)}.$$
 1. What is the *relative change* in the Dow Jones average from 169.84 to 77.90 (from 1 January 1931 to 31 December 1931)? 
 2. Compare this to the *relative change* in the Dow Jones average from 35,443.82 to 35369.09 (from 2 September 2021 to 3 September 2021).
 
-<!--
+
 ## Solutions
 
 ### AROC of a function
@@ -153,4 +158,3 @@ $$ \frac{77.90-169.84}{169.84}=-0.541,$$
 2. The relative change is 
 $$\frac{35369.09-35443.82}{35443.82}=-0.002.$$
 
--->

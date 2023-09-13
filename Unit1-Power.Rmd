@@ -1,4 +1,4 @@
-# 1.F Power Functions
+# Power Functions
 
 
 ```{r, include=FALSE, warning=FALSE}
@@ -64,7 +64,7 @@ The specific heat $s$ of an element is the number of calories of heat required t
 **weight** $w$ (g/mol) | 6.9 | 24.3 | 27.0 | 55.8 | 107.9 | 207.2 | 200.6 
 **specific heat** $s$ (cal) | 0.92  | 0.25 | 0.21 | 0.11 | 0.056 | 0.031 | 0.033 
 
-<!--
+
 ## Solutions
 
 ### Examples and non-examples
@@ -101,4 +101,3 @@ The log-log plot looks linear with a negative slope. So the specific heat is inv
 $$
 s = 5.812 w^{-0.985}.
 $$
--->

@@ -1,4 +1,4 @@
-# 1.H Functions of Two Variables
+# Functions of Two Variables
 
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
