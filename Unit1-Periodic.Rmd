@@ -132,7 +132,7 @@ There are lots of period functions. How about:
 ### Variable star
 
 The amplitude is $(10-2)/2=4$ and the vertical shift is $(10+2)/2=6$. The period is 332 days, so our formula is
-$$ 4 \cos \left( \frac{2 \pi}{335} t\right).$$
+$$ 4 \cos \left( \frac{2 \pi}{332} t\right) + 6.$$
 
 ### Tides and currents
 
