@@ -866,18 +866,20 @@ What are the optimal atmospheric conditions?</p>
 <span id="cb9-3"><a href="d-optimization-1.html#cb9-3" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
 <span id="cb9-4"><a href="d-optimization-1.html#cb9-4" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
 <span id="cb9-5"><a href="d-optimization-1.html#cb9-5" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
-<pre><code>##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269 -0.03100000 -0.03113269
-##  [8] -0.03136803 -0.03135721 -0.03086803 -0.03000000 -0.02913197 -0.02864279 -0.02863197
-## [15] -0.02886731 -0.02900000 -0.02886731 -0.02863197 -0.02864279 -0.02913197 -0.03000000</code></pre>
+<pre><code>##  [1] -0.03000000 -0.03086803 -0.03135721 -0.03136803 -0.03113269 -0.03100000
+##  [7] -0.03113269 -0.03136803 -0.03135721 -0.03086803 -0.03000000 -0.02913197
+## [13] -0.02864279 -0.02863197 -0.02886731 -0.02900000 -0.02886731 -0.02863197
+## [19] -0.02864279 -0.02913197 -0.03000000</code></pre>
 <p>Next up is <span class="math inline">\((1,1)\)</span>.It is a <strong>saddle point</strong>!</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="d-optimization-1.html#cb11-1" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb11-2"><a href="d-optimization-1.html#cb11-2" tabindex="-1"></a>b<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb11-3"><a href="d-optimization-1.html#cb11-3" tabindex="-1"></a>r <span class="ot">=</span> <span class="fl">0.1</span></span>
 <span id="cb11-4"><a href="d-optimization-1.html#cb11-4" tabindex="-1"></a>theta <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">2</span><span class="sc">*</span>pi,pi<span class="sc">/</span><span class="dv">10</span>)</span>
 <span id="cb11-5"><a href="d-optimization-1.html#cb11-5" tabindex="-1"></a><span class="fu">f</span>(a,b) <span class="sc">-</span> <span class="fu">f</span>(a<span class="sc">+</span>r<span class="sc">*</span><span class="fu">cos</span>(theta), b<span class="sc">+</span>r<span class="sc">*</span><span class="fu">sin</span>(theta)) </span></code></pre></div>
-<pre><code>##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625 -0.00100000  0.01650087
-##  [8]  0.02716366  0.02717449  0.01676552  0.00000000 -0.01676552 -0.02717449 -0.02716366
-## [15] -0.01650087  0.00100000  0.01876625  0.02989973  0.02988890  0.01850159  0.00000000</code></pre>
+<pre><code>##  [1]  0.00000000 -0.01850159 -0.02988890 -0.02989973 -0.01876625 -0.00100000
+##  [7]  0.01650087  0.02716366  0.02717449  0.01676552  0.00000000 -0.01676552
+## [13] -0.02717449 -0.02716366 -0.01650087  0.00100000  0.01876625  0.02989973
+## [19]  0.02988890  0.01850159  0.00000000</code></pre>
 <p>One more point to go: <span class="math inline">\((1,-1)\)</span>. This is also a <strong>saddle point</strong>.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="d-optimization-1.html#cb13-1" tabindex="-1"></a>a<span class="ot">=</span><span class="dv">1</span></span>
 <span id="cb13-2"><a href="d-optimization-1.html#cb13-2" tabindex="-1"></a>b<span class="ot">=</span><span class="sc">-</span><span class="dv">1</span></span>
