@@ -1,4 +1,4 @@
-# The Gradient
+# 4.D, 4.E Partial Derivatives, Gradients
 
 
 ## Activities

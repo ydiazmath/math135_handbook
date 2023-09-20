@@ -1,4 +1,4 @@
-# The Second Derivative
+# 3.B The Second Derivative
 
 
 ```{r, include=FALSE, warning=FALSE}

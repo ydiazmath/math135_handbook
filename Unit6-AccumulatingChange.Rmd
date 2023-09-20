@@ -1,6 +1,6 @@
 # (PART) Integration {-}
 
-# Accumulating Change
+# 6.A Accumulating Change
 
 
 ## Activities

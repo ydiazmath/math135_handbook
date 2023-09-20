@@ -1,6 +1,6 @@
 # (PART) Computational Derivatives {-}
 
-# The Derivative
+# 3.A The Derivative
 
 
 ```{r, include=FALSE, warning=FALSE}

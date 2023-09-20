@@ -1,4 +1,4 @@
-# Euler's  Method
+# 7.C Euler's  Method
 
 
 ```{r}

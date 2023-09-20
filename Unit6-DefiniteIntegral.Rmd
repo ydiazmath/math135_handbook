@@ -1,4 +1,4 @@
-# The Definite Integral
+# 6.B The Definite Integral
 
 ## Introduction
 

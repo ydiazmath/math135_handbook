@@ -302,7 +302,7 @@ plotFun(g(x,y)~x&y, xlim=range(-1.5,1.5),
 
 ```{r fig.align="center", fig.width=4.5, fig.height=3.5}
 f=makeFun(3*x^2-x-2*y^2+y-2~x&y)
-plotFun(f(x,y)~x&y, surface=TRUE, xlim=range(-5,5), ylim=range(-5,5), zlab="f(x,y)")
+plotFun(f(x,y)~x&y, surface=TRUE, xlim=range(-5,5), ylim=range(-5,5), zlab="f(x,y)",alpha=1)
 ```
 
 ### Plotting data

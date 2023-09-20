@@ -1,4 +1,4 @@
-# SIR Model
+# 7.E SIR Model
 
 ## The SIR Model for the Spread of Disease
 

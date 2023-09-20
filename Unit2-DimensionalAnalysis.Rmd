@@ -1,4 +1,4 @@
-# Dimensional Analysis
+# 2.B Dimensional Analysis
 
 
 ## Performing a Dimensional Analysis

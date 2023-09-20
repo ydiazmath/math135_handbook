@@ -2,7 +2,7 @@
 
 # (PART) Functions {-}
 
-# Functions
+# 1.A Functions
 
 ## Steps of the Modeling Cycle
 

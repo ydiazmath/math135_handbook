@@ -303,7 +303,7 @@ plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20))
 You can create a 3D plot by setting `surface=TRUE`.
 
 ```{r}
-plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20), surface=TRUE)
+plotFun(f(x,y) ~ x&y, xlim=c(-20,20), ylim=c(-20,20), surface=TRUE, alpha=1)
 ```
 
 ## Differentiation

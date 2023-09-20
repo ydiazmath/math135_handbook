@@ -1,4 +1,4 @@
-# Local Linear Approximation
+# 3.D Local Linear Approximation
 
 
 ```{r, include=FALSE, warning=FALSE}

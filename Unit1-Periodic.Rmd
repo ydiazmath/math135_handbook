@@ -1,4 +1,4 @@
-# Periodic Functions
+# 1.G Periodic Functions
 
 
 ```{r, include=FALSE, warning=FALSE}
@@ -120,7 +120,7 @@ There are lots of period functions. How about:
 
 
 
-1. The function is $\cos\left(3x \right)+1$
+1. The function is $\cos\left(3x \right)+2$
 
 
 

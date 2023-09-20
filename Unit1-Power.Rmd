@@ -1,4 +1,4 @@
-# Power Functions
+# 1.F Power Functions
 
 
 ```{r, include=FALSE, warning=FALSE}

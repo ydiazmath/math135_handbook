@@ -1,4 +1,4 @@
-# Partial Derivatives
+# 3.C Partial Derivatives
 
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

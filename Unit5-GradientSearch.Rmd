@@ -1,5 +1,5 @@
 
-# Gradient Search
+# 5.C Gradient Search
 
 
 ## Gradient Search Example

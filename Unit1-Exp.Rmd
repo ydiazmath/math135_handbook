@@ -1,4 +1,4 @@
-# Exponential and Logarithmic Functions
+# 1.D, 1.E Exponential and Logarithmic Functions
 
 
 ```{r, include=FALSE, warning=FALSE}

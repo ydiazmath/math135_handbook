@@ -1,4 +1,4 @@
-# Functions of Two Variables
+# 1.H Multivariable Functions
 
 ```{r, include=FALSE, warning=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -57,7 +57,8 @@ plotFun(W(T,V)~T & V,
         surface=TRUE,
         zlab="W",
         xlab="T",
-        ylab="V")
+        ylab="V",
+        alpha=1)
 ```
 
 Contour Plot
@@ -88,7 +89,8 @@ plotFun(f(x,y) ~ x & y,
         surface=TRUE,
         zlab="f(x,y)",
         x.lim=range(-3,3),
-        y.lim=range(-3,3))
+        y.lim=range(-3,3),
+        alpha=1)
 ```
 
 Contour Plot
