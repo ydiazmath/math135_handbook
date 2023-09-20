@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>7.D Slope Fields | MATH 135: AMC I</title>
+  <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="7.D Slope Fields | MATH 135: AMC I" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  <meta name="github-repo" content="ydiazmath/math135_handbook" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="7.D Slope Fields | MATH 135: AMC I" />
+  
+  <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
+  
+
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="b-population-models.html"/>
+<link rel="next" href="e-sir-model.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; } /* Alert */
+code span.an { color: #008000; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #0000ff; } /* ControlFlow */
+code span.ch { color: #008080; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #008000; } /* Comment */
+code span.cv { color: #008000; } /* CommentVar */
+code span.do { color: #008000; } /* Documentation */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.im { } /* Import */
+code span.in { color: #008000; } /* Information */
+code span.kw { color: #0000ff; } /* Keyword */
+code span.op { } /* Operator */
+code span.ot { color: #ff4000; } /* Other */
+code span.pp { color: #ff4000; } /* Preprocessor */
+code span.sc { color: #008080; } /* SpecialChar */
+code span.ss { color: #008080; } /* SpecialString */
+code span.st { color: #008080; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #008080; } /* VerbatimString */
+code span.wa { color: #008000; font-weight: bold; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="m135style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href = "./">MATH 135: AMC I</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a></li>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html"><i class="fa fa-check"></i>R Studio Orientation</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#getting-oriented"><i class="fa fa-check"></i>Getting Oriented</a>
+<ul>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#first-login"><i class="fa fa-check"></i>First login</a></li>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#the-rstudio-window"><i class="fa fa-check"></i>The RStudio window</a></li>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#packages"><i class="fa fa-check"></i>Packages</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="r-studio-orientation.html"><a href="r-studio-orientation.html#rmarkdown"><i class="fa fa-check"></i>RMarkdown</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html"><i class="fa fa-check"></i>RStudio Quick Referrence</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#functions-and-data"><i class="fa fa-check"></i>Functions and Data</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#common-functions"><i class="fa fa-check"></i>Common Functions</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#defining-your-own-function"><i class="fa fa-check"></i>Defining Your Own Function</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#creating-lists-of-data"><i class="fa fa-check"></i>Creating Lists of Data</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data"><i class="fa fa-check"></i>Plotting Data</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-functions"><i class="fa fa-check"></i>Plotting Functions</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-data-and-functions"><i class="fa fa-check"></i>Plotting Data and Functions</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#fitting-a-function-to-data"><i class="fa fa-check"></i>Fitting a Function to Data</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#plotting-surfaces-in-3d"><i class="fa fa-check"></i>Plotting Surfaces in 3D</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#differentiation"><i class="fa fa-check"></i>Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#estimating-the-derivative"><i class="fa fa-check"></i>Estimating the Derivative</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#estimating-the-partial-derivative"><i class="fa fa-check"></i>Estimating the Partial Derivative</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#gradient-search"><i class="fa fa-check"></i>Gradient Search</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#constrained-optimization"><i class="fa fa-check"></i>Constrained Optimization</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#integration"><i class="fa fa-check"></i>Integration</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#estimating-the-definite-integral"><i class="fa fa-check"></i>Estimating the Definite Integral</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#differential-equations"><i class="fa fa-check"></i>Differential Equations</a>
+<ul>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#eulers-method"><i class="fa fa-check"></i>Euler’s Method</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#slope-fields"><i class="fa fa-check"></i>Slope Fields</a></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#sir-model"><i class="fa fa-check"></i>SIR Model</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rstudio-quick-referrence.html"><a href="rstudio-quick-referrence.html#troubleshooting"><i class="fa fa-check"></i>Troubleshooting</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html"><i class="fa fa-check"></i>Intro to RStudio</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#getting-started"><i class="fa fa-check"></i>Getting Started</a></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#r-markdown-files"><i class="fa fa-check"></i>R Markdown files</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#formatting-regular-text"><i class="fa fa-check"></i>Formatting Regular Text</a></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#code-chunks"><i class="fa fa-check"></i>Code Chunks</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#writing-code"><i class="fa fa-check"></i>Writing Code</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#basic-calculations"><i class="fa fa-check"></i>Basic Calculations</a></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#variables-lists-and-sequences"><i class="fa fa-check"></i>Variables, Lists and Sequences</a></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#functions"><i class="fa fa-check"></i>Functions</a></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#plotting"><i class="fa fa-check"></i>Plotting</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#troubleshooting-1"><i class="fa fa-check"></i>Troubleshooting</a>
+<ul>
+<li class="chapter" data-level="" data-path="intro-to-rstudio.html"><a href="intro-to-rstudio.html#you-try-4"><i class="fa fa-check"></i>You Try</a></li>
+</ul></li>
+</ul></li>
+<li class="part"><span><b>I Functions</b></span></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html"><i class="fa fa-check"></i>1.A Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#steps-of-the-modeling-cycle"><i class="fa fa-check"></i>Steps of the Modeling Cycle</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#goals"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#activities"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#life-insurance"><i class="fa fa-check"></i>Life insurance</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#bat-species"><i class="fa fa-check"></i>Bat species</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#slope-and-concavity"><i class="fa fa-check"></i>Slope and concavity</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#relative-change-of-the-dow-jones-average"><i class="fa fa-check"></i>Relative change of the Dow Jones average</a></li>
+<li class="chapter" data-level="" data-path="a-functions.html"><a href="a-functions.html#measuring-rainfall"><i class="fa fa-check"></i>Measuring rainfall</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html"><i class="fa fa-check"></i>1.B Linear Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#goals-1"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#linear-funtions"><i class="fa fa-check"></i>Linear Funtions</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#activities-1"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#graph-of-a-linear-function"><i class="fa fa-check"></i>Graph of a linear function</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#height-and-weight-of-american-men"><i class="fa fa-check"></i>Height and weight of American men</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#scooter-rates"><i class="fa fa-check"></i>Scooter rates</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#oil-reserves"><i class="fa fa-check"></i>Oil reserves</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#solutions"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#graph-of-a-linear-function-1"><i class="fa fa-check"></i>Graph of a linear function</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#height-and-weight-of-american-men-1"><i class="fa fa-check"></i>Height and weight of American men</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#scooter-rates-1"><i class="fa fa-check"></i>Scooter rates</a></li>
+<li class="chapter" data-level="" data-path="b-linear-functions.html"><a href="b-linear-functions.html#oil-reserves-1"><i class="fa fa-check"></i>Oil reserves</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html"><i class="fa fa-check"></i>1.C Average Rate of Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#goals-2"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#activities-2"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#aroc-of-a-function"><i class="fa fa-check"></i>AROC of a function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#measuring-daily-rainfall"><i class="fa fa-check"></i>Measuring daily rainfall</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#sketching-a-function"><i class="fa fa-check"></i>Sketching a function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#slope-and-concavity-1"><i class="fa fa-check"></i>Slope and Concavity</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#example-function"><i class="fa fa-check"></i>Example Function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#vinyl-lps"><i class="fa fa-check"></i>Vinyl LPs</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#relative-change-of-the-dow-jones-average-1"><i class="fa fa-check"></i>Relative change of the Dow Jones average</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#solutions-1"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#aroc-of-a-function-1"><i class="fa fa-check"></i>AROC of a function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#measuring-daily-rainfall-1"><i class="fa fa-check"></i>Measuring daily rainfall</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#sketching-a-function-1"><i class="fa fa-check"></i>Sketching a function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#slope-and-concavity-2"><i class="fa fa-check"></i>Slope and Concavity</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#example-function-1"><i class="fa fa-check"></i>Example Function</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#vinyl-lps-1"><i class="fa fa-check"></i>Vinyl LPs</a></li>
+<li class="chapter" data-level="" data-path="c-average-rate-of-change.html"><a href="c-average-rate-of-change.html#relative-change-of-the-dow-jones-average-2"><i class="fa fa-check"></i>Relative change of the Dow Jones average</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html"><i class="fa fa-check"></i>1.D, 1.E Exponential and Logarithmic Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#goals-3"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#activities-3"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#growing-population"><i class="fa fa-check"></i>Growing population</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#consumer-price-index"><i class="fa fa-check"></i>Consumer price index</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#two-data-sets"><i class="fa fa-check"></i>Two data sets</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#interest-rate-for-an-investment"><i class="fa fa-check"></i>Interest rate for an investment</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#exponential-decay"><i class="fa fa-check"></i>Exponential decay</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#doubling-time"><i class="fa fa-check"></i>Doubling time</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#people-and-vehicles"><i class="fa fa-check"></i>People and vehicles</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#solutions-2"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#growing-population-1"><i class="fa fa-check"></i>Growing population</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#consumer-price-index-1"><i class="fa fa-check"></i>Consumer price index</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#two-data-sets-1"><i class="fa fa-check"></i>Two data sets</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#interest-rate-for-an-investment-1"><i class="fa fa-check"></i>Interest rate for an investment</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#exponential-decay-1"><i class="fa fa-check"></i>Exponential decay</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#doubling-time-1"><i class="fa fa-check"></i>Doubling time</a></li>
+<li class="chapter" data-level="" data-path="d-1.e-exponential-and-logarithmic-functions.html"><a href="d-1.e-exponential-and-logarithmic-functions.html#people-and-vehicles-1"><i class="fa fa-check"></i>People and vehicles</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html"><i class="fa fa-check"></i>1.F Power Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#goals-4"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#activities-4"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#examples-and-non-examples"><i class="fa fa-check"></i>Examples and non-examples</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#descriptions-of-power-functions"><i class="fa fa-check"></i>Descriptions of power functions</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#allometry-of-pectoral-fins"><i class="fa fa-check"></i>Allometry of pectoral fins</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#specific-heat"><i class="fa fa-check"></i>Specific heat</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#solutions-3"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#examples-and-non-examples-1"><i class="fa fa-check"></i>Examples and non-examples</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#descriptions-of-power-functions-1"><i class="fa fa-check"></i>Descriptions of power functions</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#allometry-of-pectoral-fins-1"><i class="fa fa-check"></i>Allometry of pectoral fins</a></li>
+<li class="chapter" data-level="" data-path="f-power-functions.html"><a href="f-power-functions.html#specific-heat-1"><i class="fa fa-check"></i>Specific heat</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html"><i class="fa fa-check"></i>1.G Periodic Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#goals-5"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#activities-5"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#periodic-function-examples"><i class="fa fa-check"></i>Periodic function examples</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#find-a-periodic-formula"><i class="fa fa-check"></i>Find a periodic formula</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#variable-star"><i class="fa fa-check"></i>Variable star</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#tides-and-currents"><i class="fa fa-check"></i>Tides and currents</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#rainfall-in-seattle"><i class="fa fa-check"></i>Rainfall in Seattle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#solutions-4"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#periodic-function-examples-1"><i class="fa fa-check"></i>Periodic function examples</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#find-a-periodic-formula-1"><i class="fa fa-check"></i>Find a periodic formula</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#variable-star-1"><i class="fa fa-check"></i>Variable star</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#tides-and-currents-1"><i class="fa fa-check"></i>Tides and currents</a></li>
+<li class="chapter" data-level="" data-path="g-periodic-functions.html"><a href="g-periodic-functions.html#rainfall-in-seattle-1"><i class="fa fa-check"></i>Rainfall in Seattle</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html"><i class="fa fa-check"></i>1.H Multivariable Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#goals-6"><i class="fa fa-check"></i>Goals</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#activities-6"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#matching-contours"><i class="fa fa-check"></i>Matching Contours</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#plotting-in-rstudio"><i class="fa fa-check"></i>Plotting in RStudio</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#cross-sections"><i class="fa fa-check"></i>Cross Sections</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#plotting-in-rstudio-1"><i class="fa fa-check"></i>Plotting in RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#solutions-5"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#matching-contours-1"><i class="fa fa-check"></i>Matching Contours</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#plotting-in-rstudio-2"><i class="fa fa-check"></i>Plotting in RStudio</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#cross-sections-1"><i class="fa fa-check"></i>Cross Sections</a></li>
+<li class="chapter" data-level="" data-path="h-multivariable-functions.html"><a href="h-multivariable-functions.html#plotting-in-rstudio-3"><i class="fa fa-check"></i>Plotting in RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html"><i class="fa fa-check"></i>Unit 1 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#functions-1"><i class="fa fa-check"></i>Functions</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#linear-functions"><i class="fa fa-check"></i>Linear Functions</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#average-rate-of-change"><i class="fa fa-check"></i>Average Rate of Change</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#exponential-and-logarithmic-functions"><i class="fa fa-check"></i>Exponential and Logarithmic Functions</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#power-functions"><i class="fa fa-check"></i>Power Functions</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#periodic-functions"><i class="fa fa-check"></i>Periodic Functions</a></li>
+<li class="chapter" data-level="" data-path="unit-1-summary.html"><a href="unit-1-summary.html#multivariable-functions"><i class="fa fa-check"></i>Multivariable Functions</a></li>
+</ul></li>
+<li class="part"><span><b>II Units and Estimation</b></span></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html"><i class="fa fa-check"></i>2.A Dimensions and Units</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#activities-7"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#find-the-dimension"><i class="fa fa-check"></i>Find the Dimension</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#dimensionally-feasible"><i class="fa fa-check"></i>Dimensionally Feasible</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#geometric-formulas-for-a-cylinder"><i class="fa fa-check"></i>Geometric Formulas for a Cylinder</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#unit-conversions"><i class="fa fa-check"></i>Unit Conversions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#solutions-6"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#find-the-dimension-1"><i class="fa fa-check"></i>Find the Dimension</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#dimensionally-feasible-1"><i class="fa fa-check"></i>Dimensionally Feasible</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#geometric-formulas-for-a-cylinder-1"><i class="fa fa-check"></i>Geometric Formulas for a Cylinder</a></li>
+<li class="chapter" data-level="" data-path="a-dimensions-and-units.html"><a href="a-dimensions-and-units.html#unit-conversions-1"><i class="fa fa-check"></i>Unit Conversions</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html"><i class="fa fa-check"></i>2.B Dimensional Analysis</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#performing-a-dimensional-analysis"><i class="fa fa-check"></i>Performing a Dimensional Analysis</a></li>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#activities-8"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#vocal-chord-frequency"><i class="fa fa-check"></i>Vocal Chord Frequency</a></li>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#mixer-power"><i class="fa fa-check"></i>Mixer Power</a></li>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#velocity-of-an-ocean-wave"><i class="fa fa-check"></i>Velocity of an Ocean Wave</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-dimensional-analysis.html"><a href="b-dimensional-analysis.html#solutions-7"><i class="fa fa-check"></i>Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-fermi-estimation.html"><a href="c-fermi-estimation.html"><i class="fa fa-check"></i>2.C Fermi Estimation</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-fermi-estimation.html"><a href="c-fermi-estimation.html#working-fermi-problems"><i class="fa fa-check"></i>Working Fermi Problems</a></li>
+<li class="chapter" data-level="" data-path="c-fermi-estimation.html"><a href="c-fermi-estimation.html#some-useful-data"><i class="fa fa-check"></i>Some Useful Data</a></li>
+<li class="chapter" data-level="" data-path="c-fermi-estimation.html"><a href="c-fermi-estimation.html#activities-9"><i class="fa fa-check"></i>Activities</a></li>
+<li class="chapter" data-level="" data-path="c-fermi-estimation.html"><a href="c-fermi-estimation.html#solutions-8"><i class="fa fa-check"></i>Solutions</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-2-summary.html"><a href="unit-2-summary.html"><i class="fa fa-check"></i>Unit 2 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-2-summary.html"><a href="unit-2-summary.html#dimensions-and-units"><i class="fa fa-check"></i>Dimensions and Units</a></li>
+<li class="chapter" data-level="" data-path="unit-2-summary.html"><a href="unit-2-summary.html#dimensional-analysis"><i class="fa fa-check"></i>Dimensional Analysis</a></li>
+<li class="chapter" data-level="" data-path="unit-2-summary.html"><a href="unit-2-summary.html#fermi-estimation"><i class="fa fa-check"></i>Fermi Estimation</a></li>
+</ul></li>
+<li class="part"><span><b>III Computational Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html"><i class="fa fa-check"></i>3.A The Derivative</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#the-derivative"><i class="fa fa-check"></i>The Derivative</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#activities-10"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#studying"><i class="fa fa-check"></i>Studying</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#marginal-cost"><i class="fa fa-check"></i>Marginal Cost</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#farmland-in-the-united-states"><i class="fa fa-check"></i>Farmland in the United States</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#a-moving-particle"><i class="fa fa-check"></i>A Moving Particle</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#solutions-9"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#studying-1"><i class="fa fa-check"></i>Studying</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#marginal-cost-1"><i class="fa fa-check"></i>Marginal Cost</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#farmland-in-the-united-states-1"><i class="fa fa-check"></i>Farmland in the United States</a></li>
+<li class="chapter" data-level="" data-path="a-the-derivative.html"><a href="a-the-derivative.html#a-moving-particle-1"><i class="fa fa-check"></i>A Moving Particle</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html"><i class="fa fa-check"></i>3.B The Second Derivative</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#interpreting-the-first-and-second-derivative"><i class="fa fa-check"></i>Interpreting the First and Second Derivative</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#activities-11"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#estimating-the-first-and-second-derivatives-from-a-graph"><i class="fa fa-check"></i>Estimating the first and second derivatives from a graph</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#function-matching"><i class="fa fa-check"></i>Function Matching</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#a-plot-of-velocity"><i class="fa fa-check"></i>A Plot of Velocity</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#characterize-the-derivatives"><i class="fa fa-check"></i>Characterize the Derivatives</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#solutions-10"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#estimating-the-first-and-second-derivatives-from-a-graph-1"><i class="fa fa-check"></i>Estimating the first and second derivatives from a graph</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#function-matching-1"><i class="fa fa-check"></i>Function Matching</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#a-plot-of-velocity-1"><i class="fa fa-check"></i>A Plot of Velocity</a></li>
+<li class="chapter" data-level="" data-path="b-the-second-derivative.html"><a href="b-the-second-derivative.html#characterize-the-derivatives-1"><i class="fa fa-check"></i>Characterize the Derivatives</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html"><i class="fa fa-check"></i>3.C Partial Derivatives</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#activities-12"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-from-data"><i class="fa fa-check"></i>Estimating From Data</a></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-from-a-contour-plot"><i class="fa fa-check"></i>Estimating From a Contour Plot</a></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-using-desmos"><i class="fa fa-check"></i>Estimating Using Desmos</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#solutions-11"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-from-data-1"><i class="fa fa-check"></i>Estimating From Data</a></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-from-a-contour-plot-1"><i class="fa fa-check"></i>Estimating From a Contour Plot</a></li>
+<li class="chapter" data-level="" data-path="c-partial-derivatives.html"><a href="c-partial-derivatives.html#estimating-using-desmos-1"><i class="fa fa-check"></i>Estimating Using Desmos</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html"><i class="fa fa-check"></i>3.D Local Linear Approximation</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#activities-13"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-sugar-solution-temperature"><i class="fa fa-check"></i>Estimating Sugar Solution Temperature</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#comparing-linearizations"><i class="fa fa-check"></i>Comparing Linearizations</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-a-function"><i class="fa fa-check"></i>Estimating a Function</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-the-windchill"><i class="fa fa-check"></i>Estimating the Windchill</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#solutions-12"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-sugar-solution-temperature-1"><i class="fa fa-check"></i>Estimating Sugar Solution Temperature</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#comparing-linearizations-1"><i class="fa fa-check"></i>Comparing Linearizations</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-a-function-1"><i class="fa fa-check"></i>Estimating a Function</a></li>
+<li class="chapter" data-level="" data-path="d-local-linear-approximation.html"><a href="d-local-linear-approximation.html#estimating-the-windchill-1"><i class="fa fa-check"></i>Estimating the Windchill</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-3-summary.html"><a href="unit-3-summary.html"><i class="fa fa-check"></i>Unit 3 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-3-summary.html"><a href="unit-3-summary.html#the-derivative-1"><i class="fa fa-check"></i>The Derivative</a></li>
+<li class="chapter" data-level="" data-path="unit-3-summary.html"><a href="unit-3-summary.html#the-second-derivative"><i class="fa fa-check"></i>The Second Derivative</a></li>
+<li class="chapter" data-level="" data-path="unit-3-summary.html"><a href="unit-3-summary.html#partial-derivatives"><i class="fa fa-check"></i>Partial Derivatives</a></li>
+<li class="chapter" data-level="" data-path="unit-3-summary.html"><a href="unit-3-summary.html#local-linear-approximation"><i class="fa fa-check"></i>Local Linear Approximation</a></li>
+</ul></li>
+<li class="part"><span><b>IV Symbolic Derivatives</b></span></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html"><i class="fa fa-check"></i>Rules of Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#derivatives-of-familiar-functions"><i class="fa fa-check"></i>Derivatives of Familiar Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#constant-rule"><i class="fa fa-check"></i>Constant Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#linear-function-rule"><i class="fa fa-check"></i>Linear Function Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#power-rule"><i class="fa fa-check"></i>Power Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#trig-rules"><i class="fa fa-check"></i>Trig Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#exponential-rules"><i class="fa fa-check"></i>Exponential Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#logarithmic-rules"><i class="fa fa-check"></i>Logarithmic Rules</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#arithmetic-rules-for-derivatives"><i class="fa fa-check"></i>Arithmetic Rules for Derivatives</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#constant-multiple-rule"><i class="fa fa-check"></i>Constant Multiple Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#sum-and-difference-rules"><i class="fa fa-check"></i>Sum and Difference Rules</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#rules-for-combinations-of-functions"><i class="fa fa-check"></i>Rules for Combinations of Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#product-rule"><i class="fa fa-check"></i>Product Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#quotient-rule"><i class="fa fa-check"></i>Quotient Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-differentiation.html"><a href="rules-of-differentiation.html#chain-rule"><i class="fa fa-check"></i>Chain Rule</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html"><i class="fa fa-check"></i>4.A, 4.B Symbolic Differentiation</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#activities-14"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#basic-derivative-practice"><i class="fa fa-check"></i>Basic Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#more-basic-derivative-practice"><i class="fa fa-check"></i>More Basic Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#product-rule-and-quotient-rule-practice"><i class="fa fa-check"></i>Product Rule and Quotient Rule Practice</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#solutions-13"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#basic-derivative-practice-1"><i class="fa fa-check"></i>Basic Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#more-basic-derivative-practice-1"><i class="fa fa-check"></i>More Basic Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="a-4.b-symbolic-differentiation.html"><a href="a-4.b-symbolic-differentiation.html#product-rule-and-quotient-rule-practice-1"><i class="fa fa-check"></i>Product Rule and Quotient Rule Practice</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html"><i class="fa fa-check"></i>4.C The Chain Rule</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#activities-15"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#chain-rule-practice"><i class="fa fa-check"></i>Chain Rule Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#more-chain-rule-practice"><i class="fa fa-check"></i>More Chain Rule Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#conceptual-chain-rule-problems"><i class="fa fa-check"></i>Conceptual Chain Rule Problems</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#visual-chain-rule-problem"><i class="fa fa-check"></i>Visual Chain Rule Problem</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#solutions-14"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#chain-rule-practice-1"><i class="fa fa-check"></i>Chain Rule Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#more-chain-rule-practice-1"><i class="fa fa-check"></i>More Chain Rule Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#conceptual-chain-rule-problems-1"><i class="fa fa-check"></i>Conceptual Chain Rule Problems</a></li>
+<li class="chapter" data-level="" data-path="c-the-chain-rule.html"><a href="c-the-chain-rule.html#visual-chain-rule-problem-1"><i class="fa fa-check"></i>Visual Chain Rule Problem</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html"><i class="fa fa-check"></i>4.D, 4.E Partial Derivatives, Gradients</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#activities-16"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#partial-derivative-practice"><i class="fa fa-check"></i>Partial Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#second-partial-derivative-practice"><i class="fa fa-check"></i>Second Partial Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-practice"><i class="fa fa-check"></i>Gradient Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-on-a-contour-diagram"><i class="fa fa-check"></i>Gradient on a Contour Diagram</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-and-the-direction-of-greatest-increase"><i class="fa fa-check"></i>Gradient and the Direction of Greatest Increase</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#solutions-15"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#partial-derivative-practice-1"><i class="fa fa-check"></i>Partial Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#second-partial-derivative-practice-1"><i class="fa fa-check"></i>Second Partial Derivative Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-practice-1"><i class="fa fa-check"></i>Gradient Practice</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-on-a-contour-diagram-1"><i class="fa fa-check"></i>Gradient on a Contour Diagram</a></li>
+<li class="chapter" data-level="" data-path="d-4.e-partial-derivatives-gradients.html"><a href="d-4.e-partial-derivatives-gradients.html#gradient-and-the-direction-of-greatest-increase-1"><i class="fa fa-check"></i>Gradient and the Direction of Greatest Increase</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-4-summary.html"><a href="unit-4-summary.html"><i class="fa fa-check"></i>Unit 4 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-4-summary.html"><a href="unit-4-summary.html#symbolic-derivatives"><i class="fa fa-check"></i>Symbolic Derivatives</a></li>
+<li class="chapter" data-level="" data-path="unit-4-summary.html"><a href="unit-4-summary.html#partial-derivatives-1"><i class="fa fa-check"></i>Partial Derivatives</a></li>
+<li class="chapter" data-level="" data-path="unit-4-summary.html"><a href="unit-4-summary.html#the-gradient"><i class="fa fa-check"></i>The Gradient</a></li>
+</ul></li>
+<li class="part"><span><b>V Optimization</b></span></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html"><i class="fa fa-check"></i>5.A 1D Optimization</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#activities-17"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#characterize-the-extrema"><i class="fa fa-check"></i>Characterize the Extrema</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#first-derivative-test"><i class="fa fa-check"></i>First Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#second-derivative-test"><i class="fa fa-check"></i>Second Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#cupcake-store"><i class="fa fa-check"></i>Cupcake Store</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#solutions-16"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#characterize-the-extrema-1"><i class="fa fa-check"></i>Characterize the Extrema</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#first-derivative-test-1"><i class="fa fa-check"></i>First Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#second-derivative-test-1"><i class="fa fa-check"></i>Second Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="a-1d-optimization.html"><a href="a-1d-optimization.html#cupcake-store-1"><i class="fa fa-check"></i>Cupcake Store</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html"><i class="fa fa-check"></i>5.B 2D Optimization</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#summary"><i class="fa fa-check"></i>Summary</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#activities-18"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#characterize-the-extrema-2"><i class="fa fa-check"></i>Characterize the Extrema</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#classifying-a-critical-point-using-a-small-circle-of-values"><i class="fa fa-check"></i>Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#the-2d-second-derivative-test"><i class="fa fa-check"></i>The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#classify-the-critical-points"><i class="fa fa-check"></i>Classify the Critical Points</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#optimizing-flight-control"><i class="fa fa-check"></i>Optimizing Flight Control</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#solutions-17"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#characterize-the-extrema-3"><i class="fa fa-check"></i>Characterize the Extrema</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#classifying-a-critical-point-using-a-small-circle-of-values-1"><i class="fa fa-check"></i>Classifying a critical point using a small circle of values</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#the-2d-second-derivative-test-1"><i class="fa fa-check"></i>The 2D Second Derivative Test</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#classify-the-critical-points-1"><i class="fa fa-check"></i>Classify the Critical Points</a></li>
+<li class="chapter" data-level="" data-path="b-2d-optimization.html"><a href="b-2d-optimization.html#optimizing-flight-control-1"><i class="fa fa-check"></i>Optimizing Flight Control</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html"><i class="fa fa-check"></i>5.C Gradient Search</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html#gradient-search-example"><i class="fa fa-check"></i>Gradient Search Example</a></li>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html#activities-19"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html#finding-a-local-minimum"><i class="fa fa-check"></i>Finding a Local Minimum</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html#solutions-18"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-gradient-search.html"><a href="c-gradient-search.html#finding-a-local-minimum-1"><i class="fa fa-check"></i>Finding a Local Minimum</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html"><i class="fa fa-check"></i>5.B Constrained 2D Optimization</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#creating-a-contour-plot-for-2d-optimization"><i class="fa fa-check"></i>Creating a Contour Plot for 2D Optimization</a></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#activities-20"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#constrained-production"><i class="fa fa-check"></i>Constrained Production</a></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#constrained-optimization-on-a-circle"><i class="fa fa-check"></i>Constrained Optimization on a Circle</a></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#estimating-the-lagrange-multiplier"><i class="fa fa-check"></i>Estimating the Lagrange Multiplier</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#solutions-19"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#constrained-production-1"><i class="fa fa-check"></i>Constrained Production</a></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#constrained-optimization-on-a-circle-1"><i class="fa fa-check"></i>Constrained Optimization on a Circle</a></li>
+<li class="chapter" data-level="" data-path="b-constrained-2d-optimization.html"><a href="b-constrained-2d-optimization.html#estimating-the-lagrange-multiplier-1"><i class="fa fa-check"></i>Estimating the Lagrange Multiplier</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-5-summary.html"><a href="unit-5-summary.html"><i class="fa fa-check"></i>Unit 5 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-5-summary.html"><a href="unit-5-summary.html#d-optimization"><i class="fa fa-check"></i>1D Optimization</a></li>
+<li class="chapter" data-level="" data-path="unit-5-summary.html"><a href="unit-5-summary.html#d-optimization-1"><i class="fa fa-check"></i>2D Optimization</a></li>
+<li class="chapter" data-level="" data-path="unit-5-summary.html"><a href="unit-5-summary.html#gradient-search-1"><i class="fa fa-check"></i>Gradient Search</a></li>
+<li class="chapter" data-level="" data-path="unit-5-summary.html"><a href="unit-5-summary.html#constrained-optimization-1"><i class="fa fa-check"></i>Constrained Optimization</a></li>
+</ul></li>
+<li class="part"><span><b>VI Integration</b></span></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html"><i class="fa fa-check"></i>6.A Accumulating Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#activities-21"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#growing-bacteria"><i class="fa fa-check"></i>Growing Bacteria</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#the-change-in-world-population"><i class="fa fa-check"></i>The Change in World Population</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#speed-tests"><i class="fa fa-check"></i>Speed Tests</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#estimating-area-with-rstudio"><i class="fa fa-check"></i>Estimating Area with RStudio</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#solutions-20"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#growing-bacteria-1"><i class="fa fa-check"></i>Growing Bacteria</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#the-change-in-world-population-1"><i class="fa fa-check"></i>The Change in World Population</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#speed-tests-1"><i class="fa fa-check"></i>Speed Tests</a></li>
+<li class="chapter" data-level="" data-path="a-accumulating-change.html"><a href="a-accumulating-change.html#estimating-area-with-rstudio-1"><i class="fa fa-check"></i>Estimating Area with RStudio</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html"><i class="fa fa-check"></i>6.B The Definite Integral</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#introduction"><i class="fa fa-check"></i>Introduction</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#activities-22"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#drive-my-car"><i class="fa fa-check"></i>Drive My Car</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#accelerate-my-car"><i class="fa fa-check"></i>Accelerate My Car</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#making-cupcakes"><i class="fa fa-check"></i>Making Cupcakes</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#area-between-curves"><i class="fa fa-check"></i>Area Between Curves</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#solutions-21"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#drive-my-car-1"><i class="fa fa-check"></i>Drive My Car</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#accelerate-my-car-1"><i class="fa fa-check"></i>Accelerate My Car</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#making-cupcakes-1"><i class="fa fa-check"></i>Making Cupcakes</a></li>
+<li class="chapter" data-level="" data-path="b-the-definite-integral.html"><a href="b-the-definite-integral.html#area-between-curves-1"><i class="fa fa-check"></i>Area Between Curves</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html"><i class="fa fa-check"></i>Rules of Integration</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#the-fundamental-theorem-of-calculus"><i class="fa fa-check"></i>The Fundamental Theorem of Calculus</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#integrals-of-familiar-functions"><i class="fa fa-check"></i>Integrals of Familiar Functions</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#constant-rule-1"><i class="fa fa-check"></i>Constant Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#power-rules"><i class="fa fa-check"></i>Power Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#trig-rules-1"><i class="fa fa-check"></i>Trig Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#exponential-rules-1"><i class="fa fa-check"></i>Exponential Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#logarithmic-rules-1"><i class="fa fa-check"></i>Logarithmic Rules</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#arithmetic-rules-for-integrals"><i class="fa fa-check"></i>Arithmetic Rules for Integrals</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#constant-multiple-rule-1"><i class="fa fa-check"></i>Constant Multiple Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#sum-and-difference-rules-1"><i class="fa fa-check"></i>Sum and Difference Rules</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#substitution-rule"><i class="fa fa-check"></i>Substitution Rule</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#rules-for-endpoints"><i class="fa fa-check"></i>Rules for Endpoints</a>
+<ul>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#decomposition-rule"><i class="fa fa-check"></i>Decomposition Rule</a></li>
+<li class="chapter" data-level="" data-path="rules-of-integration.html"><a href="rules-of-integration.html#zero-integral-rule"><i class="fa fa-check"></i>Zero Integral Rule</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html"><i class="fa fa-check"></i>6.C The Indefinite Integral</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#activities-23"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#indefinite-integral-practice"><i class="fa fa-check"></i>Indefinite Integral Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#definite-integral-practice"><i class="fa fa-check"></i>Definite Integral Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#area-between-curves-2"><i class="fa fa-check"></i>Area Between Curves</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#average-value"><i class="fa fa-check"></i>Average Value</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#modeling-population-growth"><i class="fa fa-check"></i>Modeling Population Growth</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#zombie-apocalypse"><i class="fa fa-check"></i>Zombie Apocalypse</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#solutions-22"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#indefinite-integral-practice-1"><i class="fa fa-check"></i>Indefinite Integral Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#definite-integral-practice-1"><i class="fa fa-check"></i>Definite Integral Practice</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#area-between-curves-3"><i class="fa fa-check"></i>Area Between Curves</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#average-value-1"><i class="fa fa-check"></i>Average Value</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#modeling-population-growth-1"><i class="fa fa-check"></i>Modeling Population Growth</a></li>
+<li class="chapter" data-level="" data-path="c-the-indefinite-integral.html"><a href="c-the-indefinite-integral.html#zombie-apocalypse-1"><i class="fa fa-check"></i>Zombie Apocalypse</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-6-summary.html"><a href="unit-6-summary.html"><i class="fa fa-check"></i>Unit 6 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-6-summary.html"><a href="unit-6-summary.html#accumulating-change"><i class="fa fa-check"></i>Accumulating Change</a></li>
+<li class="chapter" data-level="" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-definite-integral"><i class="fa fa-check"></i>The Definite Integral</a></li>
+<li class="chapter" data-level="" data-path="unit-6-summary.html"><a href="unit-6-summary.html#the-indefinite-integral"><i class="fa fa-check"></i>The Indefinite Integral</a></li>
+</ul></li>
+<li class="part"><span><b>VII Differential Equations</b></span></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html"><i class="fa fa-check"></i>7.A Modeling Change</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#activities-24"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#building-differential-equations"><i class="fa fa-check"></i>Building Differential Equations</a></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#solve-the-differential-equation"><i class="fa fa-check"></i>Solve the Differential Equation</a></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#verifying-solutions-to-differential-equations"><i class="fa fa-check"></i>Verifying Solutions to Differential Equations</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#solutions-23"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#building-differential-equations-1"><i class="fa fa-check"></i>Building Differential Equations</a></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#solve-the-differential-equation-1"><i class="fa fa-check"></i>Solve the Differential Equation</a></li>
+<li class="chapter" data-level="" data-path="a-modeling-change.html"><a href="a-modeling-change.html#verifying-solutions-to-differential-equations-1"><i class="fa fa-check"></i>Verifying Solutions to Differential Equations</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html"><i class="fa fa-check"></i>7.B Population Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#important-models"><i class="fa fa-check"></i>Important Models</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#exponential-growthdecay"><i class="fa fa-check"></i>Exponential Growth/Decay</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#exponential-growthdecay-with-constant-inputoutput"><i class="fa fa-check"></i>Exponential Growth/Decay with Constant Input/Output</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#constrained-growth"><i class="fa fa-check"></i>Constrained Growth</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#newtons-law-of-cooling"><i class="fa fa-check"></i>Newton’s Law of Cooling</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#activities-25"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#drug-metabolization"><i class="fa fa-check"></i>Drug Metabolization</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#elementary-my-dear-watson"><i class="fa fa-check"></i>Elementary, My Dear Watson</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#optimal-coffee-temperature"><i class="fa fa-check"></i>Optimal Coffee Temperature</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#constrained-rabbit-population"><i class="fa fa-check"></i>Constrained Rabbit Population</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#constrained-deer-population"><i class="fa fa-check"></i>Constrained Deer Population</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#solutions-24"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#drug-metabolization-1"><i class="fa fa-check"></i>Drug Metabolization</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#elementary-my-dear-watson-1"><i class="fa fa-check"></i>Elementary, My Dear Watson</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#optimal-coffee-temperature-1"><i class="fa fa-check"></i>Optimal Coffee Temperature</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#constrained-rabbit-population-1"><i class="fa fa-check"></i>Constrained Rabbit Population</a></li>
+<li class="chapter" data-level="" data-path="b-population-models.html"><a href="b-population-models.html#constrained-deer-population-1"><i class="fa fa-check"></i>Constrained Deer Population</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html"><i class="fa fa-check"></i>7.D Slope Fields</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#creating-a-slope-field-in-rstudio"><i class="fa fa-check"></i>Creating a Slope Field in RStudio</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#activities-26"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-field"><i class="fa fa-check"></i>Match the Slope Field</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#solutions-25"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#match-the-slope-fields"><i class="fa fa-check"></i>Match the Slope Fields</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#draw-some-trajectories-1"><i class="fa fa-check"></i>Draw Some Trajectories</a></li>
+<li class="chapter" data-level="" data-path="d-slope-fields.html"><a href="d-slope-fields.html#slope-fields-for-population-models-1"><i class="fa fa-check"></i>Slope Fields for Population Models</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html"><i class="fa fa-check"></i>7.E SIR Model</a>
+<ul>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#the-sir-model-for-the-spread-of-disease"><i class="fa fa-check"></i>The SIR Model for the Spread of Disease</a>
+<ul>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#plotting-an-sir-slope-field-and-an-sir-trajectory"><i class="fa fa-check"></i>Plotting an SIR Slope Field and an SIR Trajectory</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#activities-27"><i class="fa fa-check"></i>Activities</a>
+<ul>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#threshold-population-for-an-sir-model"><i class="fa fa-check"></i>Threshold Population for an SIR Model</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#ending-an-outbreak-before-everyone-gets-sick"><i class="fa fa-check"></i>Ending an Outbreak Before Everyone Gets Sick</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#managing-an-outbreak"><i class="fa fa-check"></i>Managing an Outbreak</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#changing-infection-rate-versus-changing-removal-rate"><i class="fa fa-check"></i>Changing Infection Rate Versus Changing Removal Rate</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#solutions-26"><i class="fa fa-check"></i>Solutions</a>
+<ul>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#threshold-population-for-an-sir-model-1"><i class="fa fa-check"></i>Threshold Population for an SIR Model</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#ending-an-outbreak-before-everyone-gets-sick-1"><i class="fa fa-check"></i>Ending an Outbreak Before Everyone Gets Sick</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#managing-an-outbreak-1"><i class="fa fa-check"></i>Managing an Outbreak</a></li>
+<li class="chapter" data-level="" data-path="e-sir-model.html"><a href="e-sir-model.html#changing-infection-rate-versus-changing-removal-rate-1"><i class="fa fa-check"></i>Changing Infection Rate Versus Changing Removal Rate</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html"><i class="fa fa-check"></i>Unit 7 Summary</a>
+<ul>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html#differential-equations-1"><i class="fa fa-check"></i>Differential Equations</a></li>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html#population-models"><i class="fa fa-check"></i>Population Models</a></li>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html#eulers-method-1"><i class="fa fa-check"></i>Euler’s Method</a></li>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html#slope-fields-1"><i class="fa fa-check"></i>Slope Fields</a></li>
+<li class="chapter" data-level="" data-path="unit-7-summary.html"><a href="unit-7-summary.html#sir-model-1"><i class="fa fa-check"></i>SIR Model</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MATH 135: AMC I</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="d-slope-fields" class="section level1 hasAnchor">
+<h1>7.D Slope Fields<a href="d-slope-fields.html#d-slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="creating-a-slope-field-in-rstudio" class="section level2 hasAnchor">
+<h2>Creating a Slope Field in RStudio<a href="d-slope-fields.html#creating-a-slope-field-in-rstudio" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The <code>mosaicCalc</code> package has a <code>vectorfield_plot</code> function that we use to create a slope field. So we need to make sure that this package has been loaded into RStudio.</p>
+<div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="d-slope-fields.html#cb196-1" tabindex="-1"></a><span class="fu">suppressPackageStartupMessages</span>(<span class="fu">library</span>(mosaicCalc))</span></code></pre></div>
+<p>Here is the code to create the slope field for <span class="math inline">\(\displaystyle{\frac{dP}{dt} = 6 - 2 P}\)</span></p>
+<div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="d-slope-fields.html#cb197-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb197-2"><a href="d-slope-fields.html#cb197-2" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
+<span id="cb197-3"><a href="d-slope-fields.html#cb197-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+</div>
+<div id="activities-26" class="section level2 hasAnchor">
+<h2>Activities<a href="d-slope-fields.html#activities-26" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="match-the-slope-field" class="section level3 hasAnchor">
+<h3>Match the Slope Field<a href="d-slope-fields.html#match-the-slope-field" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Match each of the following differential equations with its slope field. <em>Hint:</em> start by setting <span class="math inline">\(\frac{dy}{dx} = 0\)</span> and solving for <span class="math inline">\(y\)</span>. The slopes along the resulting curve will always be horizontal.</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=xy}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=\frac{x}{y}}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x+y}\)</span></li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x-y}\)</span></li>
+</ol>
+<table>
+<tr>
+<td>
+Slope Field A
+</td>
+<td>
+Slope Field B
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield1.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield2.png" style="width:100.0%" />
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Slope Field C
+</td>
+<td>
+Slope Field D
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield3.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield4.png" style="width:100.0%" />
+</td>
+</tr>
+</table>
+</div>
+<div id="draw-some-trajectories" class="section level3 hasAnchor">
+<h3>Draw Some Trajectories<a href="d-slope-fields.html#draw-some-trajectories" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For each of the above slope fields, sketch the solution curves that satisfy</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(y(0) = 1\)</span></li>
+<li><span class="math inline">\(y(0) = 0\)</span></li>
+<li><span class="math inline">\(y(0) = -1\)</span></li>
+</ol>
+</div>
+<div id="slope-fields-for-population-models" class="section level3 hasAnchor">
+<h3>Slope Fields for Population Models<a href="d-slope-fields.html#slope-fields-for-population-models" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of <span class="math inline">\(P\)</span> does the population increase without bound? stabilize to a constant value? die out?</p>
+<ol style="list-style-type: decimal">
+<li><p>Exponential growth with harvesting.
+<span class="math display">\[
+\frac{dP}{dt} = 0.2 P - 40
+\]</span>
+for <span class="math inline">\(0 \leq P \leq 300\)</span> and <span class="math inline">\(0 \leq t \leq 100\)</span>.</p></li>
+<li><p>Constrained growth
+<span class="math display">\[
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P)
+\]</span>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</p></li>
+<li><p>Constrained growth with constant harvesting
+<span class="math display">\[
+\frac{dP}{dt} = 0.05 P  (1 - 0.002 P) - 4
+\]</span>
+for <span class="math inline">\(0 \leq P \leq 600\)</span> and <span class="math inline">\(0 \leq t \leq 50\)</span>.</p></li>
+</ol>
+</div>
+</div>
+<div id="solutions-25" class="section level2 hasAnchor">
+<h2>Solutions<a href="d-slope-fields.html#solutions-25" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="match-the-slope-fields" class="section level3 hasAnchor">
+<h3>Match the Slope Fields<a href="d-slope-fields.html#match-the-slope-fields" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=xy}\)</span> is Slope Field B</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=\frac{x}{y}}\)</span> is Slope Field A</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x+y}\)</span> is Slope Field D</li>
+<li><span class="math inline">\(\displaystyle{\frac{dy}{dx}=x-y}\)</span> is Slope Field C</li>
+</ol>
+</div>
+<div id="draw-some-trajectories-1" class="section level3 hasAnchor">
+<h3>Draw Some Trajectories<a href="d-slope-fields.html#draw-some-trajectories-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Here are some trajectories (not necessarily the ones that go through the three points specified).</p>
+<table>
+<tr>
+<td>
+Slope Field A
+</td>
+<td>
+Slope Field B
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield1soln.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield2soln.png" style="width:100.0%" />
+<tr>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td>
+Slope Field C
+</td>
+<td>
+Slope Field D
+</td>
+</tr>
+</td>
+</tr>
+<tr>
+<td>
+<img src="images/slopefield3soln.png" style="width:100.0%" />
+</td>
+<td>
+<img src="images/slopefield4soln.png" style="width:100.0%" />
+</td>
+</tr>
+</table>
+</div>
+<div id="slope-fields-for-population-models-1" class="section level3 hasAnchor">
+<h3>Slope Fields for Population Models<a href="d-slope-fields.html#slope-fields-for-population-models-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Create a slope field for each of the following population models. For each one, describe the long-term behavior for a variety of intial populations. For which initial values of <span class="math inline">\(P\)</span> does the population increase without bound? stabilize to a constant value? die out?</p>
+<ol style="list-style-type: decimal">
+<li>Exponential growth with harvesting.</li>
+</ol>
+<div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="d-slope-fields.html#cb198-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb198-2"><a href="d-slope-fields.html#cb198-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.2</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">40</span>,</span>
+<span id="cb198-3"><a href="d-slope-fields.html#cb198-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">300</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-160-1.png" width="70%" /></p>
+<ul>
+<li>If <span class="math inline">\(P(0) &gt; 200\)</span> then the population increases without bound</li>
+<li>If <span class="math inline">\(P(0) = 200\)</span> then the population remains at this equilibrium value. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(P(0) &lt; 200\)</span> then the population decreases to zero.</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Constrained growth</li>
+</ol>
+<div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="d-slope-fields.html#cb199-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb199-2"><a href="d-slope-fields.html#cb199-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P),</span>
+<span id="cb199-3"><a href="d-slope-fields.html#cb199-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-161-1.png" width="70%" /></p>
+<ul>
+<li>If <span class="math inline">\(P(0) = 0\)</span> then the population remains at 0. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(0 &lt; P(0) &lt; 500\)</span> then the population increases to the carrying capacity 500.</li>
+<li>If <span class="math inline">\(P(0) = 500\)</span> then the population remains at this equilibrium value. This is a stable equilibrium, and it is the carrying capacity.</li>
+<li>If <span class="math inline">\(P(0) &gt; 500\)</span> then the population decreases down to the carrying capacity 500.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Constrained growth with constant harvesting</li>
+</ol>
+<div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="d-slope-fields.html#cb200-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb200-2"><a href="d-slope-fields.html#cb200-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P) <span class="sc">-</span> <span class="dv">4</span>,</span>
+<span id="cb200-3"><a href="d-slope-fields.html#cb200-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-162-1.png" width="70%" /></p>
+<p>Let’s set <span class="math inline">\(\frac{dP}{dt}=0\)</span> and solve to find the equilibrium points. We have
+<span class="math display">\[\begin{align}
+-0.0001 P^2 + 0.05 P   - 4 &amp;= 0 \\
+P^2 - 500 P   + 40000 &amp;= 0 \\
+(P-100)(P-400) &amp;= 0
+\end{align}\]</span></p>
+<ul>
+<li>If <span class="math inline">\(P(0) &lt; 100\)</span> then the population decreases to 0 at 0.</li>
+<li>If <span class="math inline">\(P(0) = 100\)</span> then the population remains at 100. This is an unstable equilibrium.</li>
+<li>If <span class="math inline">\(100 &lt; P(0) &lt; 400\)</span> then the population increases to 400.</li>
+<li>If <span class="math inline">\(P(0) = 400\)</span> then the population remains at this equilibrium value. This is a stable equilibrium.</li>
+<li>If <span class="math inline">\(P(0) &gt; 400\)</span> then the population decreases down to 400.</li>
+</ul>
+
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="b-population-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="e-sir-model.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": false,
+"twitter": false,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
