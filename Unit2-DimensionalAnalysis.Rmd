@@ -62,7 +62,7 @@ $$
 $$
 which means that $a=1/2$ and $c=-1/2$ and $b=-3/2$. So our final equation is
 $$
-A = k a^{1/2} b^{-3/2} c^{-1/2} = k \sqrt{\frac{P}{D^3H}}
+A = k P^{1/2} D^{-3/2} H^{-1/2} = k \sqrt{\frac{P}{D^3H}}
 $$
 
 3. We have
