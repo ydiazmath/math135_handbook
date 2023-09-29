@@ -45,7 +45,7 @@ $$
 $$
 Therefore $b=1/2$ and $c=-1/2$ and $a=-1$. Our formula is
 $$
-f = k \ell^{-1} s^{1/2} \mu^{-1/2} k \frac{1}{\ell} \sqrt{\frac{s}{\mu}}.
+f = k \ell^{-1} s^{1/2} \mu^{-1/2} = k \frac{1}{\ell} \sqrt{\frac{s}{\mu}}.
 $$
 2. We have
 $$
