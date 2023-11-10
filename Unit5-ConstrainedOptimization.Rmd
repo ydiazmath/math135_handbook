@@ -1,4 +1,4 @@
-# 5.B Constrained 2D Optimization
+# 5.D Constrained 2D Optimization
 
 ## Creating a Contour Plot for 2D Optimization
 

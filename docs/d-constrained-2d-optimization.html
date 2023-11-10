@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.C Partial Derivatives | MATH 135: AMC I</title>
+  <title>5.D Constrained 2D Optimization | MATH 135: AMC I</title>
   <meta name="description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="generator" content="bookdown 0.35 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.C Partial Derivatives | MATH 135: AMC I" />
+  <meta property="og:title" content="5.D Constrained 2D Optimization | MATH 135: AMC I" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   <meta name="github-repo" content="ydiazmath/math135_handbook" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.C Partial Derivatives | MATH 135: AMC I" />
+  <meta name="twitter:title" content="5.D Constrained 2D Optimization | MATH 135: AMC I" />
   
   <meta name="twitter:description" content="This is the class activity manual for MATH 135 at Macalester College." />
   
@@ -28,8 +28,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="b-the-second-derivative.html"/>
-<link rel="next" href="d-local-linear-approximation.html"/>
+<link rel="prev" href="c-gradient-search.html"/>
+<link rel="next" href="unit-5-summary.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -808,181 +808,107 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="c-partial-derivatives" class="section level1 hasAnchor">
-<h1>3.C Partial Derivatives<a href="c-partial-derivatives.html#c-partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="activities-12" class="section level2 hasAnchor">
-<h2>Activities<a href="c-partial-derivatives.html#activities-12" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-from-data" class="section level3 hasAnchor">
-<h3>Estimating From Data<a href="c-partial-derivatives.html#estimating-from-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The maximum duration of a scuba dive <span class="math inline">\(T(V,D)\)</span> (in minutes) depends on the volume <span class="math inline">\(V\)</span> of air (at sea-level pressure) in the tank and the depth <span class="math inline">\(D\)</span> (in feet) of the dive.
-The following table shows the estimated dive times for various combinations of air volume and dive depth.</p>
-<table style="width: 70%; margin-left: auto; margin-right: auto;" border="1" cellspacing="2" cellpadding="2" align="center">
-<tbody>
-<tr>
-<td style="margin-left: 30px; text-align: center;" rowspan="2" colspan="2">
-<strong>Dive Time (minutes)</strong> 
-</td>
-<td style="text-align: center;" colspan="4">
-<strong> Air Volume</strong>
-</td>
-</tr>
-<tr>
-<td style="text-align: center;">
-<strong>20 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>40 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>60 ft<sup>3</sup></strong>
-</td>
-<td style="text-align: center;">
-<strong>80 ft<sup>3</sup></strong>
-</td>
-</tr>
-<tr align="right">
-<td style="margin-left: 30px; text-align: center;" rowspan="5">
-<strong>Depth</strong>
-</td>
-<td style="text-align: center;">
-<strong>20 ft</strong>
-</td>
-<td style="text-align: center;">
-12.5
-</td>
-<td style="text-align: center;">
-25.0
-</td>
-<td style="text-align: center;">
-37.5
-</td>
-<td style="text-align: center;">
-50.0
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>40 ft</strong>
-</td>
-<td style="text-align: center;">
-9.0
-</td>
-<td style="text-align: center;">
-18.0
-</td>
-<td style="text-align: center;">
-27.0
-</td>
-<td style="text-align: center;">
-36.0
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>60 ft</strong>
-</td>
-<td style="text-align: center;">
-7.1
-</td>
-<td style="text-align: center;">
-14.2
-</td>
-<td style="text-align: center;">
-21.3
-</td>
-<td style="text-align: center;">
-28.4
-</td>
-</tr>
-<tr align="right">
-<td style="text-align: center;">
-<strong>80 ft</strong>
-</td>
-<td style="text-align: center;">
-5.8
-</td>
-<td style="text-align: center;">
-11.6
-</td>
-<td style="text-align: center;">
-17.4
-</td>
-<td style="text-align: center;">
-23.2
-</td>
-</tr>
-</tbody>
-</table>
-<p>Use this table to estimate the derivatives
-<span class="math inline">\(\displaystyle{\frac{\partial T}{\partial V}}\)</span> and <span class="math inline">\(\displaystyle{\frac{\partial T}{\partial D}}\)</span> at the point <span class="math inline">\((V=60, T=40)\)</span>. Give units for each of these derivatives and then interpret what these numbers mean.</p>
+<div id="d-constrained-2d-optimization" class="section level1 hasAnchor">
+<h1>5.D Constrained 2D Optimization<a href="d-constrained-2d-optimization.html#d-constrained-2d-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="creating-a-contour-plot-for-2d-optimization" class="section level2 hasAnchor">
+<h2>Creating a Contour Plot for 2D Optimization<a href="d-constrained-2d-optimization.html#creating-a-contour-plot-for-2d-optimization" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Here is some example code to create a plot of an objective function <span class="math inline">\(P(x,y) = x^{0.2} y^{0.8}\)</span> and a constraint function <span class="math inline">\(Q(x,y)=4x + 3y=200\)</span>.</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb141-1"><a href="d-constrained-2d-optimization.html#cb141-1" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="fl">0.2</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="fl">0.8</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb141-2"><a href="d-constrained-2d-optimization.html#cb141-2" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">4</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">3</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb141-3"><a href="d-constrained-2d-optimization.html#cb141-3" tabindex="-1"></a></span>
+<span id="cb141-4"><a href="d-constrained-2d-optimization.html#cb141-4" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">60</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">20</span>,<span class="dv">50</span>,<span class="dv">4</span>))</span>
+<span id="cb141-5"><a href="d-constrained-2d-optimization.html#cb141-5" tabindex="-1"></a></span>
+<span id="cb141-6"><a href="d-constrained-2d-optimization.html#cb141-6" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">200</span>)</span></code></pre></div>
 </div>
-<div id="estimating-from-a-contour-plot" class="section level3 hasAnchor">
-<h3>Estimating From a Contour Plot<a href="c-partial-derivatives.html#estimating-from-a-contour-plot" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The production function <span class="math inline">\(F(L,K)\)</span> for a factory gives the number of units produced by labor <span class="math inline">\(L\)</span> and capital <span class="math inline">\(K\)</span> (both measured in dollars). This production function is given by
-<span class="math display">\[
-F(L,K) = 10 L^{2/7}K^{5/7}.
-\]</span>
-Here is a contour plot of the production function.</p>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-102-1.png" width="672" /></p>
+<div id="activities-20" class="section level2 hasAnchor">
+<h2>Activities<a href="d-constrained-2d-optimization.html#activities-20" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="constrained-production" class="section level3 hasAnchor">
+<h3>Constrained Production<a href="d-constrained-2d-optimization.html#constrained-production" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A company produces <span class="math inline">\(P(x,y) = 100 x^{4/11} y^{7/11}\)</span> units of its product from raw materials <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>. The cost of each unit of <span class="math inline">\(x\)</span> is $5 and the cost of each unit of <span class="math inline">\(y\)</span> is $4.</p>
 <ol style="list-style-type: decimal">
-<li>Estimate the production output for <span class="math inline">\(L=400\)</span> and <span class="math inline">\(K=600\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial L}}\)</span> at <span class="math inline">\((400,600)\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial K}}\)</span> at <span class="math inline">\((400,600)\)</span>.</li>
+<li><p>Find the maximal output for a budget of $500, along with how much input <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is used to create them. (Hint: plot your contour diagram on the domain <span class="math inline">\(0 \leq x \leq 100\)</span> and <span class="math inline">\(0 \leq y \leq 100\)</span>. Start with the <strong>default</strong> contours by removing the <code>levels</code> input.)</p></li>
+<li><p>What is the maximal output if the unit cost of <span class="math inline">\(x\)</span> increases to $7? How much of inputs <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are used?</p></li>
+<li><p>What is the maximal output if the unit cost of <span class="math inline">\(x\)</span> returns to $5 and the budget is decreased to $300? How much of inputs <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> are used?</p></li>
 </ol>
 </div>
-<div id="estimating-using-desmos" class="section level3 hasAnchor">
-<h3>Estimating Using Desmos<a href="c-partial-derivatives.html#estimating-using-desmos" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Use desmos to define the prodution function <span class="math inline">\(F(L,K) = L^{2/7} K^{5/7}\)</span> from the previous problem and to answer the analogous questions</p>
+<div id="constrained-optimization-on-a-circle" class="section level3 hasAnchor">
+<h3>Constrained Optimization on a Circle<a href="d-constrained-2d-optimization.html#constrained-optimization-on-a-circle" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Below is a plot of an objective function <span class="math inline">\(f(x,y)\)</span> in red, and its constraint function <span class="math inline">\(g(x,y)=4\)</span> in blue.</p>
 <ol style="list-style-type: decimal">
-<li>Calculate the production outpuut <span class="math inline">\(F(400,600)\)</span>.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial L}}\)</span> at <span class="math inline">\((400,600)\)</span>. Your answer must be correct to two decimal places.</li>
-<li>Estimate the partial derivative <span class="math inline">\(\displaystyle{\frac{\partial F}{\partial K}}\)</span> at <span class="math inline">\((400,600)\)</span>.
-Your answer must be correct to two decimal places.</li>
+<li>Estimate the <strong>minimum</strong> value of <span class="math inline">\(f(x,y)\)</span> constrained to <span class="math inline">\(g(x,y)=4\)</span>. What point achieves this minimum?</li>
+<li>Estimate the <strong>maximum</strong> value of <span class="math inline">\(f(x,y)\)</span> constrained to <span class="math inline">\(g(x,y)=4\)</span>. What point achieves this maximum?</li>
 </ol>
-<p>Compare your three answers to the estimates from the contour plot in the previous problem.</p>
+<p><img src="images/constrained-circle.png" style="width:50.0%" /></p>
 </div>
-</div>
-<div id="solutions-11" class="section level2 hasAnchor">
-<h2>Solutions<a href="c-partial-derivatives.html#solutions-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="estimating-from-data-1" class="section level3 hasAnchor">
-<h3>Estimating From Data<a href="c-partial-derivatives.html#estimating-from-data-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We estimate the partial derivatives. We have
-<span class="math display">\[
-T_V(60,40) \approx \frac{T(80,40) - T(60,40)}{80-60}
-= \frac{36 - 27}{80-60} = \frac{9}{20} = 0.45 \mbox{ min/ft}^3
-\]</span>
-where we have used the interval <span class="math inline">\(60 \leq V \leq 80\)</span> for our estimate. We could also use <span class="math inline">\(40 \leq V \leq 80\)</span> or <span class="math inline">\(40 \leq V \leq 80\)</span> as the interval for our estimate.
-<span class="math display">\[
-T_D(60,40) \approx \frac{T(60,60) - T(60,40)}{60-40}
-= \frac{21.3 - 27}{60-40} = - \frac{5.7}{20} = -0.285 \mbox{ min/ft}
-\]</span>
-where we have used the interval <span class="math inline">\(40 \leq D \leq 60\)</span> for our estimate. We could also use <span class="math inline">\(20 \leq D \leq 40\)</span> or <span class="math inline">\(20 \leq D \leq 60\)</span> as the interval for our estimate.</p>
-<p>The units for <span class="math inline">\(T_V(V,D)\)</span> are minutes per cubic feet. An additional cubic foot of air will allow you to dive for an extra 0.45 minutes.</p>
-<p>The units for <span class="math inline">\(T_V(V,D)\)</span> are minutes per feet. An additional foot of dive depth will reduce your dive time: the change is <span class="math inline">\(-0.285\)</span> minutes.</p>
-</div>
-<div id="estimating-from-a-contour-plot-1" class="section level3 hasAnchor">
-<h3>Estimating From a Contour Plot<a href="c-partial-derivatives.html#estimating-from-a-contour-plot-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>We have
-<span class="math display">\[
-F(400,600) \approx 5300.
-\]</span></p>
-<p>Let’s estimate by using the contour line <span class="math inline">\(F(L,K) = 5000\)</span>. I estimate that <span class="math inline">\(F(325,600)=5000\)</span> and that <span class="math inline">\(F(400,550)=5000\)</span>. Therefore</p>
-<p><span class="math display">\[
-F_L(400,600) \approx \frac{5300 - 5000}{400 - 325} = \frac{300}{75} = 4
-\]</span>
-and
-<span class="math display">\[
-F_K(400,600) \approx \frac{5300 - 5000}{600-550}
-= \frac{300}{50} = 6.
-\]</span></p>
-</div>
-<div id="estimating-using-desmos-1" class="section level3 hasAnchor">
-<h3>Estimating Using Desmos<a href="c-partial-derivatives.html#estimating-using-desmos-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Here is a <a href="https://www.desmos.com/calculator/piexczmrsn">link to my desmos calculations</a>.</p>
+<div id="estimating-the-lagrange-multiplier" class="section level3 hasAnchor">
+<h3>Estimating the Lagrange Multiplier<a href="d-constrained-2d-optimization.html#estimating-the-lagrange-multiplier" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Below is a plot of an objective function <span class="math inline">\(f(x,y)\)</span> in red, and its constraint function <span class="math inline">\(g(x,y)\)</span> for various budgets in blue (in thousands of dollars).</p>
+<p><img src="images/cobb-douglas2.png" style="width:50.0%" /></p>
 <ol style="list-style-type: decimal">
-<li><span class="math inline">\(F(400,600) = 534.37\)</span></li>
-<li><span class="math inline">\(F_L(400,600) = 0.38\)</span></li>
-<li><span class="math inline">\(F(400,600) = 0.64\)</span></li>
+<li>Estimate the point <span class="math inline">\((x,y)\)</span> that maximizes production for a budget of <span class="math inline">\(g(x,y)=15\)</span>. What is the production level?</li>
+<li>Estimate the point <span class="math inline">\((x,y)\)</span> that maximizes production for a budget of <span class="math inline">\(g(x,y)=20\)</span>. What is the production level?</li>
+<li>What is the value of the Lagrange multiplier for the budget <span class="math inline">\(g(x,y)=15\)</span>? What are the units? What does this number mean?</li>
+<li>What price would make this increase useful to the company? (Hint: the units for your answer are “dollars per unit produced.”)</li>
+</ol>
+</div>
+</div>
+<div id="solutions-19" class="section level2 hasAnchor">
+<h2>Solutions<a href="d-constrained-2d-optimization.html#solutions-19" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="constrained-production-1" class="section level3 hasAnchor">
+<h3>Constrained Production<a href="d-constrained-2d-optimization.html#constrained-production-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>Here is our plot of the objective function <span class="math inline">\(P(x,y)\)</span> and the constraint <span class="math inline">\(Q(x,y) = 500\)</span>.</li>
+</ol>
+<div class="sourceCode" id="cb142"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb142-1"><a href="d-constrained-2d-optimization.html#cb142-1" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="dv">4</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="dv">7</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb142-2"><a href="d-constrained-2d-optimization.html#cb142-2" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">5</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb142-3"><a href="d-constrained-2d-optimization.html#cb142-3" tabindex="-1"></a></span>
+<span id="cb142-4"><a href="d-constrained-2d-optimization.html#cb142-4" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="d-constrained-2d-optimization.html#cb143-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">500</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-125-1.png" width="672" /></p>
+<p>The maximum output for our budget occurs where the <span class="math inline">\(Q(x,y)=500\)</span> constraint is tangent to a contour of <span class="math inline">\(P(x,y)\)</span>. This occurs at (approximately) the point <span class="math inline">\((38,78)\)</span> and we estimate that the maximum production is <span class="math inline">\(P(38,78)=60\)</span>.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>We need to make a new plot using an updated constraint function.</li>
+</ol>
+<div class="sourceCode" id="cb144"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb144-1"><a href="d-constrained-2d-optimization.html#cb144-1" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="dv">4</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="dv">7</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb144-2"><a href="d-constrained-2d-optimization.html#cb144-2" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">7</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb144-3"><a href="d-constrained-2d-optimization.html#cb144-3" tabindex="-1"></a></span>
+<span id="cb144-4"><a href="d-constrained-2d-optimization.html#cb144-4" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb145-1"><a href="d-constrained-2d-optimization.html#cb145-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">500</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-127-1.png" width="672" /></p>
+<p>Now, the constraint isn’t tangent to any of the shown contours, but it IS tangent to a contour that we haven’t drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let’s make another plot on a smaller domain and pick some contours to draw.</p>
+<div class="sourceCode" id="cb146"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb146-1"><a href="d-constrained-2d-optimization.html#cb146-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">20</span>,<span class="dv">40</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">60</span>,<span class="dv">100</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">47</span>,<span class="dv">66</span>,<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="d-constrained-2d-optimization.html#cb147-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">500</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-129-1.png" width="672" /></p>
+<p>After some experimentation, I realized that <span class="math inline">\(P(x,y)=53\)</span> is the contour that is tangent $ Q(x,y)=500$. So the optimal point is <span class="math inline">\((26,80)\)</span> and the optimal output is 53.</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Now we return to the original constraint function, but decrease the budget to <span class="math inline">\(300\)</span>.</li>
+</ol>
+<div class="sourceCode" id="cb148"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb148-1"><a href="d-constrained-2d-optimization.html#cb148-1" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>( x<span class="sc">^</span>(<span class="dv">4</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">*</span> y<span class="sc">^</span>(<span class="dv">7</span><span class="sc">/</span><span class="dv">11</span>) <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb148-2"><a href="d-constrained-2d-optimization.html#cb148-2" tabindex="-1"></a>Q <span class="ot">=</span> <span class="fu">makeFun</span>( <span class="dv">5</span><span class="sc">*</span>x <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>y <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
+<span id="cb148-3"><a href="d-constrained-2d-optimization.html#cb148-3" tabindex="-1"></a></span>
+<span id="cb148-4"><a href="d-constrained-2d-optimization.html#cb148-4" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">100</span>), <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">15</span>,<span class="dv">85</span>,<span class="dv">10</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="d-constrained-2d-optimization.html#cb149-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">Q</span>(x,y)<span class="sc">~</span>x<span class="sc">&amp;</span>y, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">filled=</span><span class="cn">FALSE</span>, <span class="at">levels=</span><span class="dv">300</span>)</span></code></pre></div>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
+<p>The optimal point is at <span class="math inline">\((21,40)\)</span> and the optimal production is approximately <span class="math inline">\(f(21,40)=35\)</span>. (This is a slight under-estimate, but it’s pretty close.)</p>
+</div>
+<div id="constrained-optimization-on-a-circle-1" class="section level3 hasAnchor">
+<h3>Constrained Optimization on a Circle<a href="d-constrained-2d-optimization.html#constrained-optimization-on-a-circle-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li>The minimum is approximately <span class="math inline">\(f(1.5, 1.5) = 20\)</span>.</li>
+<li>The maximum is approximately <span class="math inline">\(f(4.5, 4.5) = 210\)</span>.</li>
+</ol>
+</div>
+<div id="estimating-the-lagrange-multiplier-1" class="section level3 hasAnchor">
+<h3>Estimating the Lagrange Multiplier<a href="d-constrained-2d-optimization.html#estimating-the-lagrange-multiplier-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ol style="list-style-type: decimal">
+<li><p>For a budget of 15, the maximal production is <span class="math inline">\(f(25,18)=250\)</span>.</p></li>
+<li><p>For a budget of 20, the maximal production is <span class="math inline">\(f(32,26)=360\)</span>.</p></li>
+<li><p>The Lagrange multiplier is
+<span class="math display">\[
+\lambda = \frac{\triangle \mbox{production}}{\triangle \mbox{constraint}} \approx \frac{360-250}{20-15}=\frac{110}{5}=22  \frac{\mbox{units}}{\mbox{dollar}}
+\]</span>
+So if we increase our budget by $1, then we will produce 22 more units.</p></li>
+<li><p>The Lagrange multiplier is approximately <span class="math inline">\(22\)</span> units/dollar. We will break even if we can sell one unit for <span class="math inline">\(1/22=0.045\)</span> dollars/unit. So if the sale price is at least $0.045, we will decide to increase production.</p></li>
 </ol>
 
 </div>
@@ -993,8 +919,8 @@ F_K(400,600) \approx \frac{5300 - 5000}{600-550}
           </div>
         </div>
       </div>
-<a href="b-the-second-derivative.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="d-local-linear-approximation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="c-gradient-search.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="unit-5-summary.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
