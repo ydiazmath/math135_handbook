@@ -851,7 +851,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <span id="cb203-3"><a href="e-sir-model.html#cb203-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">80</span>), <span class="at">S=</span><span class="dv">800</span>, <span class="at">I=</span><span class="dv">5</span>)</span>
 <span id="cb203-4"><a href="e-sir-model.html#cb203-4" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-166-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-182-1.png" width="70%" /></p>
 </div>
 </div>
 <div id="activities-27" class="section level2 hasAnchor">
@@ -864,7 +864,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <li>If we start at <span class="math inline">\(S=400\)</span> and <span class="math inline">\(I=10\)</span>, are we in epidemic phase?</li>
 <li>What is the threshold population for this SIR Model?</li>
 </ol>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-167-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-183-1.png" width="70%" /></p>
 </div>
 <div id="ending-an-outbreak-before-everyone-gets-sick" class="section level3 hasAnchor">
 <h3>Ending an Outbreak Before Everyone Gets Sick<a href="e-sir-model.html#ending-an-outbreak-before-everyone-gets-sick" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -891,7 +891,7 @@ Soln = integrateODE(SIRdyn, domain(t=0:45), S=600, I=8)
 traj_plot(I(t) ~ S(t), Soln, nt=20)
 ```
 
-<img src="math135_handbook_files/figure-html/unnamed-chunk-168-1.png" width="672" />
+<img src="math135_handbook_files/figure-html/unnamed-chunk-184-1.png" width="672" />
 -->
 </div>
 <div id="managing-an-outbreak" class="section level3 hasAnchor">
@@ -949,7 +949,7 @@ and starting at <span class="math inline">\(S=600\)</span> and <span class="math
 <span id="cb205-3"><a href="e-sir-model.html#cb205-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb207"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb207-1"><a href="e-sir-model.html#cb207-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-169-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-185-1.png" width="70%" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>The outbreak lasts about 50 days.</li>
 </ol>
@@ -958,7 +958,7 @@ and starting at <span class="math inline">\(S=600\)</span> and <span class="math
 <span id="cb208-3"><a href="e-sir-model.html#cb208-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="e-sir-model.html#cb210-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">10</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-170-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-186-1.png" width="70%" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>The removal rate <span class="math inline">\(b=0.38\)</span> is the smallest rate that has at least 200 susceptible people remaining when the infected population is 0.</li>
 </ol>
@@ -967,7 +967,7 @@ and starting at <span class="math inline">\(S=600\)</span> and <span class="math
 <span id="cb211-3"><a href="e-sir-model.html#cb211-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="e-sir-model.html#cb213-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-171-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-187-1.png" width="70%" /></p>
 </div>
 <div id="managing-an-outbreak-1" class="section level3 hasAnchor">
 <h3>Managing an Outbreak<a href="e-sir-model.html#managing-an-outbreak-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1000,7 +1000,7 @@ where <span class="math inline">\(0 &lt; c &lt; 1\)</span> is the rate at which 
 <span id="cb214-3"><a href="e-sir-model.html#cb214-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb216"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb216-1"><a href="e-sir-model.html#cb216-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-172-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-188-1.png" width="70%" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>When the model is half as infectious, the peak infected population is 46, and this occurs at <span class="math inline">\(t=29\)</span>. There are about 235 susceptible people left at the end of the outbreak, which lasts about 100 days.</li>
 </ol>
@@ -1009,7 +1009,7 @@ where <span class="math inline">\(0 &lt; c &lt; 1\)</span> is the rate at which 
 <span id="cb217-3"><a href="e-sir-model.html#cb217-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="e-sir-model.html#cb219-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-173-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-189-1.png" width="70%" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li>When the removal time is doubled, the peak infected population is 46, and this occurs at <span class="math inline">\(t=14.5\)</span>. There are 235 susceptible people at the end of the outbreak, which lasts 50 days.</li>
 </ol>
@@ -1018,7 +1018,7 @@ where <span class="math inline">\(0 &lt; c &lt; 1\)</span> is the rate at which 
 <span id="cb220-3"><a href="e-sir-model.html#cb220-3" tabindex="-1"></a>Soln <span class="ot">=</span> <span class="fu">integrateODE</span>(SIRdyn, <span class="fu">domain</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>), <span class="at">S=</span><span class="dv">600</span>, <span class="at">I=</span><span class="dv">8</span>)</span></code></pre></div>
 <pre><code>## Solution containing functions S(t), I(t).</code></pre>
 <div class="sourceCode" id="cb222"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb222-1"><a href="e-sir-model.html#cb222-1" tabindex="-1"></a><span class="fu">traj_plot</span>(<span class="fu">I</span>(t) <span class="sc">~</span> <span class="fu">S</span>(t), Soln, <span class="at">nt=</span><span class="dv">20</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-174-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-190-1.png" width="70%" /></p>
 <ol start="4" style="list-style-type: decimal">
 <li>The models in parts 2 and 3 both follow the same trajectory, but the outbreak in Model 3 happens twice as quickly. The respective changes to the removal rate <span class="math inline">\(a\)</span> (in Model 2) and the removal rate <span class="math inline">\(b\)</span> (in Model 3) both have the same effect on the threshold population (which is twice its original value).</li>
 </ol>

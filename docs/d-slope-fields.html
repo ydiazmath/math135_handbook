@@ -818,7 +818,7 @@ code span.wa { color: #008000; font-weight: bold; } /* Warning */
 <div class="sourceCode" id="cb197"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb197-1"><a href="d-slope-fields.html#cb197-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb197-2"><a href="d-slope-fields.html#cb197-2" tabindex="-1"></a>P <span class="sc">~</span> <span class="dv">6</span> <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> P,</span>
 <span id="cb197-3"><a href="d-slope-fields.html#cb197-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>, <span class="at">P=</span><span class="sc">-</span><span class="dv">8</span><span class="sc">:</span><span class="dv">8</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-159-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-175-1.png" width="672" /></p>
 </div>
 <div id="activities-26" class="section level2 hasAnchor">
 <h2>Activities<a href="d-slope-fields.html#activities-26" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -967,7 +967,7 @@ Slope Field D
 <div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="d-slope-fields.html#cb198-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb198-2"><a href="d-slope-fields.html#cb198-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.2</span> <span class="sc">*</span> P <span class="sc">-</span>  <span class="dv">40</span>,</span>
 <span id="cb198-3"><a href="d-slope-fields.html#cb198-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">100</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">300</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-160-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-176-1.png" width="70%" /></p>
 <ul>
 <li>If <span class="math inline">\(P(0) &gt; 200\)</span> then the population increases without bound</li>
 <li>If <span class="math inline">\(P(0) = 200\)</span> then the population remains at this equilibrium value. This is an unstable equilibrium.</li>
@@ -979,7 +979,7 @@ Slope Field D
 <div class="sourceCode" id="cb199"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb199-1"><a href="d-slope-fields.html#cb199-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb199-2"><a href="d-slope-fields.html#cb199-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P),</span>
 <span id="cb199-3"><a href="d-slope-fields.html#cb199-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-161-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-177-1.png" width="70%" /></p>
 <ul>
 <li>If <span class="math inline">\(P(0) = 0\)</span> then the population remains at 0. This is an unstable equilibrium.</li>
 <li>If <span class="math inline">\(0 &lt; P(0) &lt; 500\)</span> then the population increases to the carrying capacity 500.</li>
@@ -992,7 +992,7 @@ Slope Field D
 <div class="sourceCode" id="cb200"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb200-1"><a href="d-slope-fields.html#cb200-1" tabindex="-1"></a><span class="fu">vectorfield_plot</span>(t <span class="sc">~</span> <span class="dv">1</span>,</span>
 <span id="cb200-2"><a href="d-slope-fields.html#cb200-2" tabindex="-1"></a>P <span class="sc">~</span>  <span class="fl">0.05</span>  <span class="sc">*</span> P <span class="sc">*</span>  (<span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.002</span> <span class="sc">*</span> P) <span class="sc">-</span> <span class="dv">4</span>,</span>
 <span id="cb200-3"><a href="d-slope-fields.html#cb200-3" tabindex="-1"></a><span class="fu">bounds</span>(<span class="at">t=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">50</span>, <span class="at">P=</span><span class="dv">0</span><span class="sc">:</span><span class="dv">600</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-162-1.png" width="70%" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-178-1.png" width="70%" /></p>
 <p>Let’s set <span class="math inline">\(\frac{dP}{dt}=0\)</span> and solve to find the equilibrium points. We have
 <span class="math display">\[\begin{align}
 -0.0001 P^2 + 0.05 P   - 4 &amp;= 0 \\

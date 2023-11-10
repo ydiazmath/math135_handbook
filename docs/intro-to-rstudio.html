@@ -992,16 +992,16 @@ to start, let’s evaluate it at 1.</p>
 <div class="sourceCode" id="cb89"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb89-1"><a href="intro-to-rstudio.html#cb89-1" tabindex="-1"></a>X <span class="ot">=</span> <span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">5</span>)</span>
 <span id="cb89-2"><a href="intro-to-rstudio.html#cb89-2" tabindex="-1"></a>Y <span class="ot">=</span> X<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb89-3"><a href="intro-to-rstudio.html#cb89-3" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-72-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
 <p>Notice! We list the <strong>dependent</strong> variable <code>Y</code> first and then the <strong>independent</strong> variable <code>X</code> after the tidle <code>~</code> (which matches the syntax of <code>makeFun</code>).</p>
 <p>We can also plot a function. Once again the dependent variable appears after the tilde.</p>
 <div class="sourceCode" id="cb90"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb90-1"><a href="intro-to-rstudio.html#cb90-1" tabindex="-1"></a><span class="fu">plotFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-73-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-89-1.png" width="672" /></p>
 <p>We can actually plot the data and the function on the same graph. We will plot the data and then add the function by using the <code>add=TRUE</code> parameter for <code>plotFun</code>. I will also use the optional <code>col</code> parameter to change the color of the function curve.</p>
 <div class="sourceCode" id="cb91"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb91-1"><a href="intro-to-rstudio.html#cb91-1" tabindex="-1"></a><span class="fu">plotPoints</span>(Y <span class="sc">~</span> X)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-74-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
 <div class="sourceCode" id="cb92"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb92-1"><a href="intro-to-rstudio.html#cb92-1" tabindex="-1"></a><span class="fu">plotFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">~</span> x, <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">&#39;red&#39;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-74-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-2.png" width="672" /></p>
 <div id="you-try-3" class="section level4 hasAnchor">
 <h4>You Try<a href="intro-to-rstudio.html#you-try-3" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <ul>

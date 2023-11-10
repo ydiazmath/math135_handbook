@@ -854,7 +854,7 @@ W(T,V) = 35.74+0.6215 \, T-35.75 \, V^{0.16}+0.4275 \, T \,  V^{0.16}
 <span id="cb94-8"><a href="h-multivariable-functions.html#cb94-8" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">&quot;T&quot;</span>,</span>
 <span id="cb94-9"><a href="h-multivariable-functions.html#cb94-9" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">&quot;V&quot;</span>,</span>
 <span id="cb94-10"><a href="h-multivariable-functions.html#cb94-10" tabindex="-1"></a>        <span class="at">alpha=</span><span class="dv">1</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-82-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
 <p>Contour Plot</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb95-1"><a href="h-multivariable-functions.html#cb95-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">W</span>(T,V) <span class="sc">~</span> T <span class="sc">&amp;</span> V, </span>
 <span id="cb95-2"><a href="h-multivariable-functions.html#cb95-2" tabindex="-1"></a>        <span class="at">T.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">40</span>,<span class="dv">40</span>), </span>
@@ -864,7 +864,7 @@ W(T,V) = 35.74+0.6215 \, T-35.75 \, V^{0.16}+0.4275 \, T \,  V^{0.16}
 <span id="cb95-6"><a href="h-multivariable-functions.html#cb95-6" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">&quot;T&quot;</span>,</span>
 <span id="cb95-7"><a href="h-multivariable-functions.html#cb95-7" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">&quot;V&quot;</span>, </span>
 <span id="cb95-8"><a href="h-multivariable-functions.html#cb95-8" tabindex="-1"></a>        <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>,<span class="dv">40</span>,<span class="dv">10</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-83-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-99-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Another Function</li>
 </ol>
@@ -880,14 +880,14 @@ Surface Plot</p>
 <span id="cb96-6"><a href="h-multivariable-functions.html#cb96-6" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),</span>
 <span id="cb96-7"><a href="h-multivariable-functions.html#cb96-7" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),</span>
 <span id="cb96-8"><a href="h-multivariable-functions.html#cb96-8" tabindex="-1"></a>        <span class="at">alpha=</span><span class="dv">1</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-84-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-100-1.png" width="672" /></p>
 <p>Contour Plot</p>
 <div class="sourceCode" id="cb97"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb97-1"><a href="h-multivariable-functions.html#cb97-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,y)<span class="sc">~</span> x <span class="sc">&amp;</span> y,</span>
 <span id="cb97-2"><a href="h-multivariable-functions.html#cb97-2" tabindex="-1"></a>        <span class="at">filled=</span><span class="cn">FALSE</span>,</span>
 <span id="cb97-3"><a href="h-multivariable-functions.html#cb97-3" tabindex="-1"></a>        <span class="at">zlab=</span><span class="st">&quot;f(x,y)&quot;</span>,</span>
 <span id="cb97-4"><a href="h-multivariable-functions.html#cb97-4" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),</span>
 <span id="cb97-5"><a href="h-multivariable-functions.html#cb97-5" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-85-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-101-1.png" width="672" /></p>
 </div>
 <div id="cross-sections" class="section level3 hasAnchor">
 <h3>Cross Sections<a href="h-multivariable-functions.html#cross-sections" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -904,13 +904,13 @@ Surface Plot</p>
 <div class="sourceCode" id="cb98"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb98-1"><a href="h-multivariable-functions.html#cb98-1" tabindex="-1"></a>P <span class="ot">=</span> <span class="fu">makeFun</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">-</span> <span class="dv">4</span><span class="sc">*</span>x<span class="sc">*</span>y<span class="sc">^</span><span class="dv">3</span> <span class="sc">~</span> x<span class="sc">&amp;</span>y)</span>
 <span id="cb98-2"><a href="h-multivariable-functions.html#cb98-2" tabindex="-1"></a></span>
 <span id="cb98-3"><a href="h-multivariable-functions.html#cb98-3" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, <span class="at">filled=</span><span class="cn">FALSE</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-86-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-102-1.png" width="672" /></p>
 <div class="sourceCode" id="cb99"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb99-1"><a href="h-multivariable-functions.html#cb99-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">P</span>(x,y) <span class="sc">~</span> x<span class="sc">&amp;</span>y, </span>
 <span id="cb99-2"><a href="h-multivariable-functions.html#cb99-2" tabindex="-1"></a>        <span class="at">filled=</span><span class="cn">FALSE</span>, </span>
 <span id="cb99-3"><a href="h-multivariable-functions.html#cb99-3" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>),</span>
 <span id="cb99-4"><a href="h-multivariable-functions.html#cb99-4" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>), </span>
 <span id="cb99-5"><a href="h-multivariable-functions.html#cb99-5" tabindex="-1"></a>        <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">1000</span>, <span class="dv">1000</span>, <span class="dv">200</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-86-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-102-2.png" width="672" /></p>
 <p>Using RStudio,</p>
 <ul>
 <li>Use <code>makeFun</code> to create each of these functions.</li>
@@ -953,26 +953,26 @@ Surface Plot</p>
 <span id="cb100-6"><a href="h-multivariable-functions.html#cb100-6" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;W&quot;</span>,  </span>
 <span id="cb100-7"><a href="h-multivariable-functions.html#cb100-7" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Windchill for V=20&quot;</span>,</span>
 <span id="cb100-8"><a href="h-multivariable-functions.html#cb100-8" tabindex="-1"></a>        <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>,<span class="dv">40</span>,<span class="dv">10</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-87-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-103-1.png" width="672" /></p>
 <div class="sourceCode" id="cb101"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb101-1"><a href="h-multivariable-functions.html#cb101-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">W</span>(T,<span class="dv">40</span>) <span class="sc">~</span> T, </span>
 <span id="cb101-2"><a href="h-multivariable-functions.html#cb101-2" tabindex="-1"></a>        <span class="at">T.lim =</span> <span class="fu">range</span>(<span class="sc">-</span><span class="dv">40</span>,<span class="dv">40</span>), </span>
 <span id="cb101-3"><a href="h-multivariable-functions.html#cb101-3" tabindex="-1"></a>        <span class="at">xlab =</span> <span class="st">&quot;T&quot;</span>,</span>
 <span id="cb101-4"><a href="h-multivariable-functions.html#cb101-4" tabindex="-1"></a>        <span class="at">ylab =</span> <span class="st">&quot;W&quot;</span>,  </span>
 <span id="cb101-5"><a href="h-multivariable-functions.html#cb101-5" tabindex="-1"></a>        <span class="at">main =</span> <span class="st">&quot;Windchill for V=40&quot;</span>,</span>
 <span id="cb101-6"><a href="h-multivariable-functions.html#cb101-6" tabindex="-1"></a>        <span class="at">levels =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">100</span>,<span class="dv">40</span>,<span class="dv">10</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-87-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-103-2.png" width="672" /></p>
 <div class="sourceCode" id="cb102"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb102-1"><a href="h-multivariable-functions.html#cb102-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">W</span>(<span class="sc">-</span><span class="dv">20</span>,V) <span class="sc">~</span> V, </span>
 <span id="cb102-2"><a href="h-multivariable-functions.html#cb102-2" tabindex="-1"></a>        <span class="at">V.lim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">60</span>), </span>
 <span id="cb102-3"><a href="h-multivariable-functions.html#cb102-3" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">&quot;V&quot;</span>,</span>
 <span id="cb102-4"><a href="h-multivariable-functions.html#cb102-4" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">&quot;W&quot;</span>,  </span>
 <span id="cb102-5"><a href="h-multivariable-functions.html#cb102-5" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;Windchill for T=-20&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-88-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-104-1.png" width="672" /></p>
 <div class="sourceCode" id="cb103"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb103-1"><a href="h-multivariable-functions.html#cb103-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">W</span>(<span class="dv">20</span>,V) <span class="sc">~</span> V, </span>
 <span id="cb103-2"><a href="h-multivariable-functions.html#cb103-2" tabindex="-1"></a>        <span class="at">V.lim=</span><span class="fu">range</span>(<span class="dv">0</span>,<span class="dv">60</span>), </span>
 <span id="cb103-3"><a href="h-multivariable-functions.html#cb103-3" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">&quot;V&quot;</span>,</span>
 <span id="cb103-4"><a href="h-multivariable-functions.html#cb103-4" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">&quot;W&quot;</span>,  </span>
 <span id="cb103-5"><a href="h-multivariable-functions.html#cb103-5" tabindex="-1"></a>        <span class="at">main=</span><span class="st">&quot;Windchill for T=20&quot;</span>)</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-88-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-104-2.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li>Here are some cross sections for the second function.
 <span class="math display">\[
@@ -981,17 +981,17 @@ f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
 </ol>
 <div class="sourceCode" id="cb104"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb104-1"><a href="h-multivariable-functions.html#cb104-1" tabindex="-1"></a>f <span class="ot">=</span> <span class="fu">makeFun</span>(<span class="fu">sin</span>(x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>(<span class="fl">0.1</span> <span class="sc">+</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> y<span class="sc">^</span><span class="dv">2</span>) <span class="sc">+</span> (x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="dv">4</span><span class="sc">*</span>y<span class="sc">^</span><span class="dv">2</span>) <span class="sc">*</span> <span class="fu">exp</span>(<span class="dv">1</span> <span class="sc">-</span> x<span class="sc">^</span> <span class="dv">2</span><span class="sc">-</span> y<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span><span class="dv">2</span> <span class="sc">~</span> x <span class="sc">&amp;</span> y)</span></code></pre></div>
 <div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb105-1"><a href="h-multivariable-functions.html#cb105-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,<span class="sc">-</span><span class="fl">1.5</span>) <span class="sc">~</span> x, <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-106-1.png" width="672" /></p>
 <div class="sourceCode" id="cb106"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb106-1"><a href="h-multivariable-functions.html#cb106-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,<span class="dv">0</span>) <span class="sc">~</span> x, <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-106-2.png" width="672" /></p>
 <div class="sourceCode" id="cb107"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb107-1"><a href="h-multivariable-functions.html#cb107-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(x,<span class="fl">1.5</span>) <span class="sc">~</span> x, <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-90-3.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-106-3.png" width="672" /></p>
 <div class="sourceCode" id="cb108"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb108-1"><a href="h-multivariable-functions.html#cb108-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(<span class="sc">-</span><span class="fl">1.5</span>,y) <span class="sc">~</span> y, <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-91-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-107-1.png" width="672" /></p>
 <div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="h-multivariable-functions.html#cb109-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(<span class="dv">0</span>,y) <span class="sc">~</span> y, <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-91-2.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-107-2.png" width="672" /></p>
 <div class="sourceCode" id="cb110"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb110-1"><a href="h-multivariable-functions.html#cb110-1" tabindex="-1"></a><span class="fu">plotFun</span>(<span class="fu">f</span>(<span class="fl">1.5</span>,y) <span class="sc">~</span> y, <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-91-3.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-107-3.png" width="672" /></p>
 </div>
 <div id="plotting-in-rstudio-3" class="section level3 hasAnchor">
 <h3>Plotting in RStudio<a href="h-multivariable-functions.html#plotting-in-rstudio-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -1005,7 +1005,7 @@ f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
 <span id="cb111-5"><a href="h-multivariable-functions.html#cb111-5" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>),</span>
 <span id="cb111-6"><a href="h-multivariable-functions.html#cb111-6" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>), </span>
 <span id="cb111-7"><a href="h-multivariable-functions.html#cb111-7" tabindex="-1"></a>        <span class="at">levels =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="fl">0.25</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-108-1.png" width="672" /></p>
 <ol start="2" style="list-style-type: decimal">
 <li><span class="math inline">\(g(x,y) = x^2 y^2 e^{-x^2-y^2}\)</span></li>
 </ol>
@@ -1016,7 +1016,7 @@ f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
 <span id="cb112-5"><a href="h-multivariable-functions.html#cb112-5" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), </span>
 <span id="cb112-6"><a href="h-multivariable-functions.html#cb112-6" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>), </span>
 <span id="cb112-7"><a href="h-multivariable-functions.html#cb112-7" tabindex="-1"></a>        <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">15</span>,<span class="dv">3</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-93-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-109-1.png" width="672" /></p>
 <ol start="3" style="list-style-type: decimal">
 <li><span class="math inline">\(h(x,y) = \sin^2x + \frac{1}{4}y^2\)</span></li>
 </ol>
@@ -1027,7 +1027,7 @@ f(x,y) = \frac{\sin(x^2+y^2)}{0.1+x^2+y^2}+ \frac{1}{2}(x^2+4y^2)e^{1-x^2-y^2}
 <span id="cb113-5"><a href="h-multivariable-functions.html#cb113-5" tabindex="-1"></a>        <span class="at">x.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">5</span>,<span class="dv">5</span>), </span>
 <span id="cb113-6"><a href="h-multivariable-functions.html#cb113-6" tabindex="-1"></a>        <span class="at">y.lim=</span><span class="fu">range</span>(<span class="sc">-</span><span class="dv">3</span>,<span class="dv">3</span>), </span>
 <span id="cb113-7"><a href="h-multivariable-functions.html#cb113-7" tabindex="-1"></a>        <span class="at">levels=</span><span class="fu">seq</span>(<span class="dv">0</span>,<span class="dv">4</span>,<span class="fl">0.5</span>))</span></code></pre></div>
-<p><img src="math135_handbook_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<p><img src="math135_handbook_files/figure-html/unnamed-chunk-110-1.png" width="672" /></p>
 <!--
 
 Draw contours for $g(x,y)=k$ on the given table for $k=3,6,9$.

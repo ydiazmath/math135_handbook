@@ -61,7 +61,7 @@ Below is a plot of an objective function $f(x,y)$ in red, and its constraint fun
 
 ```{r fig.show='hide'}
 
-P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
+P = makeFun( 100*x^(4/11) * y^(7/11) ~ x&y)
 Q = makeFun( 5*x + 4*y ~ x&y)
 
 plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
@@ -79,7 +79,7 @@ The maximum output for our budget occurs where the $Q(x,y)=500$ constraint is ta
 
 ```{r fig.show='hide'}
 
-P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
+P = makeFun(100*x^(4/11) * y^(7/11) ~ x&y)
 Q = makeFun( 7*x + 4*y ~ x&y)
 
 plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE)
@@ -93,30 +93,30 @@ plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 Now, the constraint isn't tangent to any of the shown contours, but it IS tangent to a contour that we haven't drawn! That point is somewhere around (25, 80), and the optimal productions probably around 52 or so. Let's make another plot on a smaller domain and pick some contours to draw.
 
 ```{r fig.show='hide'}
-plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(47,66,3))
+plotFun(P(x,y)~x&y, xlim=c(20,40), ylim=c(60,100), filled=FALSE, levels=seq(4700,6600,300))
 ```
 
 ```{r}
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=500)
 ```
 
-After some experimentation, I realized that $P(x,y)=53$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
+After some experimentation, I realized that $P(x,y)=5300$ is the contour that is tangent $ Q(x,y)=500$. So the optimal point is $(26,80)$ and the optimal output is 53.
 
 3. Now we return to the original constraint function, but decrease the budget to $300$.
 
 ```{r fig.show='hide'}
 
-P = makeFun( x^(4/11) * y^(7/11) ~ x&y)
+P = makeFun(100*x^(4/11) * y^(7/11) ~ x&y)
 Q = makeFun( 5*x + 4*y ~ x&y)
 
-plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE, levels=seq(15,85,10))
+plotFun(P(x,y)~x&y, xlim=c(0,100), ylim=c(0,100), filled=FALSE, levels=seq(1500,8500,1000))
 ```
 
 ```{r}
 plotFun(Q(x,y)~x&y, add=TRUE, filled=FALSE, levels=300)
 ```
 
-The optimal point is at $(21,40)$ and the optimal production is approximately $f(21,40)=35$. (This is a slight under-estimate, but it's pretty close.)
+The optimal point is at $(21,40)$ and the optimal production is approximately $f(21,40)=3500$. (This is a slight under-estimate, but it's pretty close.)
 
 ### Constrained Optimization on a Circle
 
